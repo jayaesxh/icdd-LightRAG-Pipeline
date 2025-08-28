@@ -1,0 +1,2738 @@
+:ID,:LABEL,text
+building,object,building
+consisting_primarily_of_one_storey,quality,consisting primarily of one storey
+200_m2,value,200 m2
+fire_compartmented,quality,fire-compartmented
+50_m2,value,50 m2
+non_fire_compartmented,quality,non-fire-compartmented
+areas,object,areas
+essentially_relate_to_the_business_of_the_building,quality,essentially relate to the business of the building
+located_on_the_level_of_second_storey,quality,located on the level of second storey
+facilities,object,facilities
+suitable_for_persons_with_mobility_and_functional_impairment,quality,suitable for persons with mobility and functional impairment
+marked_with_the_International_Symbol_of_Access,quality,marked with the International Symbol of Access
+lift,object,lift
+provide_access,quality,provide access
+entrance_level,property,entrance level
+level_with_entry,property,level with entry
+dwelling,object,dwelling
+space,object,space
+serving_the_use_of_the_building,quality,serving the use of the building
+Attics,object,Attics
+uppermost,quality,uppermost
+floor_voids,object,floor voids
+divided_into_400_m2_parts,quality,divided into 400 m2 parts
+landing,object,landing
+in_front_of_the_outside_door,quality,in front of the outside door
+1_500_millimetres,value,"1,500 millimetres"
+wide,property,wide
+long,property,long
+rooms,object,rooms
+used_for_sleeping_or_rest,quality,used for sleeping or rest
+one_hour_A_weighted_equivalent_continuous_sound_level_of_impulsive___narrow_band_or_low_frequency_noise,property,"one-hour A-weighted equivalent continuous sound level of impulsive , narrow-band or low-frequency noise"
+25_decibels,value,25 decibels
+Storage_premises,object,Storage premises
+fire_load,property,fire load
+1_200_MJ_m2,value,"1,200 MJ/m2"
+not_permitted_within_the_building,quality,not permitted within the building
+domestic,quality,domestic
+hot_water_cylinder,object,hot water cylinder
+located_inside_the_building_envelope,quality,located inside the building envelope
+50,value,50
+calculated,quality,calculated
+domestic_hot_water_cylinder_heat_loss,property,domestic hot water cylinder heat loss
+added_to_the_thermal_load_of_the_spaces_of_the_building,quality,added to the thermal load of the spaces of the building
+sound_system,object,sound system
+auditorium,object,auditorium
+restaurant,object,restaurant
+conference_facility,object,conference facility
+facility_for_festive_occasions,object,facility for festive occasions
+teaching_facility,object,teaching facility
+similar_assembly_facility,object,similar assembly facility
+public_service_facility,object,public service facility
+induction_loop,object,induction loop
+similar_sound_transmission_system,object,similar sound transmission system
+spread_of_fire,property,spread of fire
+voids,object,voids
+wall_type,quality,wall-type
+building_elements,object,building elements
+restricted_at_least_by_storey,quality,restricted at least by storey
+intended_for_service_housing_or_supported_housing_of_a_person_with_mobility_and_functional_impairment,quality,intended for service housing or supported housing of a person with mobility and functional impairment
+turning_space,object,turning space
+diameter,property,diameter
+hallway,object,hallway
+kitchen,object,kitchen
+dwellings,object,dwellings
+accommodation,object,accommodation
+patient_rooms,object,patient rooms
+designed_and_implemented,quality,designed and implemented
+reverberation_time,property,reverberation time
+staircase,object,staircase
+exit_route,object,exit route
+1_3_seconds,value,1.3 seconds
+Spaces,object,Spaces
+non_residential_building,object,non-residential building
+common_spaces,object,common spaces
+residential_building,object,residential building
+fixtures___fittings_and_fixed_equipment,object,"fixtures , fittings and fixed equipment"
+intended_for_sheltered_housing_or_supported_housing_of_a_person_with_mobility_or_functional_impairment,quality,intended for sheltered housing or supported housing of a person with mobility or functional impairment
+one,value,one
+toilet_and_washing_facility,object,toilet and washing facility
+free_space,object,free space
+fire_compartment,object,fire compartment
+partitioned_by_accommodation_room,quality,partitioned by accommodation room
+Partitioning,quality,Partitioning
+doors,object,doors
+accommodation_premises,object,accommodation premises
+closing_devices,object,closing devices
+exit_enclosure,object,exit enclosure
+open_separately_into_each_adjoining_fire_compartment_without_a_need_to_open_the_doors_at_the_same_time,quality,open separately into each adjoining fire compartment without a need to open the doors at the same time
+outdoor,quality,outdoor
+air_flow,property,air flow
+used_in_the_calculations_for_buildings_other_than_those_in_intended_use_categories_1_and_2_outside_the_occupancy_period,quality,used in the calculations for buildings other than those in intended use categories 1 and 2 outside the occupancy period
+0_15_dm3_s_per_m2,value,0.15 dm3/s per m2
+fire_resistance_time_requirement,property,fire resistance time requirement
+balconies,object,balconies
+half,value,half
+load_bearing_structures,object,load-bearing structures
+storey,object,storey
+toilet_seat,object,toilet seat
+placed_between_200_and_300_millimetres_from_the_rear_wall,quality,placed between 200 and 300 millimetres from the rear wall
+shutoff_valves,object,shutoff valves
+house,object,house
+apartment,object,apartment
+vertical,quality,vertical
+service_pipes,object,service pipes
+both_sides,property,both sides
+devices,object,devices
+device,object,device
+fixture,object,fixture
+connector_pipe,object,connector pipe
+water_meters,object,water meters
+Large,quality,Large
+roof,object,roof
+surfaces,property,surfaces
+divided_into_parts_of_no_more_than_2_400_square_metres,quality,"divided into parts of no more than 2,400 square metres"
+crawl_space,object,crawl space
+ventilated,quality,ventilated
+fire_wall,object,fire wall
+it,object,it
+situated_adjacent_to_a_neighbouring_building,quality,situated adjacent to a neighbouring building
+so_close_to_a_neighbouring_building_that_the_spread_of_fire_is_evident,quality,so close to a neighbouring building that the spread of fire is evident
+height,property,height
+28_metres,value,28 metres
+access,quality,access
+attic,object,attic
+fire_compartments,object,fire compartments
+from_the_outside,quality,from the outside
+exits,object,exits
+leading_to_them,quality,leading to them
+easy_to_open_in_an_emergency,quality,easy to open in an emergency
+drainage_point,object,drainage point
+located_below_the_height_of_backwater,quality,located below the height of backwater
+waste_water,object,waste water
+pumped,quality,pumped
+two,value,two
+drainage_wells,object,drainage wells
+floor_drain,object,floor drain
+located_at_a_maximum_distance_of_three_meters_from_the_floor_drain,quality,located at a maximum distance of three meters from the floor drain
+Structures,object,Structures
+exposed_to_moisture,quality,exposed to moisture
+resistant_to_the_effects_of_water,quality,resistant to the effects of water
+residential_buildings,object,residential buildings
+storeys,object,storeys
+exit,object,exit
+900_millimetres,value,900 millimetres
+width,property,width
+for_firefighting_operations,quality,for firefighting operations
+cold_water_pipe,object,cold water pipe
+designed_and_installed,quality,designed and installed
+temperature,property,temperature
+cold_water_system,object,cold water system
+20_degrees_Celsius,value,20 degrees Celsius
+Sewers,object,Sewers
+stack_vent,object,stack vent
+extends_above_the_roofing_of_a_building,quality,extends above the roofing of a building
+new,quality,new
+0_8_metres,value,0.8 metres
+Extinguishing_routes,object,Extinguishing routes
+basement_storeys,object,basement storeys
+fire_and_smoke_proof,quality,fire and smoke-proof
+fire_performance,property,fire performance
+external,quality,external
+wall_structure,object,wall structure
+56_metres,value,56 metres
+demonstrated_by_a_fullscale_test,quality,demonstrated by a fullscale test
+Constructions,object,Constructions
+behind_surfaces_exposed_to_running_water___repetitious_splash_water_or_water_condensation,quality,"behind surfaces exposed to running water , repetitious splash water or water condensation"
+waterproofed,quality,waterproofed
+roof_structures,object,roof structures
+joints,object,joints
+properly_inclined,quality,properly inclined
+sealed_for_water_drainage,quality,sealed for water drainage
+storey_level,quality,storey-level
+door,object,door
+number_of_people_evacuating,property,number of people evacuating
+60,value,60
+open_in_the_direction_of_the_exit,quality,open in the direction of the exit
+moving_between_levels,quality,moving between levels
+existing,quality,existing
+850_millimetres,value,850 millimetres
+open,quality,open
+garage,object,garage
+five,value,five
+maximum,quality,maximum
+area,object,area
+used_as_the_surface_area_of_the_storeys,quality,used as the surface area of the storeys
+driveways,object,driveways
+between_the_various_storeys,quality,between the various storeys
+combined,quality,combined
+heat_loss,property,heat loss
+buildings,object,buildings
+design_solution,object,design solution
+design_value,property,design value
+air_leakage_rate_figure,property,air leakage rate figure
+envelope,object,envelope
+load_bearing_element,object,load-bearing element
+required_to_have_a_longer_fire_resistance_time_with_respect_to_integrity_E_and_insulation_I_than_with_respect_to_load_bearing_capacity_R,quality,required to have a longer fire resistance time with respect to integrity E and insulation I than with respect to load-bearing capacity R
+longer,quality,longer
+fire_resistance_time,property,fire resistance time
+applied_to_the_load_bearing_capacity,quality,applied to the load-bearing capacity
+electrical,quality,electrical
+energy_consumption,property,energy consumption
+mechanical,quality,mechanical
+ventilation_system,object,ventilation system
+calculated_on_the_basis_of_air_flows___specific_fan_powers_and_operating_times_for_all_air_handling_units_and_powered_roof_ventilators_in_the_building,quality,"calculated on the basis of air flows , specific fan powers and operating times for all air handling units and powered roof ventilators in the building"
+dynamic,quality,dynamic
+calculation_tool,object,calculation tool
+calculation_of_the_room_temperature_for_the_summer_season,quality,calculation of the room temperature for the summer season
+glazed,quality,glazed
+from_one_balcony_to_another_and_to_an_adjacent_fire_compartment,quality,from one balcony to another and to an adjacent fire compartment
+restricted,quality,restricted
+Extensive,quality,Extensive
+partitioned,quality,partitioned
+restrict_the_spread_of_fire,quality,restrict the spread of fire
+cooling_energy_production,object,cooling energy production
+auxiliary_units,object,auxiliary units
+taken_into_account_where_the_use_of_the_systems_is_required_for_indoor_temperature_control,quality,taken into account where the use of the systems is required for indoor temperature control
+2_0_m3____h_m2__,value,2.0 m3/ ( h m2 )
+reference_value,property,reference value
+Exits,object,Exits
+parts,object,parts
+separated_by_a_fire_wall,quality,separated by a fire wall
+constructed_separately_so_that_in_the_event_of_a_fire_there_is_no_need_to_use_any_door_that_may_be_in_the_fire_wall,quality,constructed separately so that in the event of a fire there is no need to use any door that may be in the fire wall
+circulation_piping,object,circulation piping
+located_inside_the_building_envelopes_insulation,quality,located inside the building envelopes insulation
+25,value,25
+domestic_hot_water_circulation_heat_loss,property,domestic hot water circulation heat loss
+building__s,object,building 's
+total_combined_window_area,property,total combined window area
+15,value,15
+sum_total,property,sum total
+floor_plate_areas,property,floor plate areas
+fully_or_in_part_above_the_ground,quality,fully or in part above the ground
+facade_area,property,facade area
+energy_declaration,object,energy declaration
+drawn_up_when_designing_a_building,quality,drawn up when designing a building
+annual_efficiency_of_heat_recovery_from_ventilation_extract_air,property,annual efficiency of heat recovery from ventilation extract air
+55,value,55
+impact,property,impact
+ground,object,ground
+taken_into_account_in_heat_loss_calculations,quality,taken into account in heat loss calculations
+fire_door,object,fire door
+kept_open_in_normal_use,quality,kept open in normal use
+devices_that_will_close_the_door_in_the_event_of_fire,object,devices that will close the door in the event of fire
+net_heating_energy_demand,property,net heating energy demand
+ventilation,object,ventilation
+calculated_on_the_basis_of_the_heating_of_air_after_heat_recovery_to_supply_air_temperature_and_any_heating_before_heat_recovery,quality,calculated on the basis of the heating of air after heat recovery to supply air temperature and any heating before heat recovery
+9_metres,value,9 metres
+anchoring_structures,object,anchoring structures
+safety_lines,object,safety lines
+driveway,object,driveway
+not_intersect_a_walkway_leading_to_a_play_area,quality,not intersect a walkway leading to a play area
+30__,value,30 %
+ties,object,ties
+located_in_the_immediate_vicinity_of_the_grid_lines_of_the_columns_and_the_walls,quality,located in the immediate vicinity of the grid lines of the columns and the walls
+column,object,column
+wall,object,wall
+continuous,quality,continuous
+from_the_foundations_to_the_roof_level,quality,from the foundations to the roof level
+Edge,quality,Edge
+columns,object,columns
+walls,object,walls
+tied_to_every_floor_and_roof,quality,tied to every floor and roof
+Entrances,object,Entrances
+passageways,object,passageways
+playgrounds,object,playgrounds
+recreation_areas,object,recreation areas
+used_in_the_wintertime,quality,used in the wintertime
+street_areas,object,street areas
+surrounding_the_building_and_other_public_areas,quality,surrounding the building and other public areas
+protected_from_snow_and_ice_falling_from_the_roof_of_the_building_using_snow_barriers___taking_into_account_the_pitch_of_the_roof,quality,"protected from snow and ice falling from the roof of the building using snow barriers , taking into account the pitch of the roof"
+Fixed,quality,Fixed
+linked,quality,linked
+seats,object,seats
+arranged_as_rows_of_seating,quality,arranged as rows of seating
+access_route,object,access route
+on_the_side_of_the_rows,quality,on the side of the rows
+continuing,quality,continuing
+horizontal,quality,horizontal
+structures,object,structures
+loaded_area,object,loaded area
+calculated_span_by_span,quality,calculated span by span
+large,quality,large
+roofs,object,roofs
+smaller,quality,smaller
+dimension,property,dimension
+50_m,value,50 m
+topography,property,topography
+windswept,quality,windswept
+exposure_coefficient,property,exposure coefficient
+1,value,1
+parking_spaces,object,parking spaces
+them,object,them
+intended_for_the_use_of_a_person_with_mobility_and_functional_impairment,quality,intended for the use of a person with mobility and functional impairment
+internal,quality,internal
+centred_on_the_supporting_line,quality,centred on the supporting line
+tie_force,property,tie force
+10_kN,value,10 kN
+70_kN,value,70 kN
+chairs,object,chairs
+they,object,they
+linked_to_one_another_in_at_least_four_groups,quality,linked to one another in at least four groups
+placed_around_tables,quality,placed around tables
+800_millimetres,value,800 millimetres
+side,property,side
+accessible_via_the_interior_and_exterior_of_the_building,quality,accessible via the interior and exterior of the building
+accessible_via_the_interior,quality,accessible via the interior
+premises,object,premises
+used_by_children,quality,used by children
+restrictors,object,restrictors
+windows,object,windows
+openings,object,openings
+danger_of_falling,quality,danger of falling
+these,object,these
+limit_the_easy_opening_of_the_window_to_100_millimetres,quality,limit the easy opening of the window to 100 millimetres
+fixed,quality,fixed
+furnishings,object,furnishings
+number_of_persons,property,number of persons
+two_persons_per_square_metre,value,two persons per square metre
+spaces,object,spaces
+intended_for_more_than_60_persons,quality,intended for more than 60 persons
+1_200_millimetres,value,"1,200 millimetres"
+Joints,object,Joints
+between_vertical_and_horizontal_structures,quality,between vertical and horizontal structures
+designed_without_a_reduction_factor,quality,designed without a reduction factor
+Ladders,object,Ladders
+structural_elements,object,structural elements
+emergency_exits,object,emergency exits
+service_routes,object,service routes
+designed_and_constructed,quality,designed and constructed
+used_in_an_emergency_situation,quality,used in an emergency situation
+Parapets,object,Parapets
+categories,property,categories
+A,value,A
+E,value,E
+panel_parts,object,panel parts
+acting_as_parapets,quality,acting as parapets
+fasteners,object,fasteners
+designed_to_the_concentrated_load_Qk___0_3_kN_acting_on_a_random_spot,quality,designed to the concentrated load Qk = 0.3 kN acting on a random spot
+Seats,object,Seats
+fixed_to_a_base,quality,fixed to a base
+floor,object,floor
+seating_area,object,seating area
+sloped,quality,sloped
+level_differences,property,level differences
+between_the_floors_of_the_respective_rows_of_seats,quality,between the floors of the respective rows of seats
+standing_auditorium,object,standing auditorium
+directly_accessible_from_the_end_of_each_row,quality,directly accessible from the end of each row
+breaking,property,breaking
+glass_structure,object,glass structure
+light_permeable_structure,object,light-permeable structure
+not_cause_a_danger_of_falling_or_a_danger_of_injury_from_fragments_falling_onto_persons_below,quality,not cause a danger of falling or a danger of injury from fragments falling onto persons below
+clear_width,property,clear width
+opening,object,opening
+leading_to_room_spaces_of_a_non_residential_building_as_well_as_to_residential_rooms_of_a_residential_building___necessary_spaces_serving_residence_and_spaces_serving_the_use_of_the_building,quality,"leading to room spaces of a non-residential building as well as to residential rooms of a residential building , necessary spaces serving residence and spaces serving the use of the building"
+depth,property,depth
+standing_rows,object,standing rows
+half_a_metre,value,half a metre
+parking_area,object,parking area
+plot,object,plot
+building_site,object,building site
+separated_from_pedestrian___play_and_recreation_areas,quality,"separated from pedestrian , play and recreation areas"
+free,quality,free
+from_the_ground,quality,from the ground
+from_the_surface_of_a_driveway_or_walkway_of_the_lower_edge_of_a_structural_element___device_or_equipment_protruding_from_the_building___such_as_a_balcony___bay_window___sign___lighting_device_or_awning,quality,"from the surface of a driveway or walkway of the lower edge of a structural element , device or equipment protruding from the building , such as a balcony , bay window , sign , lighting device or awning"
+2_2_metres,value,2.2 metres
+protected_so_as_to_prevent_the_danger_of_collision,quality,protected so as to prevent the danger of collision
+hatch,object,hatch
+window,object,window
+emergency_exit,object,emergency exit
+600_millimetres,value,600 millimetres
+500_millimetres,value,500 millimetres
+sum,property,sum
+inaccuracies,property,inaccuracies
+crane,object,crane
+wheels,object,wheels
+determined_together_with_the_crane_supplier,quality,determined together with the crane supplier
+load,object,load
+stated_on_this_sign_in_kg_m2,quality,stated on this sign in kg/m2
+600_x_600_millimetres,value,600 x 600 millimetres
+slope,property,slope
+surface,property,surface
+8_per_cent___1_12_5__,value,8 per cent ( 1:12.5 )
+access_routes,object,access routes
+assembly_areas,object,assembly areas
+maximum_capacity,property,maximum capacity
+60_persons,value,60 persons
+Their,object,Their
+glazing,object,glazing
+safety_glass,object,safety glass
+warning_sign,object,warning sign
+not_posted,quality,not posted
+designed_to_an_axle_load_Qk,quality,designed to an axle load Qk
+axle_group_load,property,axle group load
+190_kN,value,190 kN
+Windows,object,Windows
+glass,quality,glass
+danger_of_collision,quality,danger of collision
+marked_in_such_a_way_that_they_can_be_easily_noticed,quality,marked in such a way that they can be easily noticed
+its,object,its
+mountings,object,mountings
+withstand_the_load_to_which_it_is_normally_subject,quality,withstand the load to which it is normally subject
+structure,object,structure
+protected_by_a_fixed_collision_barrier,quality,protected by a fixed collision barrier
+handrail,object,handrail
+ending,property,ending
+shaped_safely,quality,shaped safely
+continue_past_the_start_and_end_points_of_the_structure,quality,continue past the start and end points of the structure
+considering_the_intended_use_and_functional_units_of_the_building_and_distances_in_the_building,quality,considering the intended use and functional units of the building and distances in the building
+adequate_number,value,adequate number
+appropriately_located,quality,appropriately located
+toilet_facilities,object,toilet facilities
+suitable_for_users_of_wheelchairs_and_walking_frames_with_wheels,quality,suitable for users of wheelchairs and walking frames with wheels
+pitch,property,pitch
+1_8,value,1:8
+constructed_making_appropriate_use_of_walkways___roof_ladders___safety_ladders___roof_stairs___roof_treads_and_foot_rails,quality,"constructed making appropriate use of walkways , roof ladders , safety ladders , roof stairs , roof treads and foot rails"
+safe,quality,safe
+marked,quality,marked
+reserved_for_pedestrians_in_connection_with_vehicle_traffic_and_goods_transport_routes___doors_and_gates_in_the_yards_of_buildings_other_than_single_family_houses,quality,"reserved for pedestrians in connection with vehicle traffic and goods transport routes , doors and gates in the yards of buildings other than single-family houses"
+pedestrian_traffic,object,pedestrian traffic
+through_them,quality,through them
+necessary,quality,necessary
+sewer,object,sewer
+installed_in_the_ground,quality,installed in the ground
+withstand_the_load_imposed_by_soil___soil_corrosion_as_well_as_subsidence_of_soil,quality,"withstand the load imposed by soil , soil corrosion as well as subsidence of soil"
+cold_premises,object,cold premises
+thermally_insulated,quality,thermally insulated
+unit,object,unit
+living_accommodation,object,living accommodation
+space_for_commercial_purposes,object,space for commercial purposes
+treated_as_a_dwelling,quality,treated as a dwelling
+commercial_part,object,commercial part
+reverted_to_domestic_use,quality,reverted to domestic use
+Account,object,Account
+taken_of_outside_noise,quality,taken of outside noise
+openable,quality,openable
+appropriate_for_purge_ventilation,quality,appropriate for purge ventilation
+potentially_flammable,quality,potentially flammable
+explosive,quality,explosive
+atmosphere,property,atmosphere
+institutions,object,institutions
+assembly,quality,assembly
+business,quality,business
+abrupt,quality,abrupt
+0_7_metres,value,0.7 metres
+precipices,object,precipices
+vicinity,property,vicinity
+common_play,quality,common play
+recreation,quality,recreation
+indicated_by_appropriate_barriers_or_suitable_planted_areas,quality,indicated by appropriate barriers or suitable planted areas
+outfitted_with_a_base_that_cushions_any_fall,quality,outfitted with a base that cushions any fall
+used_as_emergency_exits,quality,used as emergency exits
+easily_releasable_by_an_adult,quality,easily releasable by an adult
+Barriers,object,Barriers
+loading_docks,object,loading docks
+not_impede_loading_and_unloading,quality,not impede loading and unloading
+Combustion_appliances,object,Combustion appliances
+operate_safely,quality,operate safely
+Doors,object,Doors
+gates,object,gates
+boom_barriers,object,boom barriers
+not_cause_a_danger_of_an_accident,quality,not cause a danger of an accident
+emergency_repairs,object,emergency repairs
+not_possible_to_notify_the_building_control_body_in_advance,quality,not possible to notify the building control body in advance
+building_control_body,object,building control body
+notified_as_soon_as_possible,quality,notified as soon as possible
+ventilation_systems,object,ventilation systems
+fan_units,object,fan units
+appropriately_sized,quality,appropriately sized
+fans,object,fans
+operating_in_normal_background_ventilation_mode,quality,operating in normal background ventilation mode
+not_overly_noisy,quality,not overly noisy
+restrict_the_spread_of_fire_and_smoke,quality,restrict the spread of fire and smoke
+provide_safe_evacuation,quality,provide safe evacuation
+facilitate_rescue_and_extinguishing_measures,quality,facilitate rescue and extinguishing measures
+heating_system,object,heating system
+heat,property,heat
+conveyed_via_heat_pipes_external_to_the_building_from_a_shared_heat_exchanger_or_heat_generation_unit_to_several_buildings,quality,conveyed via heat pipes external to the building from a shared heat exchanger or heat generation unit to several buildings
+pipes,object,pipes
+divided_between_the_buildings_in_proportion_to_their_areas,quality,divided between the buildings in proportion to their areas
+natural,quality,natural
+ventilation_valves,object,ventilation valves
+easy_to_close,quality,easy to close
+Mechanical,quality,Mechanical
+intermittent,quality,intermittent
+mechanical_ventilation,property,mechanical ventilation
+designed_and_installed_to_minimise_noise,quality,designed and installed to minimise noise
+Routes,object,Routes
+intended_for_vehicle_traffic,quality,intended for vehicle traffic
+located_in_a_way_that_does_not_restrict_pedestrian_routes_or_the_space_required_for_opening_doors_and_gates,quality,located in a way that does not restrict pedestrian routes or the space required for opening doors and gates
+Staircases,object,Staircases
+sufficiently_spacious,quality,sufficiently spacious
+suitable_for_their_purpose,quality,suitable for their purpose
+Standing_areas,object,Standing areas
+terraced,quality,terraced
+safe_to_move_in_the_rows,quality,safe to move in the rows
+air_flows,object,air flows
+designed,quality,designed
+average_carbon_monoxide_concentration,property,average carbon monoxide concentration
+parking_garage,object,parking garage
+for_motor_vehicles,quality,for motor vehicles
+during_the_hour_of_use_assessed_as_the_most_critical,quality,during the hour of use assessed as the most critical
+35_mg_m3___30_ppm__,value,35 mg/m3 ( 30 ppm )
+barrier,object,barrier
+not_feature_horizontal_structures_or_patterns_that_make_it_possible_to_climb,quality,not feature horizontal structures or patterns that make it possible to climb
+lighting,object,lighting
+not_cause_glare_that_endangers_safety,quality,not cause glare that endangers safety
+loading_area,object,loading area
+appropriate,quality,appropriate
+materials,object,materials
+fittings,object,fittings
+compatible,quality,compatible
+pumping_station,object,pumping station
+located_in_a_place_where_it_can_be_easily_inspected_and_serviced,quality,located in a place where it can be easily inspected and serviced
+water_tight,quality,water tight
+resistant_to_earth_pressure,quality,resistant to earth pressure
+not_cause_odour_problem,quality,not cause odour problem
+separator_devices,object,separator devices
+located_so_that_they_can_be_serviced_and_emptied_easily_and_without_causing_problems,quality,located so that they can be serviced and emptied easily and without causing problems
+supports,property,supports
+fastening_points,property,fastening points
+water_pipes,object,water pipes
+neither_heat_expansion_nor_forces_generated_by_water_flow_cause_the_pipes_to_shift___loosen___break_or_make_disturbing_noises,quality,"neither heat expansion nor forces generated by water flow cause the pipes to shift , loosen , break or make disturbing noises"
+vehicle_traffic_area,object,vehicle traffic area
+courtyard,object,courtyard
+easily_accessible,quality,easily accessible
+uninterrupted,quality,uninterrupted
+chimneys,object,chimneys
+ventilation_equipment,object,ventilation equipment
+equipment,object,equipment
+located_on_the_roof_of_the_building,quality,located on the roof of the building
+accessed_regularly,quality,accessed regularly
+adequate_means,value,adequate means
+provided_for_people_in_the_building,quality,provided for people in the building
+Water_pipes,object,Water pipes
+located_in_cold_premises,quality,located in cold premises
+environment,object,environment
+lit,quality,lit
+enables_safe_use_and_servicing,quality,enables safe use and servicing
+size,property,size
+number_of_storeys,property,number of storeys
+intended_purpose,property,intended purpose
+requires,quality,requires
+divided_into_fire_compartments,quality,divided into fire compartments
+certain_proportion,value,certain proportion
+changing_rooms,object,changing rooms
+washing_facilities,object,washing facilities
+saunas,object,saunas
+swimming_pools,object,swimming pools
+suitable_for_a_person_with_mobility_and_functional_impairment,quality,suitable for a person with mobility and functional impairment
+evacuation_areas,object,evacuation areas
+possible_to_transport_an_immobile_individual_on_a_stretcher_via_the_exit_route,quality,possible to transport an immobile individual on a stretcher via the exit route
+During_the_design_period_of_occupancy,quality,During the design period of occupancy
+room_temperature,property,room temperature
+comfortable,quality,comfortable
+not_adversely_affected_by_air_velocity___thermal_radiation___temperature_fluctuation___temperature_differences_or_surface_temperatures,quality,"not adversely affected by air velocity , thermal radiation , temperature fluctuation , temperature differences or surface temperatures"
+External,quality,External
+layers,object,layers
+form_a_whole_that_prevents_water_from_harmfully_penetrating_into_the_structures,quality,form a whole that prevents water from harmfully penetrating into the structures
+Extract_air,object,Extract air
+toilets,object,toilets
+washrooms,object,washrooms
+cleaning_spaces,object,cleaning spaces
+conducted_to_vertical_ducts,quality,conducted to vertical ducts
+extract_air_categories,property,extract air categories
+2,value,2
+total_extract_air_flow,property,total extract air flow
+10,value,10
+total_air_flow,property,total air flow
+duct,object,duct
+extract_air,object,extract air
+category,property,category
+3,value,3
+conducted_through_individual_ducts___or_common_ducts_serving_spaces_of_the_same_type_as_regards_level_of_air_purity___to_the_outdoors___into_a_collection_duct_installed_above_the_spaces_it_serves_or_into_an_extract_air_chamber,quality,"conducted through individual ducts , or common ducts serving spaces of the same type as regards level of air purity , to the outdoors , into a collection duct installed above the spaces it serves or into an extract air chamber"
+4,value,4
+conducted_to_the_outdoors_through_individual_extract_air_ducts,quality,conducted to the outdoors through individual extract air ducts
+Fire,object,Fire
+not_spread_in_a_roof_or_in_its_underlay,quality,not spread in a roof or in its underlay
+causes_a_hazard,quality,causes a hazard
+elevation_difference,property,elevation difference
+1_000_millimetres,value,"1,000 millimetres"
+ramp,object,ramp
+gradient,property,gradient
+eight_per_cent,value,eight per cent
+snow_load,object,snow load
+occur,quality,occur
+minimum_value,property,minimum value
+0_5_kN_m2,value,0.5 kN/m2
+combined_into_the_same_duct,quality,combined into the same duct
+free_gap,property,free gap
+between_facing_walls_of_adjacent_glazed_balconies,quality,between facing walls of adjacent glazed balconies
+distance,property,distance
+wall_to_the_window_of_an_adjacent_fire_compartment,quality,wall to the window of an adjacent fire compartment
+2_metres,value,2 metres
+class,property,class
+EI_15,value,EI 15
+indoor,quality,indoor
+leading_to_an_evacuation_area_in_a_non_residential_building,quality,leading to an evacuation area in a non-residential building
+stairs,object,stairs
+wide_enough_that_they_can_be_used_to_transport_an_immobile_individual_on_a_stretcher,quality,wide enough that they can be used to transport an immobile individual on a stretcher
+entrance,object,entrance
+protected_against_snow_loads_with_a_covering,quality,protected against snow loads with a covering
+outside_space,object,outside space
+individual,quality,individual
+level_difference,property,level difference
+outside_the_door,quality,outside the door
+20_millimetres,value,20 millimetres
+eliminated_with_equipment_in_the_outdoor_space,quality,eliminated with equipment in the outdoor space
+Moisture,property,Moisture
+from_the_foundation_wall_and_the_base_floors_concrete_slab,quality,from the foundation wall and the base floors concrete slab
+not_transfer_harmfully_to_the_wooden_sole_plates_or_upper_wall_and_floor_structures,quality,not transfer harmfully to the wooden sole plates or upper wall and floor structures
+Snow,object,Snow
+rain_water,object,rain-water
+not_be_allowed_to_ingress_the_ventilation_system_via_externally_mounted_air_transfer_devices_in_quantities_causing_damage_to_the_system___lowering_air_quality_or_impairing_the_functioning_of_the_system,quality,"not be allowed to ingress the ventilation system via externally mounted air transfer devices in quantities causing damage to the system , lowering air quality or impairing the functioning of the system"
+achieve_the_contrasts_in_brightness_needed_for_observation,quality,achieve the contrasts in brightness needed for observation
+fire_compartmenting_requirement,property,fire compartmenting requirement
+balcony_slab,object,balcony slab
+balcony,object,balcony
+EI_30,value,EI 30
+minor,quality,minor
+sealing_parts,object,sealing parts
+penetrations,object,penetrations
+E_15,value,E 15
+foundation,object,foundation
+drainage_water,object,drainage water
+flow_away_from_the_property_in_such_a_way_that_it_does_not_cause_problems_to_the_waste_water_and_storm_water_systems,quality,flow away from the property in such a way that it does not cause problems to the waste water and storm water systems
+landings,object,landings
+strong,quality,strong
+air_tightness,property,air-tightness
+B,value,B
+dwelling_unit,object,dwelling unit
+18_dm3_s,value,18 dm3/s
+limited,quality,limited
+fire_igniting,property,fire igniting
+compartment,object,compartment
+not_cause_unreasonably_vast_damages___compartmentation_by_area__,quality,not cause unreasonably vast damages ( compartmentation by area )
+recirculation,quality,recirculation
+transfer,quality,transfer
+secondary,quality,secondary
+air,object,air
+not_cause_any_harmful_spread_of_impurities___in_particular_odours,quality,"not cause any harmful spread of impurities , in particular odours"
+produce_an_adequate_outdoor_air_flow_to_the_building,quality,produce an adequate outdoor air flow to the building
+extract_from_indoor_air_substances_that_are_harmful_to_health___excessive_humidity___odours_with_adverse_effects_on_comfort_and_indoor_air_impurities_arising_from_humans___construction_products_and_activities,quality,"extract from indoor air substances that are harmful to health , excessive humidity , odours with adverse effects on comfort and indoor air impurities arising from humans , construction products and activities"
+water_vapour_resistance,property,water vapour resistance
+prevent_the_accumulation_of_moisture_content_of_wall_structures_from_internal_water_vapour_diffusion_or_convection_that_is_harmful_from_the_viewpoint_of_moisture_performance_of_structures,quality,prevent the accumulation of moisture content of wall structures from internal water vapour diffusion or convection that is harmful from the viewpoint of moisture performance of structures
+Ventilation,object,Ventilation
+provide_healthy___safe_and_comfortable_indoor_air_quality_in_occupiable_spaces,quality,"provide healthy , safe and comfortable indoor air quality in occupiable spaces"
+Water,object,Water
+drain_off_the_roof_without_causing_damage_to_the_building,quality,drain off the roof without causing damage to the building
+handrails,object,handrails
+one_above_the_other,quality,one above the other
+installed,quality,installed
+take_into_account_children_and_users_of_wheelchairs,quality,take into account children and users of wheelchairs
+permanently_installed,quality,permanently installed
+dry_riser,object,dry riser
+suitable_for_its_purpose_for_transporting_water_for_fire_extinguishing,quality,suitable for its purpose for transporting water for fire extinguishing
+above_the_entry_level_of_the_building,quality,above the entry level of the building
+distance_of_the_uppermost_floor_level_from_the_entry_level,property,distance of the uppermost floor level from the entry level
+24_metres,value,24 metres
+below_the_entry_level_of_the_building,quality,below the entry level of the building
+distance_of_the_basement_storey_floor_from_the_entry_level,property,distance of the basement storey floor from the entry level
+14_metres,value,14 metres
+extract_ventilation_system,object,extract ventilation system
+supply_and_extract_ventilation_system,object,supply and extract ventilation system
+not_be_designed_to_be_combined_in_such_a_way_that_the_directions_of_air_flow_between_the_rooms_and_in_the_ductworks_may_change_when_the_air_flows_are_being_controlled,quality,not be designed to be combined in such a way that the directions of air flow between the rooms and in the ductworks may change when the air flows are being controlled
+21_C,value,21 C
+during_the_heating_season,quality,during the heating season
+Air_flows,object,Air flows
+working_area,object,working area
+instantaneous_carbon_monoxide_concentration,property,instantaneous carbon monoxide concentration
+7_mg_m3___6_ppm__,value,7 mg/m3 ( 6 ppm )
+connection,object,connection
+air_handling_units,object,air handling units
+chamber,object,chamber
+pressures,property,pressures
+directions,property,directions
+between_the_rooms_and_in_the_ductworks,quality,between the rooms and in the ductworks
+not_change_when_the_air_flows_of_the_units_are_being_controlled,quality,not change when the air flows of the units are being controlled
+Dwellings,object,Dwellings
+day_care_institutions,object,day-care institutions
+day_care_centres,object,day-care centres
+early_childhood_education_premises,object,early childhood education premises
+schools,object,schools
+system_that_gives_a_warning_at_an_early_stage_of_a_beginning_fire,object,system that gives a warning at an early stage of a beginning fire
+to_basement_storeys,quality,to basement storeys
+arranged,quality,arranged
+reached_from_the_ground_level_without_a_need_to_pass_through_the_exits_of_the_storeys,quality,reached from the ground level without a need to pass through the exits of the storeys
+not_be_used_as_recirculation_air,quality,not be used as recirculation air
+Humus_soil,object,Humus soil
+organic_substances,object,organic substances
+decomposing_or_rotting_from_moisture,quality,decomposing or rotting from moisture
+waste,object,waste
+not_be_left_under_new_buildings___in_their_crawl_spaces_and_in_their_gravel_backfills_functioning_as_a_drainage_layer,quality,"not be left under new buildings , in their crawl spaces and in their gravel backfills functioning as a drainage layer"
+air_barriers,object,air barriers
+vapour_barriers,object,vapour barriers
+seams,object,seams
+edges,property,edges
+tight,quality,tight
+cross_sectional_area,property,cross-sectional area
+air_duct,object,air duct
+0_06_m2,value,0.06 m2
+outdoor_air_and_exhaust_air_ducts,object,outdoor air and exhaust air ducts
+shutoff_dampers,object,shutoff dampers
+close_automatically_when_the_system_shuts_down,quality,close automatically when the system shuts down
+number_of_occupants,property,number of occupants
+120,value,120
+total_minimum_width,property,total minimum width
+calculated_by_increasing_the_original_1_200_millimetres_by_400_millimetres_for_each_additional_group_of_60_people,quality,"calculated by increasing the original 1,200 millimetres by 400 millimetres for each additional group of 60 people"
+system,object,system
+clearly_labelled,quality,clearly labelled
+stop_switch,object,stop switch
+located_in_an_easily_accessible_place,quality,located in an easily accessible place
+chambers,object,chambers
+withstand_the_loads_caused_by_fan_pressure_while_the_shutoff_dampers_are_closed,quality,withstand the loads caused by fan pressure while the shutoff dampers are closed
+evacuation_area,object,evacuation area
+maximum_number_of_occupants,property,maximum number of occupants
+second,quality,second
+exit_passageways,object,exit passageways
+elevator_shafts,object,elevator shafts
+means,object,means
+smoke_extraction,quality,smoke extraction
+flow_of_replacement_air,quality,flow of replacement air
+to_enhance,quality,to enhance
+efficiency,property,efficiency
+firefighting_and_rescue_operations,object,firefighting and rescue operations
+smoke_can_be_extracted_from_the_different_premises_in_the_building,quality,smoke can be extracted from the different premises in the building
+fire_and_service_rescue_equipment,object,fire and service rescue equipment
+sufficiently_close_access_to_the_building___emergency_access_road__,quality,sufficiently close access to the building ( emergency access road )
+flow_from_spaces_of_higher_indoor_air_purity_to_spaces_of_lower_indoor_air_purity,quality,flow from spaces of higher indoor air purity to spaces of lower indoor air purity
+enclosure,object,enclosure
+construction_layers,object,construction layers
+form_a_whole___preventing_the_transfer_of_water_across_the_surface_of_the_enclosure_into_the_construction_by_wind___slanting_rain_and_wind_pressure,quality,"form a whole , preventing the transfer of water across the surface of the enclosure into the construction by wind , slanting rain and wind pressure"
+accessible_for_inspections_and_maintenance_of_the_equipment_and_systems_located_there,quality,accessible for inspections and maintenance of the equipment and systems located there
+flooring,object,flooring
+wall_covering,object,wall covering
+provide_waterproofing,quality,provide waterproofing
+waterproofing,object,waterproofing
+installed_under_the_flooring_and_behind_the_wall_covering,quality,installed under the flooring and behind the wall covering
+functioning_as_waterproofing,quality,functioning as waterproofing
+located_underneath_the_flooring_in_wet_rooms,quality,located underneath the flooring in wet rooms
+watertight_connection,object,watertight connection
+joint,object,joint
+between_waterproofing_and_the_floor_drain,quality,between waterproofing and the floor drain
+floor_structures,object,floor structures
+prevent_the_accumulation_of_damaging_moisture_into_the_roof_structure_resulting_from_water_vapour_diffusion_or_airflow,quality,prevent the accumulation of damaging moisture into the roof structure resulting from water vapour diffusion or airflow
+wet_room,object,wet room
+allow_water_to_flow_into_the_floor_drain,quality,allow water to flow into the floor drain
+exterior_wall,object,exterior wall
+against_the_ground,quality,against the ground
+isolated_against_water_pressure,quality,isolated against water pressure
+structurally_managed,quality,structurally managed
+water_removal_system,object,water removal system
+allowing_the_cellar_wall_to_dry_in_an_outward_direction,quality,allowing the cellar wall to dry in an outward direction
+prevent_moisture_from_the_surrounding_ground_and_storm_water_from_penetrating_the_wall_structure,quality,prevent moisture from the surrounding ground and storm water from penetrating the wall structure
+wet_rooms,object,wet rooms
+rigid_enough_that_the_thermal_and_moisture_movements_do_no_damage_the_wet_room_waterproofing_or_surface_structures,quality,rigid enough that the thermal and moisture movements do no damage the wet room waterproofing or surface structures
+slots,object,slots
+leading_to_the_ventilation_space_or_gap_of_a_structure_equipped_with_a_ventilation_space_or_gap,quality,leading to the ventilation space or gap of a structure equipped with a ventilation space or gap
+positioned,quality,positioned
+ventilation_space_or_gap,object,ventilation space or gap
+fully_usable_as_a_ventilation_air_flow_path,quality,fully usable as a ventilation air flow path
+free_of_enclosed___non_ventilated_areas,quality,"free of enclosed , non-ventilated areas"
+2_100_millimetres,value,"2,100 millimetres"
+automatic,quality,automatic
+fire_extinguishing_system,object,fire-extinguishing system
+suitable_for_its_purpose,quality,suitable for its purpose
+emergency_centre,object,emergency centre
+not_drift_into_or_migrate_as_a_capillary_flow_from_the_wet_rooms_to_the_surrounding_structures_and_rooms,quality,not drift into or migrate as a capillary flow from the wet rooms to the surrounding structures and rooms
+not_freeze_in_the_systems_pipes___channels_or_devices,quality,"not freeze in the systems pipes , channels or devices"
+Waterproofing,object,Waterproofing
+water_pressure_barrier,object,water pressure barrier
+located_on_the_outer_surface_of_the_exterior_wall_structure_against_the_ground_or_inside_the_exterior_thermal_insulation_facing_the_ground,quality,located on the outer surface of the exterior wall structure against the ground or inside the exterior thermal insulation facing the ground
+Wet_room,object,Wet room
+form_a_whole_which_is_impermeable_on_all_waterproofed_surfaces_as_well_as_on_their_seams___penetrations_and_joints,quality,"form a whole which is impermeable on all waterproofed surfaces as well as on their seams , penetrations and joints"
+district_heat_network,object,district heat network
+taken_as_meaning_any_other_district_heat_network,quality,taken as meaning any other district heat network
+upstand,quality,upstand
+built_on_site,object,built on site
+U_value,property,U-value
+0_35W____m2K__,value,0.35W/ ( m2K )
+elements,object,elements
+concealed_by_subsequent_work,quality,concealed by subsequent work
+onsite,quality,onsite
+audit,object,audit
+undertaken_to_confirm_that_the_designed_details_have_been_constructed,quality,undertaken to confirm that the designed details have been constructed
+Boards,object,Boards
+fitted_to_the_structure,quality,fitted to the structure
+avoid_any_gaps_between_board_edges_and_between_the_board_facings,quality,avoid any gaps between board edges and between the board facings
+Floors,object,Floors
+foundations,object,foundations
+insulation,object,insulation
+installed_tight_to_the_structure,quality,installed tight to the structure
+without_air_gaps_between_insulation_panels_and_at_edges,quality,without air gaps between insulation panels and at edges
+block_of_flats,object,block of flats
+terrace_of_houses,object,terrace of houses
+average,quality,average
+target_primary_energy_rate,property,target primary energy rate
+target_emission_rate,property,target emission rate
+target_fabric_energy_efficiency_rate,property,target fabric energy efficiency rate
+calculated_as_an_alternative_to_individual_target_rates_for_each_dwelling,quality,calculated as an alternative to individual target rates for each dwelling
+roof_lights,object,roof-lights
+U_values,property,U-values
+calculated_based_on_a_horizontal_position,quality,calculated based on a horizontal position
+insulated_at_ceiling_level,quality,insulated at ceiling level
+long_term,quality,long-term
+protection,property,protection
+insulation_layer,object,insulation layer
+boarded,quality,boarded
+provided_above_the_insulation,quality,provided above the insulation
+give_access_for_maintenance,quality,give access for maintenance
+roof_windows,object,roof windows
+calculated_based_on_a_vertical_position,quality,calculated based on a vertical position
+Fully_insulated,quality,Fully insulated
+cavity_closers,object,cavity closers
+used,quality,used
+installed_tight_to_the_insulation_and_cavity_apertures,quality,installed tight to the insulation and cavity apertures
+thermal_element,object,thermal element
+upgraded,quality,upgraded
+0_7W____m2K__,value,0.7W/ ( m2K )
+performance,property,performance
+thicker,quality,thicker
+equivalent,quality,equivalent
+window_unit,object,window unit
+standard_thickness,property,standard thickness
+6mm,value,6mm
+shown_to_meet_the_required_standard,quality,shown to meet the required standard
+thermal_energy,object,thermal energy
+supplied_from_a_district_heat_network,quality,supplied from a district heat network
+CO2_emission_factor,property,CO2 emission factor
+primary_energy_factor,property,primary energy factor
+delivered_to_the_dwelling_by_the_district_heat_network,quality,delivered to the dwelling by the district heat network
+dwelling_primary_energy_rate,property,dwelling primary energy rate
+dwelling_emission_rate,property,dwelling emission rate
+dwelling_fabric_energy_efficiency_rate,property,dwelling fabric energy efficiency rate
+covered_by_the_pool,quality,covered by the pool
+replaced_with_the_equivalent_area_of_floor_with_the_same_U_value_as_the_pool_surround,quality,replaced with the equivalent area of floor with the same U-value as the pool surround
+Moisture_resistant,quality,Moisture-resistant
+fitted_below_damp_proof_course_level,quality,fitted below damp-proof course level
+extend_to_the_foundation_block_structure,quality,extend to the foundation block/structure
+Mortar_snots,object,Mortar snots
+removed_to_ensure_a_tight_fit_with_the_structure_and_cavities_cleared_of_all_debris,quality,removed to ensure a tight fit with the structure and cavities cleared of all debris
+single,quality,single
+calculated_for_a_product_range_of_doors,quality,calculated for a product range of doors
+configuration,property,configuration
+chosen_for_the_calculation,quality,chosen for the calculation
+worst_performing_in_the_product_range,quality,worst performing in the product range
+Perimeter_insulation,object,Perimeter insulation
+thickness,property,thickness
+25mm,value,25mm
+Roofs,object,Roofs
+installed_tight_to_the_structure___without_air_gaps,quality,"installed tight to the structure , without air gaps"
+extend_to_the_wall_insulation,quality,extend to the wall insulation
+Single,quality,Single
+supplemented_with_low_emissivity_secondary_glazing,quality,supplemented with low-emissivity secondary glazing
+annual_percentage_of_heat,property,annual percentage of heat
+supplied_from_each_heat_source,quality,supplied from each heat source
+same_for_each_newly_connected_dwelling,quality,same for each newly connected dwelling
+calculated_using_the_same_averaging_methodology,quality,calculated using the same averaging methodology
+building_fabric,object,building fabric
+constructed,quality,constructed
+reasonably_continuous_across_newly_built_elements,quality,reasonably continuous across newly built elements
+required,quality,required
+air_gap,object,air gap
+rafters,object,rafters
+heating_appliance,object,heating appliance
+with_its_appropriate_fuel,quality,with its appropriate fuel
+used_in_the_calculation_of_the_dwelling_primary_energy_rate_and_dwelling_emission_rate,quality,used in the calculation of the dwelling primary energy rate and dwelling emission rate
+insulant,object,insulant
+chosen_to_achieve_the_lowest_practicable_U_value,quality,chosen to achieve the lowest practicable U-value
+same,quality,same
+approved,quality,approved
+used_to_calculate,quality,used to calculate
+centre_pane_U_value,property,centre pane U-value
+1_2W____m2K__,value,1.2W/ ( m2K )
+element,object,element
+meets_the_limiting_U_value,quality,meets the limiting U-value
+calculated_for_the_element_in_the_appropriate_plane___either_horizontal_or_vertical,quality,calculated for the element in the appropriate plane - either horizontal or vertical
+rooflights,object,rooflights
+rooflight_and_kerb_assemblies,object,rooflight-and-kerb assemblies
+based_on_the_developed_surface_area_of_the_rooflight___U_values_____which_is_often_greater_than_the_area_of_the_roof_opening,quality,"based on the developed surface area of the rooflight ( U-values ) , which is often greater than the area of the roof opening"
+based_on_the_outer_developed_surface_area___which_is_often_greater_than_the_area_of_the_roof_opening,quality,"based on the outer developed surface area , which is often greater than the area of the roof opening"
+assessed_for_the_whole_fabric_element,quality,assessed for the whole fabric element
+Walls,object,Walls
+fitted_without_any_air_gaps,quality,fitted without any air gaps
+tight_to_the_structure___cavity_closers___lintels_and_cavity_trays,quality,"tight to the structure , cavity closers , lintels and cavity trays"
+undergoes_a_major_renovation,quality,undergoes a major renovation
+technical,quality,technical
+environmental,quality,environmental
+economic,quality,economic
+feasibility_of_installing_high_efficiency_alternative_systems,property,feasibility of installing high-efficiency alternative systems
+thermal_integrity,property,thermal integrity
+insulated_plane,object,insulated plane
+maintained,property,maintained
+insulated,quality,insulated
+plaster_board,object,plaster-board
+used_in_reveals_to_abut_jambs,quality,used in reveals to abut jambs
+considered_within_reveal_soffits,quality,considered within reveal soffits
+damage,object,damage
+tears,object,tears
+repaired_before_boarding,quality,repaired before boarding
+unavoidable,quality,unavoidable
+gaps,object,gaps
+between_boards,quality,between boards
+infilled,quality,infilled
+compressible_tape,object,compressible tape
+low_expansion_foam,object,low expansion foam
+gables,object,gables
+party_walls,object,party walls
+extend_to_the_wall,quality,extend to the wall
+between_the_wall_and_joist,quality,between the wall and joist
+100mm,value,100mm
+perimeter_insulation,object,perimeter insulation
+Cavity_walls,object,Cavity walls
+inner,quality,inner
+block_leaf,object,block leaf
+mortar_joint,object,mortar joint
+fully_filled,quality,fully filled
+pointed_within_the_cavity,quality,pointed within the cavity
+Complex,quality,Complex
+details,object,details
+avoided_wherever_possible,quality,avoided wherever possible
+Designs,object,Designs
+clearly_indicate_means_to_limit_disruption_to_the_insulation,quality,clearly indicate means to limit disruption to the insulation
+Drawings,object,Drawings
+provided_for_junctions,quality,provided for junctions
+reviewed_by_the_designer_and_installer,quality,reviewed by the designer and installer
+include_specifications_for_key_materials,quality,include specifications for key materials
+relevant,quality,relevant
+drawings,object,drawings
+provided_to_clearly_identify_the_position___continuity_and_extent_of_the_air_barrier,quality,"provided to clearly identify the position , continuity and extent of the air barrier"
+Fixings,object,Fixings
+fixings,object,fixings
+not_damage_the_airtightness_barrier,quality,not damage the airtightness barrier
+timber_frame,object,timber frame
+where_the_intermediate_floor_structure_breaches_the_external_wall_insulation,quality,where the intermediate floor structure breaches the external wall insulation
+used_in_the_external_wall,quality,used in the external wall
+included_within_the_depth_of_the_intermediate_floor_structure,quality,included within the depth of the intermediate floor structure
+common,quality,common
+leaf_lintels,object,leaf lintels
+base_plate,object,base plate
+not_be_continuous,quality,not be continuous
+lintel_core,object,lintel core
+recessed,quality,recessed
+meter_boxes,object,meter boxes
+cold_side,property,cold side
+construction,object,construction
+installed_behind_the_enclosure,quality,installed behind the enclosure
+sizes,property,sizes
+cylinder,object,cylinder
+not_listed,quality,not listed
+from_the_cylinder,quality,from the cylinder
+__16_66_8_33_V0_4_______1000_24__,value,( 16.66 8.33 V0.4 ) / ( 1000 24 )
+Foundations,object,Foundations
+blocks,object,blocks
+below_the_damp_proof_course,quality,below the damp-proof course
+same_as_those_specified_in_the_design_for_the_above_ground_main_wall_element___in_masonry_construction__,quality,same as those specified in the design for the above-ground main wall element ( in masonry construction )
+Grommets,object,Grommets
+flexible_collars,object,flexible collars
+used_around_incoming_services,quality,used around incoming services
+sealed_to_the_air_barrier_with_air_sealing_tape_or_sealant,quality,sealed to the air barrier with air-sealing tape or sealant
+Ground_floors,object,Ground floors
+wall_to_floor_junctions,object,wall-to-floor junctions
+detailed_to_achieve_continuity_of_insulation,quality,detailed to achieve continuity of insulation
+continuous_with_wall_insulation,quality,continuous with wall insulation
+existing_system,object,existing system
+boiler,object,boiler
+hot_water_storage_vessel,object,hot water storage vessel
+replaced,quality,replaced
+accessible,quality,accessible
+Incoming_services,object,Incoming services
+ducts,object,ducts
+cables,object,cables
+grouped,quality,grouped
+minimise_how_often_the_air_barrier_is_penetrated,quality,minimise how often the air barrier is penetrated
+ensuring_sufficient_space_to_allow_adequate_screed_flow_between_ducts,quality,ensuring sufficient space to allow adequate screed flow between ducts
+Insulated,quality,Insulated
+used_for_all_construction_types,quality,used for all construction types
+Intermediate,quality,Intermediate
+floors,object,floors
+floor_to_wall_junctions,object,floor-to-wall junctions
+detailed_to_ensure_that_insulation_in_the_external_wall_is_continuous,quality,detailed to ensure that insulation in the external wall is continuous
+Internal,quality,Internal
+building_services,object,building services
+services_penetrate_the_air_barrier,quality,services penetrate the air barrier
+holes,object,holes
+small_as_possible,quality,small as possible
+core_drilled_to_limit_damage,quality,core drilled to limit damage
+Loft_hatches,object,Loft hatches
+hatches,object,hatches
+suitably_designed_and_installed_to_ensure_optimum_airtightness,quality,suitably designed and installed to ensure optimum airtightness
+Masonry,quality,Masonry
+cavity,quality,cavity
+extend_below_the_damp_proof_course,quality,extend below the damp-proof course
+at_least_the_equivalent_of_one_full_block_height___215mm___below_the_underside_of_the_floor_structure_slab_and_beyond_the_depth_of_the_floor_insulation,quality,at least the equivalent of one full block height ( 215mm ) below the underside of the floor structure/slab and beyond the depth of the floor insulation
+thermal_bridging,object,thermal bridging
+including_at_the_party_wall,quality,including at the party wall
+reasonably_limited,quality,reasonably limited
+penetrating_services,object,penetrating services
+sealed_to_the_air_barrier,quality,sealed to the air barrier
+using_proprietary_grommets_or_collars_with_air_sealing_tape_or_sealant,quality,using proprietary grommets or collars with air-sealing tape or sealant
+installed_when_the_eaves_are_still_accessible,quality,installed when the eaves are still accessible
+between_the_air_barrier_and_the_insulation_layer,quality,between the air barrier and the insulation layer
+filled_with_solid_material,quality,filled with solid material
+boards,object,boards
+lapped,quality,lapped
+tongue_and_groove,quality,tongue and groove
+considered,quality,considered
+Voids,object,Voids
+between_insulation_at_the_top_of_the_external_wall_and_the_cavity_wall_timber_frame_insulation,quality,between insulation at the top of the external wall and the cavity wall/timber frame insulation
+fully_filled_with_insulation,quality,fully filled with insulation
+Wall,object,Wall
+installed_to_the_top_of_the_wall_plate,quality,installed to the top of the wall plate
+places,object,places
+eaves,object,eaves
+this,object,this
+above_the_cavity_closure_or_barrier,quality,above the cavity closure or barrier
+installing,quality,installing
+renovating,quality,renovating
+thermal_elements,object,thermal elements
+being_installed,quality,being installed
+draught_proofed,quality,draught-proofed
+air_leakage_gaps,object,air-leakage gaps
+filled,quality,filled
+controlled_fitting,object,controlled fitting
+well_fitted,quality,well fitted
+reasonably_draught_proof,quality,reasonably draught-proof
+system_for_onsite_electricity_generation,object,system for onsite electricity generation
+electrical_output,object,electrical output
+appropriately_sized_for_the_site_and_available_infrastructure,quality,appropriately sized for the site and available infrastructure
+effective,quality,effective
+controls,object,controls
+commissioned,quality,commissioned
+testing_and_adjusting_as_necessary_to_ensure_that_it_produces_the_maximum_electricity_that_is_reasonable_in_the_circumstances,quality,testing and adjusting as necessary to ensure that it produces the maximum electricity that is reasonable in the circumstances
+membranes,object,membranes
+penetrated,quality,penetrated
+careful,quality,careful
+detailing,object,detailing
+used_to_achieve_a_robust_and_durable_seal_at_these_penetrations,quality,used to achieve a robust and durable seal at these penetrations
+pipework,object,pipework
+above_ground,quality,above ground
+pipe,object,pipe
+insulating_performance,property,insulating performance
+buried_part,object,buried part
+sheathing_board,object,sheathing board
+forms_the_air_barrier,quality,forms the air barrier
+airsealing_tape,object,airsealing tape
+applied_at_junctions_and_edges,quality,applied at junctions and edges
+continuity,property,continuity
+air_barrier,object,air barrier
+window_and_door_units,object,window and door units
+connect_to_the_primary_air_barrier,quality,connect to the primary air barrier
+window_and_door_frames,object,window and door frames
+taped_to_surrounding_structural_openings___using_air_sealing_tape,quality,"taped to surrounding structural openings , using air sealing tape"
+building_primary_energy_rate,property,building primary energy rate
+building_emission_rate,property,building emission rate
+calculated_for_non_exempt_buildings_with_low_energy_demand,quality,calculated for non-exempt buildings with low energy demand
+central_heating,object,central heating
+primary,quality,primary
+hot_water_circuits,object,hot water circuits
+thoroughly_cleaned_and_flushed_out,quality,thoroughly cleaned and flushed out
+CO2_emissions,property,CO2 emissions
+primary_energy,property,primary energy
+thermal_energy_streams,object,thermal energy streams
+trigeneration_scheme,object,trigeneration scheme
+attributed_in_proportion_to_the_output_energy_streams,quality,attributed in proportion to the output energy streams
+Control,property,Control
+maximised,quality,maximised
+heat_gain,property,heat gain
+uninsulated,quality,uninsulated
+permitted,quality,permitted
+proportion_of_the_cooling_load_relating_to_distribution_pipework,property,proportion of the cooling load relating to distribution pipework
+total_load,property,total load
+Cooling_pipework,object,Cooling pipework
+insulated_along_its_whole_length,quality,insulated along its whole length
+heating_and_cooling_systems,object,heating and cooling systems
+non_domestic_building,object,non-domestic building
+heat_generator,object,heat generator
+room,object,room
+thermostatic_room_controls,object,thermostatic room controls
+Hot_water_pipework,object,Hot water pipework
+inside,quality,inside
+outside,quality,outside
+always_useful,quality,always useful
+other,quality,other
+requires_thicker_glass,quality,requires thicker glass
+planned_time_of_use,property,planned time of use
+modular,quality,modular
+portable,quality,portable
+in_a_single_location,quality,in a single location
+two_years,value,two years
+practical,quality,practical
+heating_technology,object,heating technology
+electric_resistance_heating,object,electric resistance heating
+total_useful_floor_area,property,total useful floor area
+1000m2,value,1000m2
+automatic_meter_reading,object,automatic meter reading
+data_collection_facilities,object,data collection facilities
+cases,object,cases
+Energy_Related_Products_Regulations_and_the_Building_Regulations_both_apply,quality,Energy Related Products Regulations and the Building Regulations both apply
+both,quality,both
+standards,property,standards
+met,quality,met
+hard_water_areas,object,hard water areas
+suitable,quality,suitable
+measures,object,measures
+treat_the_feed_water_to_water_heaters_and_the_hot_water_circuit_of_combination_boilers_to_reduce_limescale_accumulation,quality,treat the feed water to water heaters and the hot water circuit of combination boilers to reduce limescale accumulation
+calculated_as_if_the_area_covered_by_the_pool_were_replaced_with_the_equivalent_area_of_floor_with_the_same_U_value_as_the_pool_surround,quality,calculated as if the area covered by the pool were replaced with the equivalent area of floor with the same U-value as the pool surround
+Modular,quality,Modular
+planned,quality,planned
+service_life,property,service life
+at_a_single_location,quality,at a single location
+shown_to_comply_with_the_energy_efficiency_requirements,quality,shown to comply with the energy efficiency requirements
+intended_time_of_use,property,intended time of use
+grid_supplied,quality,grid-supplied
+electricity,object,electricity
+0_136kgCO2_kWh,value,0.136kgCO2/kWh
+1_501kWhPE_kWh,value,1.501kWhPE/kWh
+System_controls,object,System controls
+wired,quality,wired
+when_there_is_no_demand_for_space_heating___the_heating_appliance_and_pump_are_switched_off,quality,"when there is no demand for space heating , the heating appliance and pump are switched off"
+notified_that_the_analysis_of_high_efficiency_alternative_systems_has_been_undertaken___that_it_is_documented_and_is_available_to_be_verified,quality,"notified that the analysis of high-efficiency alternative systems has been undertaken , that it is documented and is available to be verified"
+building_envelope,object,building envelope
+insulated_to_a_degree_that_is_reasonable_in_the_particular_case,quality,insulated to a degree that is reasonable in the particular case
+submission,object,submission
+report,object,report
+signed_by_a_suitably_qualified_person,quality,signed by a suitably qualified person
+detailing_how_the_CO2_emission_factors_and_primary_energy_factors_have_been_derived,quality,detailing how the CO2 emission factors and primary energy factors have been derived
+default,quality,default
+condition,property,condition
+off,value,off
+outputs,property,outputs
+renewable,quality,renewable
+systems,object,systems
+separately_monitored,quality,separately monitored
+service,property,service
+appropriate_to_the_requirements_of_the_space,quality,appropriate to the requirements of the space
+enduse_categories,object,enduse categories
+heating,object,heating
+cooling,object,cooling
+submetered,quality,submetered
+at_least_90_of_the_annual_energy_consumption_of_each_fuel_can_be_assigned_to_an_enduse,quality,at least 90 of the annual energy consumption of each fuel can be assigned to an enduse
+limits,property,limits
+design,property,design
+display_windows,object,display windows
+similar,quality,similar
+their,object,their
+calculation_of_primary_energy_and_CO2_emissions,property,calculation of primary energy and CO2 emissions
+Thermal_bridging,object,Thermal bridging
+calculated_for_the_element_in_the_appropriate_plane_either_horizontal_or_vertical,quality,calculated for the element in the appropriate plane either horizontal or vertical
+based_on_the_developed_surface_area_of_the_rooflight___U_d_values_____which_is_often_greater_than_the_area_of_the_roof_opening,quality,"based on the developed surface area of the rooflight ( U_d values ) , which is often greater than the area of the roof opening"
+assessed_for_the_whole_thermal_element,quality,assessed for the whole thermal element
+controlled_fittings,object,controlled fittings
+airleakage_gaps,object,airleakage gaps
+moved_to_a_new_location___in_which_its_intended_time_of_use_is_less_than_two_years,quality,"moved to a new location , in which its intended time of use is less than two years"
+these_calculations,object,these calculations
+provided_as_evidence_that_the_energy_efficiency_requirements_are_met,quality,provided as evidence that the energy efficiency requirements are met
+not_feasible_to_install,quality,not feasible to install
+space_heating_system,object,space heating system
+can_operate_at_this_temperature,quality,can operate at this temperature
+designed_to_the_lowest_design_temperature_possible_that_will_still_meet_the_heating_needs_of_the_building,quality,designed to the lowest design temperature possible that will still meet the heating needs of the building
+alongside_the_leading_edge,property,alongside the leading edge
+enable_a_wheelchair_user_to_reach_and_grip_the_door_handle___then_open_the_door_without_releasing_hold_on_the_handle_and_without_the_footrest_colliding_with_the_return_wall,quality,"enable a wheelchair user to reach and grip the door handle , then open the door without releasing hold on the handle and without the footrest colliding with the return wall"
+Accessible,quality,Accessible
+entrances,object,entrances
+clearly_sign_posted,quality,clearly sign-posted
+easily_recognisable,quality,easily recognisable
+Activation,property,Activation
+safety_features,property,safety features
+time_lapse,property,time-lapse
+entry,property,entry
+powered,quality,powered
+door_systems,object,door systems
+carefully_considered_to_suit_the_needs_of_people_who_can_not_react_quickly,quality,carefully considered to suit the needs of people who can not react quickly
+principal,quality,principal
+alternative_accessible,quality,alternative accessible
+surfaced,quality,surfaced
+people_are_able_to_travel_along_them_easily___without_excessive_effort_and_without_the_risk_of_tripping_or_falling,quality,"people are able to travel along them easily , without excessive effort and without the risk of tripping or falling"
+boxings,object,boxings
+WC_cloakroom,object,WC/cloakroom
+bath,object,bath
+shower_room,object,shower room
+strong_enough_to_support_grab_rails___seats_and_other_adaptations_that_could_impose_a_load_of_1_5kN_m2,quality,"strong enough to support grab rails , seats and other adaptations that could impose a load of 1.5kN/m2"
+Consideration,object,Consideration
+wide_range_of_building_types,object,wide range of building types
+for_use_by_children_and_people_of_short_stature,quality,for use by children and people of short stature
+Consumer_units,object,Consumer units
+mounted,quality,mounted
+switches,object,switches
+between_1350mm_and_1450mm_above_floor_level,quality,between 1350mm and 1450mm above floor level
+Door_furniture,object,Door furniture
+manually_operated_non_powered,quality,manually operated non-powered
+easy_to_operate_by_people_with_limited_manual_dexterity,quality,easy to operate by people with limited manual dexterity
+readily_apparent_against_the_background_of_the_door,quality,readily apparent against the background of the door
+capable_of_opening_outwards,quality,capable of opening outwards
+wheelchair_adaptable,quality,wheelchair adaptable
+bathrooms,object,bathrooms
+open_inwards_providing_that_the_door_can_be_easily_rehung_to_open_outwards,quality,open inwards providing that the door can be easily rehung to open outwards
+accessible_to_all___particularly_wheelchair_users_and_people_with_limited_physical_dexterity,quality,"accessible to all , particularly wheelchair users and people with limited physical dexterity"
+Entrance,object,Entrance
+capable_of_being_held_closed_when_not_in_use,quality,capable of being held closed when not in use
+bedroom,object,bedroom
+floor_area,property,floor area
+8_5m2,value,8.5m2
+2_4m,value,2.4m
+gradients,property,gradients
+within_the_approach,quality,within the approach
+as_gentle_as_possible,quality,as gentle as possible
+Handrails,object,Handrails
+set_at_heights_that_are_convenient_for_all_users_of_the_building,quality,set at heights that are convenient for all users of the building
+extend_safely_beyond_the_top_and_bottom_of_a_flight_of_steps___or_a_ramp___to_give_both_stability_and_warning_of_the_presence_of_a_change_in_level,quality,"extend safely beyond the top and bottom of a flight of steps , or a ramp , to give both stability and warning of the presence of a change in level"
+spaced_away_from_the_wall,quality,spaced away from the wall
+rigidly_supported_in_a_way_that_avoids_impeding_finger_grip,quality,rigidly supported in a way that avoids impeding finger grip
+people,object,people
+obtain_tickets_for_pay_and_display_parking,quality,obtain tickets for pay and display parking
+ticket_dispensing_machines,object,ticket dispensing machines
+located,quality,located
+allows_a_person_in_a_wheelchair___or_a_person_of_short_stature___to_gain_access_close_to_the_machine_and_reach_the_payment_and_ticket_dispensing_functions,quality,"allows a person in a wheelchair , or a person of short stature , to gain access close to the machine and reach the payment and ticket dispensing functions"
+site,object,site
+constraints,property,constraints
+approach,object,approach
+1_20,value,1:20
+incorporating_ramped_access,quality,incorporating ramped access
+main_staff,quality,main staff
+alternative,quality,alternative
+double_buggies,object,double buggies
+wider_than_wheelchairs,quality,wider than wheelchairs
+building_type,object,building type
+entrance_door,object,entrance door
+wide_enough_to_allow_unrestricted_passage_for_a_variety_of_users___including_wheelchair_users___people_carrying_luggage___people_with_assistance_dogs___and_parents_with_pushchairs_and_small_children,quality,"wide enough to allow unrestricted passage for a variety of users , including wheelchair users , people carrying luggage , people with assistance dogs , and parents with pushchairs and small children"
+People,object,People
+appreciate_easily_where_to_place_their_feet_by_highlighting_nosings_and_avoiding_open_rises,quality,appreciate easily where to place their feet by highlighting nosings and avoiding open rises
+see_other_people_approaching_from_the_opposite_direction,quality,see other people approaching from the opposite direction
+allowing_sufficient_reaction_time_for_both_parties_to_avoid_a_collision,quality,allowing sufficient reaction time for both parties to avoid a collision
+with_mobility_impairments,quality,with mobility impairments
+arrive_as_passengers,quality,arrive as passengers
+alight_from_a_vehicle_close_to_the_principal_entrance___or_alternative_accessible_entrance___of_the_building,quality,"alight from a vehicle close to the principal entrance , or alternative accessible entrance , of the building"
+convenient_for_entry_into_the_building,quality,convenient for entry into the building
+Skirtings,object,Skirtings
+50mm,value,50mm
+total_thickness,property,total thickness
+shallow_projecting,property,shallow projecting
+casings,object,casings
+1800mm,value,1800mm
+discounted_when_measuring_clear_width,quality,discounted when measuring clear width
+designed___within_the_overall_constraints_of_space,quality,"designed , within the overall constraints of space"
+difference_in_level_between_the_entrance_storey_and_the_site_entry_point_is_minimised,quality,difference in level between the entrance storey and the site entry point is minimised
+handle,object,handle
+living_area,object,living area
+700_1000mm_above_floor_level,quality,700-1000mm above floor level
+remote_opening_device,object,remote opening device
+within_this_height_range,quality,within this height range
+warning,object,warning
+placed_sufficiently_in_advance_of_the_hazard_to_allow_time_to_stop,quality,placed sufficiently in advance of the hazard to allow time to stop
+not_be_so_narrow_that_it_might_be_missed_in_a_single_stride,quality,not be so narrow that it might be missed in a single stride
+sufficient,quality,sufficient
+approach_the_building,quality,approach the building
+pass_others_who_are_travelling_in_the_opposite_direction,quality,pass others who are travelling in the opposite direction
+carry_out_all_necessary_manoeuvres,quality,carry out all necessary manoeuvres
+WC_doors,object,WC doors
+Wheelchair_accessible,quality,Wheelchair accessible
+level_access,quality,level access
+shower,object,shower
+illuminance,property,illuminance
+200_lux,value,200 lux
+difference_in_light_reflectance_value,property,difference in light reflectance value
+20_points,value,20 points
+sanitary_facilities,object,sanitary facilities
+wheelchair_accessible,quality,wheelchair accessible
+basins,object,basins
+sinks,object,sinks
+wall_hung___typically_with_their_rim_770_850mm_above_finished_floor_level__,quality,wall hung ( typically with their rim 770-850mm above finished floor level )
+clear_zone,object,clear zone
+beneath_basins___services_and_pedestals,quality,"beneath basins , services and pedestals"
+maximised_to_enable_wheelchair_users_to_approach,quality,maximised to enable wheelchair users to approach
+WC_pans,object,WC pans
+400mm,value,400mm
+high,property,high
+over_its_whole_length_or_in_part,quality,over its whole length or in part
+that_part,object,that part
+designed_as_ramped_access,quality,designed as ramped access
+agreed_level_of_provision,property,agreed level of provision
+clearly_recorded,quality,clearly recorded
+used_only_as_an_emergency_exit,quality,used only as an emergency exit
+lead_to_spaces_in_a_dwelling_or_accommodation_facility_other_than_those_that_are_necessary_for_living,quality,lead to spaces in a dwelling or accommodation facility other than those that are necessary for living
+riser,property,riser
+220_millimetres,value,220 millimetres
+tread,property,tread
+cleansable,quality,cleansable
+water_seal,object,water seal
+protective_part,property,protective part
+contains_only_vertical_structures,quality,contains only vertical structures
+cube,object,cube
+100_millimetres,value,100 millimetres
+pass_through_its_openings,quality,pass through its openings
+In_connection_with_repair_and_alteration_work,quality,In connection with repair and alteration work
+heat_emitters,object,heat emitters
+hot_water_ring_duct,object,hot water ring duct
+heat_emission_capacity,property,heat emission capacity
+to_be_installed,quality,to be installed
+200_Watts_per_room,value,200 Watts per room
+water_system,object,water system
+leakproof,quality,leakproof
+storm_water_system,object,storm water system
+cleansable_via_manholes_and_fittings,quality,cleansable via manholes and fittings
+withstand_internal_excess_pressure_of_at_least_1_000_kilopascals,quality,withstand internal excess pressure of at least 1 000 kilopascals
+control_appliance,object,control appliance
+plumbing_fixture,object,plumbing fixture
+surface_temperature,property,surface temperature
+40_degrees_Celsius,value,40 degrees Celsius
+apartment_specific,quality,apartment-specific
+located_in_a_place_where_they_are_easy_to_install___read_and_service,quality,"located in a place where they are easy to install , read and service"
+side_edges,property,side edges
+fitted_with_a_raised_camber_to_prevent_slipping_over_the_edge,quality,fitted with a raised camber to prevent slipping over the edge
+50_millimetres,value,50 millimetres
+able_to_pass_through_the_opening_between_the_plane_level_and_the_handrail_or_wall,quality,able to pass through the opening between the plane level and the handrail or wall
+Products,object,Products
+suitable_for_conveying_household_water,quality,suitable for conveying household water
+water_point,object,water point
+connected_to_the_sewer_via_a_drainage_fixture,quality,connected to the sewer via a drainage fixture
+water_temperature,property,water temperature
+water,object,water
+hot_water_system,object,hot water system
+55_degrees_Celsius,value,55 degrees Celsius
+available_from_the_hot_water_plumbing_fixture_within_20_seconds,quality,available from the hot water plumbing fixture within 20 seconds
+extend_to_a_height_of_at_least_0_7_metres_from_the_surface_of_the_landing_or_step,quality,extend to a height of at least 0.7 metres from the surface of the landing or step
+Leakage,property,Leakage
+pressure_sewer,object,pressure sewer
+groundwater_zone,object,groundwater zone
+detectable,quality,detectable
+repair_and_alteration,quality,repair and alteration
+fitted_with_a_floor_drain,quality,fitted with a floor drain
+showers,object,showers
+wash_rooms,object,wash rooms
+in_connection_with_saunas,quality,in connection with saunas
+laundry_room,object,laundry room
+heat_distribution_room,object,heat distribution room
+ventilation_unit_room,object,ventilation unit room
+toilet_facility,object,toilet facility
+intended_for_public_use,quality,intended for public use
+technical_utility_room,object,technical utility room
+with_a_possibility_to_water_damage,quality,with a possibility to water damage
+car_wash_facility,object,car wash facility
+special_facilities,object,special facilities
+cleansed_by_water_rinsing,quality,cleansed by water rinsing
+public,quality,public
+outdoor_and_indoor_spaces,object,outdoor and indoor spaces
+continue_at_least_300_millimetres_past_the_start_and_end_points_of_the_structure,quality,continue at least 300 millimetres past the start and end points of the structure
+ramps,object,ramps
+2_4_metres,value,2.4 metres
+located_in_assembly_areas,quality,located in assembly areas
+placed_so_as_to_divide_the_passageway_into_parts_no_wider_than_the_abovementioned_width,quality,placed so as to divide the passageway into parts no wider than the abovementioned width
+malfunction_detector,object,malfunction detector
+integrity,property,integrity
+ensured_with_pressure_testing_using_water,quality,ensured with pressure testing using water
+between_a_door_that_opens_onto_a_landing_and_the_upper_edge_of_the_ramp_or_flight_of_stairs,quality,between a door that opens onto a landing and the upper edge of the ramp or flight of stairs
+400_millimetres,value,400 millimetres
+on_the_side_wall,quality,on the side wall
+on_the_end_wall,quality,on the end wall
+designed_so_as_to_prevent_detrimental_cross_flow_of_water_from_the_hot_water_pipe_to_the_cold_water_pipe_or_vice_versa,quality,designed so as to prevent detrimental cross-flow of water from the hot water pipe to the cold water pipe or vice versa
+Vertical,quality,Vertical
+structural,quality,structural
+leak_detectors,object,leak detectors
+each,quality,each
+not_visible,quality,not visible
+installed_for_the_entire_length,quality,installed for the entire length
+Drains,object,Drains
+convey_foundation_drainage_water_via_drainage_wells_to_a_collection_well,quality,convey foundation drainage water via drainage wells to a collection well
+can_not_be_conveyed_from_the_drainage_points_of_a_building_with_gravity_unloading_via_a_gradient_sewer,quality,can not be conveyed from the drainage points of a building with gravity unloading via a gradient sewer
+between_floor_levels,quality,between floor levels
+covered,quality,covered
+designed_and_shaped,quality,designed and shaped
+allows_a_firm_grip,quality,allows a firm grip
+After_a_period_of_non_use_of_at_least_eight_hours,quality,After a period of non-use of at least eight hours
+24_degrees_Celsius,value,24 degrees Celsius
+steps,object,steps
+covered_or_heated,quality,covered or heated
+staircases,object,staircases
+300_millimetres,value,300 millimetres
+160_millimetres,value,160 millimetres
+270_millimetres,value,270 millimetres
+waste_water_pumping_station,object,waste water pumping station
+rise,property,rise
+intended_for_everyday_use,quality,intended for everyday use
+180_millimetres,value,180 millimetres
+flushing,property,flushing
+carried_out_with_household_water,quality,carried out with household water
+remove_any_dirt_and_debris_from_the_pipe_network,quality,remove any dirt and debris from the pipe network
+cleanouts,object,cleanouts
+entire_pipeline_may_be_cleansed,quality,entire pipeline may be cleansed
+pressure_gauge,object,pressure gauge
+thermometers,object,thermometers
+water_pipe,object,water pipe
+mixed_domestic_hot_water,quality,mixed domestic hot water
+water_heater,object,water heater
+domestic_hot_water,quality,domestic hot water
+ring_duct,object,ring duct
+measure_the_temperature_of_return_water,quality,measure the temperature of return water
+throttling_valves,object,throttling valves
+65_degrees_Celsius,value,65 degrees Celsius
+Waste_water,object,Waste water
+conveyed_to_the_sewer_of_the_water_supply_plant_or_for_purification_property_specifically_or_to_a_cesspit,quality,conveyed to the sewer of the water supply plant or for purification property-specifically or to a cesspit
+pass_between_the_lower_edge_of_a_barriers_protective_part_and_the_landing_or_the_upper_surface_or_edge_of_a_step,quality,pass between the lower edge of a barriers protective part and the landing or the upper surface or edge of a step
+water_meter,object,water meter
+property,object,property
+located_in_a_place_where_it_is_easy_to_install___read_and_service_and_where_it_can_not_freeze,quality,"located in a place where it is easy to install , read and service and where it can not freeze"
+uncovered,quality,uncovered
+unheated,quality,unheated
+390_millimetres,value,390 millimetres
+130_millimetres,value,130 millimetres
+After_rebating,quality,After rebating
+frame_components,object,frame components
+32mm,value,32mm
+timber,object,timber
+three,value,three
+compliance_checklist,object,compliance checklist
+completed,quality,completed
+looped,quality,looped
+cords,object,cords
+fitted_with_child_safety_devices,quality,fitted with child safety devices
+panel,object,panel
+doorset,object,doorset
+15mm,value,15mm
+thick,property,thick
+Beading,object,Beading
+mechanically_fixed,quality,mechanically fixed
+glued_in_position,quality,glued in position
+Between_the_locking_points,quality,Between the locking points
+mortice_lock,object,mortice lock
+surface_mounted,quality,surface-mounted
+rim_lock,object,rim lock
+400_600mm,value,400-600mm
+Buildings,object,Buildings
+located_near_to_significant_local_pollution_sources,quality,located near to significant local pollution sources
+designed_to_minimise_the_intake_of_external_air_pollutants,quality,designed to minimise the intake of external air pollutants
+Door,object,Door
+rails,object,rails
+stiles,object,stiles
+muntins,object,muntins
+44mm,value,44mm
+sections,property,sections
+centrally_hinged,quality,centrally hinged
+assessed_as_a_single_side___bottom_or_top_hung_window,quality,"assessed as a single side , bottom or top hung window"
+shutters,object,shutters
+used_in_the_day_and_the_windows_opened_only_when_it_is_cooler_outside,quality,used in the day and the windows opened only when it is cooler outside
+Frames,object,Frames
+mechanically_fixed_to_the_structure_of_the_building_in_accordance_with_the_manufacturers_installation_instructions,quality,mechanically fixed to the structure of the building in accordance with the manufacturers installation instructions
+Guarding,object,Guarding
+sized_to_prevent_the_passage_of_a_100mm_sphere,quality,sized to prevent the passage of a 100mm sphere
+system_for_purge_ventilation,object,system for purge ventilation
+habitable_room,object,habitable room
+demonstrate_compliance_with_Part_F_of_the_Building_Regulations,quality,demonstrate compliance with Part F of the Building Regulations
+network_distribution_point,object,network distribution point
+cabinet,object,cabinet
+box,object,box
+mounted_on_a_wall,quality,mounted on a wall
+telegraph_pole,object,telegraph pole
+proportion,value,proportion
+opened_with_a_very_low_risk_of_occupants_falling_from_height,quality,opened with a very low risk of occupants falling from height
+considered_to_form_part_of_the_overheating_mitigation_strategy,quality,considered to form part of the overheating mitigation strategy
+resist_unauthorised_access,quality,resist unauthorised access
+part,object,part
+access_can_be_gained_to_a_flat_within_the_building,quality,access can be gained to a flat within the building
+installation,property,installation
+electrical_installations,object,electrical installations
+protect_persons_operating___maintaining_or_altering_the_installations_from_fire_or_injury,quality,"protect persons operating , maintaining or altering the installations from fire or injury"
+Sufficient,quality,Sufficient
+information,object,information
+about_the_overheating_mitigation_strategy_and_its_maintenance_requirements,quality,about the overheating mitigation strategy and its maintenance requirements
+given_to_owners_so_that_it_can_be_used_effectively,quality,given to owners so that it can be used effectively
+provided_to_ensure_that_people_can_operate___maintain_or_alter_an_electrical_installation_with_reasonable_safety,quality,"provided to ensure that people can operate , maintain or alter an electrical installation with reasonable safety"
+solid,quality,solid
+laminated,quality,laminated
+density,property,density
+600kg_m3,value,600kg/m3
+provided_in_a_clear_manner,quality,provided in a clear manner
+for_a_non_technical_audience,quality,for a non-technical audience
+main_doors,object,main doors
+for_entering_a_dwelling,quality,for entering a dwelling
+front_door,object,front door
+door_viewer,object,door viewer
+exist_to_see_callers,quality,exist to see callers
+clear,quality,clear
+next_to_the_doorset,quality,next to the doorset
+front_doorset,object,front doorset
+multipoint_locking_system,object,multipoint locking system
+PAS_3621___key_locking_on_both_sides__,quality,PAS 3621 ( key locking on both sides )
+PAS_8621___non_key_locking_on_the_internal_face__,quality,PAS 8621 ( non-key locking on the internal face )
+PAS_10621___non_key_locking_on_the_internal_face___but_with_an_external_locking_override_facility__,quality,"PAS 10621 ( non-key locking on the internal face , but with an external locking override facility )"
+morticed_bolts,object,morticed bolts
+projection,property,projection
+20mm,value,20mm
+from_the_top_and_bottom_corners_of_the_door,property,from the top and bottom corners of the door
+avoid_any_door_construction_joints,quality,avoid any door construction joints
+non_primary,quality,non-primary
+securely_held_in_place,quality,securely held in place
+Part_2_and_3,object,Part 2 and 3
+signed_by_a_person_who_is_competent_to_design_the_residential_building,quality,signed by a person who is competent to design the residential building
+resilient_layer,object,resilient layer
+timber_sheathing,object,timber sheathing
+9mm,value,9mm
+expanded_metal,object,expanded metal
+resilient_material,object,resilient material
+to_the_full_height_of_the_door,quality,to the full height of the door
+600mm,value,600mm
+either_side,property,either side
+230mm,value,230mm
+erected,quality,erected
+given_to_the_owner_of_the_building_to_allow_them_to_use_the_overheating_mitigation_strategy_effectively,quality,given to the owner of the building to allow them to use the overheating mitigation strategy effectively
+free_area,object,free area
+available_for_ventilation_during_sleeping_hours,quality,available for ventilation during sleeping hours
+opened_securely,quality,opened securely
+considered_to_provide_useful_ventilation,quality,considered to provide useful ventilation
+common_access_point,object,common access point
+gigabit_capable_public_electronic_communications_network,object,gigabit-capable public electronic communications network
+gigabit_ready_physical_infrastructure,object,gigabit-ready physical infrastructure
+gained_via_an_interconnecting_doorset_from_the_garage,object,gained via an interconnecting doorset from the garage
+garage_doorset,object,garage doorset
+pedestrian,quality,pedestrian
+vehicular,quality,vehicular
+interconnecting_doorset,object,interconnecting doorset
+secure_doorset,object,secure doorset
+work,object,work
+carried_out_so_as_to_ensure_that_the_building_is_equipped_in_addition_with_a_common_access_point_for_gigabit_capable_public_electronic_communications_networks,quality,carried out so as to ensure that the building is equipped in addition with a common access point for gigabit-capable public electronic communications networks
+Window_handles,object,Window handles
+open_outwards,property,open outwards
+650mm,value,650mm
+from_the_inside_face_of_the_wall,property,from the inside face of the wall
+at_its_maximum_openable_angle,quality,at its maximum openable angle
+remaining,quality,remaining
+access_to_cable_routes,quality,access to cable routes
+cable_routes,object,cable routes
+laid_as_straight_as_possible,quality,laid as straight as possible
+access_points,object,access points
+pulled_through_in_future,quality,pulled through in future
+cavity_walls,object,cavity walls
+leaves,object,leaves
+90mm,value,90mm
+cavities,object,cavities
+alongside_the_cable_duct,quality,alongside the cable duct
+backfilled_in_a_way_that_avoids_damage_to_the_duct,quality,backfilled in a way that avoids damage to the duct
+future_connection,object,future connection
+locations,property,locations
+clearly_identified,quality,clearly identified
+labelled,quality,labelled
+provided_with_cable_routes,quality,provided with cable routes
+Cable_routes,object,Cable routes
+provided_from_a_metered_electricity_supply_point_to_the_future_connection_location,quality,provided from a metered electricity supply point to the future connection location
+Each,quality,Each
+letter,object,letter
+mixed_use,quality,mixed-use
+car_park,object,car park
+requirements,object,requirements
+to_install_electric_vehicle_charge_points_or_cable_routes,quality,to install electric vehicle charge points or cable routes
+first_be_applied_to_those_parking_spaces_outside_the_covered_car_park,quality,first be applied to those parking spaces outside the covered car park
+cost,property,cost
+installing_the_required_electric_vehicle_charge_point_and_cable_routes_for_electric_vehicle_charge_points,quality,installing the required electric vehicle charge point and cable routes for electric vehicle charge points
+7__,value,7 %
+total_cost,property,total cost
+major,quality,major
+renovation,object,renovation
+exempt_from_the_requirement_to_install_the_electric_vehicle_charge_point,quality,exempt from the requirement to install the electric vehicle charge point
+electric_vehicle_charge_points,object,electric vehicle charge points
+installed_in_a_minimum_of_one_fifth_of_the_total_number_of_parking_spaces,quality,installed in a minimum of one fifth of the total number of parking spaces
+associated,quality,associated
+not_a_requirement_to_install_electric_vehicle_charge_points,quality,not a requirement to install electric vehicle charge points
+installed_in_all_remaining_associated_parking_spaces,quality,installed in all remaining associated parking spaces
+not_enough,quality,not enough
+outside_of_the_covered_car_park,quality,outside of the covered car park
+meet_the_requirement_to_install_electric_vehicle_charge_points,quality,meet the requirement to install electric vehicle charge points
+surface_area,property,surface area
+whole,quality,whole
+included_when_assessing_whether_the_works_constitute_a_major_renovation,quality,included when assessing whether the works constitute a major renovation
+One,value,One
+electric_vehicle_charge_point,object,electric vehicle charge point
+Solid_walls,object,Solid walls
+constructed_of_coursed_brickwork_or_blockwork,quality,constructed of coursed brickwork or blockwork
+1_16,value,1/16
+combined_dead___imposed_and_wind_loads,property,"combined dead , imposed and wind loads"
+sustained,quality,sustained
+transmitted_by_it_to_the_ground,quality,transmitted by it to the ground
+safely,quality,safely
+without_causing_such_deflection_or_deformation_of_any_part_of_the_building___or_such_movement_of_the_ground___as_will_impair_the_stability_of_any_part_of_another_building,quality,"without causing such deflection or deformation of any part of the building , or such movement of the ground , as will impair the stability of any part of another building"
+installing_electric_vehicle_charge_points_and_cable_routes,quality,installing electric vehicle charge points and cable routes
+total_capital_cost,property,total capital cost
+location,property,location
+suitable_for_use_by_electric_vehicles_with_charging_inlets_in_different_places,quality,suitable for use by electric vehicles with charging inlets in different places
+methodology,object,methodology
+determining_costs,quality,determining costs
+consistent_between_all_elements_of_the_calculation_to_allow_a_fair_comparison_between_the_cost_of_the_major_renovation_and_the_cost_of_electric_vehicle_charge_point_infrastructure,quality,consistent between all elements of the calculation to allow a fair comparison between the cost of the major renovation and the cost of electric vehicle charge point infrastructure
+selection,property,selection
+critical,quality,critical
+situations,object,situations
+for_design,quality,for design
+made_reflecting_the_conditions_that_can_reasonably_be_foreseen_during_future_use,quality,made reflecting the conditions that can reasonably be foreseen during future use
+sign,object,sign
+sited_where_a_person_installing_an_electric_vehicle_charge_point_in_future_will_see_it,quality,sited where a person installing an electric vehicle charge point in future will see it
+suitably,quality,suitably
+weatherproof_for_its_location,quality,weatherproof for its location
+termination_points,property,termination points
+cable_duct,object,cable duct
+sited_where_access_to_maintain_in_future_is_unrestricted,quality,sited where access to maintain in future is unrestricted
+text,object,text
+displayed_over_three_lines,quality,displayed over three lines
+total_number,property,total number
+have_access_to_either___a___cable_routes___b___an_electric_vehicle_charge_point,quality,have access to either : a . cable routes ; b . an electric vehicle charge point
+number,property,number
+wall_ties,object,wall ties
+horizontal_spacing,property,horizontal spacing
+900mm,value,900mm
+vertical_spacing,property,vertical spacing
+450mm,value,450mm
+spaced,quality,spaced
+number_of_wall_ties_per_square_metre,property,number of wall ties per square metre
+2_5_ties_m2,value,2.5 ties/m2
+undergoing_major_renovation,quality,undergoing major renovation
+not_a_residential_building_or_a_mixeduse_building,quality,not a residential building or a mixeduse building
+after_the_major_renovation_is_completed,quality,after the major renovation is completed
+access_to_one_electric_vehicle_charge_point,quality,access to one electric vehicle charge point
+installed_in_a_minimum_of_one_fifth_of_the_total_number_of_remaining_parking_spaces,quality,installed in a minimum of one fifth of the total number of remaining parking spaces
+not_a_residential_building_or_a_mixed_use_building,quality,not a residential building or a mixed-use building
+other_than_residential_or_mixed_use_buildings,quality,other than residential or mixed-use buildings
+requirement,object,requirement
+to_install_an_electric_vehicle_charge_point,quality,to install an electric vehicle charge point
+met_by_installing_a_charge_point_in_a_parking_space_that_is_not_within_a_covered_car_park,quality,met by installing a charge point in a parking space that is not within a covered car park
+to_install_electric_vehicle_charge_points,quality,to install electric vehicle charge points
+met_by_installing_charge_points_in_parking_spaces_that_are_not_within_a_covered_car_park,quality,met by installing charge points in parking spaces that are not within a covered car park
+undertaken_on_a_mixed_use_building,quality,undertaken on a mixed-use building
+determined_which_parking_spaces_are_associated_parking_spaces_for_the_use_of_occupants_of_the_dwellings___and_which_parking_spaces_are_for_use_by_users_of_the_non_residential_function_of_the_building,quality,"determined which parking spaces are associated parking spaces for the use of occupants of the dwellings , and which parking spaces are for use by users of the non-residential function of the building"
+installing_only_cable_routes,quality,installing only cable routes
+to_install_either_electric_vehicle_charge_points_or_cable_routes,quality,to install either electric vehicle charge points or cable routes
+vehicle_barriers,object,vehicle barriers
+allowed_around_the_future_connection_location,quality,allowed around the future connection location
+for_commercial_purposes,quality,for commercial purposes
+conservatory,object,conservatory
+porch,object,porch
+thermal_separation_from_the_existing_dwelling,quality,thermal separation from the existing dwelling
+built_to_a_minimum_standard_of_total_energy_performance,quality,built to a minimum standard of total energy performance
+chemical,quality,chemical
+inhibitor,object,inhibitor
+heating_circuit,object,heating circuit
+protect_against_scale_and_corrosion,quality,protect against scale and corrosion
+air_pressure_test,object,air pressure test
+carried_out_on_every_dwelling,quality,carried out on every dwelling
+at_least_the_same_extent_as_in_the_existing_dwelling,quality,at least the same extent as in the existing dwelling
+Appliances,object,Appliances
+capable_of_burning_both_biomass_fuel_and_fossil_fuel,quality,capable of burning both biomass fuel and fossil fuel
+for_dua_lfuel_appliances,quality,for dua-lfuel appliances
+smoke_control_area,object,smoke control area
+anthracite_figure,property,anthracite figure
+Areas,object,Areas
+not_enclosed,quality,not enclosed
+covered_ways,object,covered ways
+excluded,quality,excluded
+Biomass_heating,object,Biomass heating
+supplemented_by_an_alternative_appliance,quality,supplemented by an alternative appliance
+based_on_a_weighted_average_for_the_two_fuels,quality,based on a weighted average for the two fuels
+newly_constructed,quality,newly constructed
+built,quality,built
+notice,object,notice
+of_the_calculations,quality,of the calculations
+heat_pump,object,heat pump
+isolated_from_the_ground_heat_exchanger_such_that_damage_to_the_internal_heat_exchanger_inside_the_heat_pump_is_avoided,quality,isolated from the ground heat exchanger such that damage to the internal heat exchanger inside the heat pump is avoided
+commissioned_to_ensure_that_they_use_no_more_fuel_and_power_than_is_reasonable_in_the_circumstances,quality,commissioned to ensure that they use no more fuel and power than is reasonable in the circumstances
+carrying_out_work_on_an_existing_system___such_as_installing_or_replacing_components,quality,"carrying out work on an existing system , such as installing or replacing components"
+energy_performance,property,energy performance
+components,object,components
+assessed,quality,assessed
+installing_a_complete_new_or_replacement_system,quality,installing a complete new or replacement system
+commissioning_plan,object,commissioning plan
+given_to_the_building_control_body_with_the_design_stage_dwelling_primary_energy_rate___dwelling_emission_rate_and_dwelling_fabric_energy_efficiency_rate_calculations,quality,"given to the building control body with the design stage dwelling primary energy rate , dwelling emission rate and dwelling fabric energy efficiency rate calculations"
+Geo_location,property,Geo-location
+enabled_to_confirm_the_location___date_and_time,quality,"enabled to confirm the location , date and time"
+image,object,image
+Ground_arrays,object,Ground arrays
+header_pipes,object,header pipes
+manifolds,object,manifolds
+flushed_as_one_system_to_remove_all_debris_and_purged_to_remove_all_air,quality,flushed as one system to remove all debris and purged to remove all air
+total_floor_area,property,total floor area
+compensating_measures,property,compensating measures
+taken_to_improve_the_energy_efficiency_of_the_dwelling,quality,taken to improve the energy efficiency of the dwelling
+treat_the_feed_water_to_water_heaters_and_the_hot_water_circuit_of_combination_boilers_to_reduce_lime_scale_accumulation,quality,treat the feed water to water heaters and the hot water circuit of combination boilers to reduce lime-scale accumulation
+installed_where_appropriate,quality,installed where appropriate
+photograph,object,photograph
+per_detail,quality,per detail
+recorded,quality,recorded
+On_site,quality,On-site
+electricity_generation_systems,object,electricity generation systems
+commissioned_to_ensure_that_they_produce_as_much_electricity_as_is_reasonable_in_the_circumstances,quality,commissioned to ensure that they produce as much electricity as is reasonable in the circumstances
+Photographs,object,Photographs
+taken_at_appropriate_construction_stages_for_each_detail_when_completed___but_prior_to_closingup_works,quality,"taken at appropriate construction stages for each detail when completed , but prior to closingup works"
+Systems,object,Systems
+commissioned_to_optimise_the_use_of_energy_for_pumping,quality,commissioned to optimise the use of energy for pumping
+annual,quality,annual
+energy_savings,property,energy savings
+estimated_using_the_Standard_Assessment_Procedure,quality,estimated using the Standard Assessment Procedure
+newly_created,quality,newly created
+signed_by_a_suitably_qualified_person___detailing_how_the_combined_emission_factor_has_been_derived,quality,"signed by a suitably qualified person , detailing how the combined emission factor has been derived"
+calculated_using_the_measured_air_permeability,quality,calculated using the measured air permeability
+energy_efficiency,property,energy efficiency
+historic,quality,historic
+traditional,quality,traditional
+improved_only_if_doing_so_will_not_cause_long_term_deterioration_of_the_buildings_fabric_or_fittings,quality,improved only if doing so will not cause long-term deterioration of the buildings fabric or fittings
+flushed_and_purged_as_a_separate_system,quality,flushed and purged as a separate system
+isolated_from_the_ground_array_system,quality,isolated from the ground array system
+photographs,object,photographs
+made_available_to_the_energy_assessor_and_the_building_control_body,quality,made available to the energy assessor and the building control body
+results,property,results
+pressure_tests,object,pressure tests
+including_any_test_failures,quality,including any test failures
+reported_to_the_building_control_body,quality,reported to the building control body
+calculated_using_one_of_the_calculation_tools_in_the_approved_methodology___used_in_line_with_the_version_policy_as_stated_in_the_methodology,quality,"calculated using one of the calculation tools in the approved methodology , used in line with the version policy as stated in the methodology"
+Units,object,Units
+slinky,quality,slinky
+ground_arrays,object,ground arrays
+flushed_in_both_directions,quality,flushed in both directions
+replacing,quality,replacing
+installed_generation_capacity,property,installed generation capacity
+that,property,that
+demonstrated_to_be_more_appropriate_or_effective,quality,demonstrated to be more appropriate or effective
+wet,quality,wet
+newly_installed,quality,newly installed
+fully_replaced,quality,fully replaced
+emitters,object,emitters
+sized,quality,sized
+allow_the_space_heating_system_to_operate_effectively,quality,allow the space heating system to operate effectively
+meets_the_heating_needs_of_the_dwelling___at_a_maximum_flow_temperature_of_55C_or_lower,quality,"meets the heating needs of the dwelling , at a maximum flow temperature of 55C or lower"
+specification,property,specification
+comfort_cooling_systems,object,comfort cooling systems
+based_on_a_heat_gain_calculation_for_the_dwelling,quality,based on a heat gain calculation for the dwelling
+gas_fired,quality,gas-fired
+combination_boiler,object,combination boiler
+following,quality,following
+energy_efficiency_measures,property,energy efficiency measures
+appropriate_to_the_system,quality,appropriate to the system
+Heat_pumps,object,Heat pumps
+selected_to_meet_the_full_space_heating_requirement_at_the_design_condition_chosen_for_heat_loss_calculations,quality,selected to meet the full space heating requirement at the design condition chosen for heat loss calculations
+Variable_volume_control_systems,object,Variable volume control systems
+used_to_reduce_the_volume_of_water_and_the_pressure_difference_required_from_the_pumps_under_part_load,quality,used to reduce the volume of water and the pressure difference required from the pumps under part load
+luminous_efficacy,property,luminous efficacy
+75_light_source_lumens_per_circuit_watt,value,75 light source lumens per circuit-watt
+manual,quality,manual
+control,object,control
+acceptable,quality,acceptable
+heating_systems,object,heating systems
+future,quality,future
+local,quality,local
+district_heat_networks,object,district heat networks
+located_and_installed_subject_to_the_manufacturers_guidance,quality,located and installed subject to the manufacturers guidance
+electrically_operated_appliance,object,electrically operated appliance
+integral_remote,object,integral remote
+thermostatic_control,object,thermostatic control
+renewable_technology,object,renewable technology
+wind_turbine,object,wind turbine
+photovoltaic_array,object,photovoltaic array
+at_least_the_same_as_that_of_the_original_installation,quality,at least the same as that of the original installation
+Automatic,quality,Automatic
+input_charge,object,input charge
+not_be_significantly_oversized_in_most_circumstances,quality,not be significantly oversized in most circumstances
+cooling_appliance,object,cooling appliance
+not_be_sized_for_more_than_120_of_the_design_cooling_load,quality,not be sized for more than 120 of the design cooling load
+they_can_be_commissioned_to_suitable_ventilation_rates_so_that_spaces_are_not_significantly_over_ventilated,quality,they can be commissioned to suitable ventilation rates so that spaces are not significantly over-ventilated
+Programmable,quality,Programmable
+room_thermostats,object,room thermostats
+with_an_override_feature,quality,with an override feature
+provided_for_all_direct_electric_zones_of_the_electric_underfloor_heating_system,quality,provided for all direct electric zones of the electric underfloor heating system
+rate_of_heat_release,property,rate of heat release
+appliance,object,appliance
+adjustable___using_an_adjustable_damper_or_other_thermostatically_controlled_method,quality,"adjustable , using an adjustable damper or other thermostatically controlled method"
+Under_floor,quality,Under-floor
+intended_for_intermittent_or_cyclical_operation,quality,intended for intermittent or cyclical operation
+installed_over_unheated_rooms,quality,installed over unheated rooms
+separated_from_the_structural_floor_by_a_layer_of_insulation_with_a_thermal_resistance_of_at_least_1_25___m2K____W,quality,separated from the structural floor by a layer of insulation with a thermal resistance of at least 1.25 ( m2K ) /W
+District_heat_networks,object,District heat networks
+community_heating_systems,object,community heating systems
+designed_to_accommodate_heat_meter___s___for_each_dwelling,quality,designed to accommodate heat meter ( s ) for each dwelling
+150m2,value,150m2
+independently_controlled,quality,independently controlled
+heating_circuits,object,heating circuits
+Independent,quality,Independent
+temperature_control,object,temperature control
+hot_water_circuit,object,hot water circuit
+implemented_with_a_cylinder_thermostat_and_a_timing_device,quality,implemented with a cylinder thermostat and a timing device
+design_temperature_difference,property,design temperature difference
+community_heating_primary_circuit,object,community heating primary circuit
+20C,value,20C
+gas_combination_boiler,object,gas combination boiler
+boiler_type,property,boiler type
+selected_to_modulate_down_to_the_typical_heating_load,quality,selected to modulate down to the typical heating load
+Heating_systems,object,Heating systems
+screed_floors,object,screed floors
+65mm,value,65mm
+automatically_reduce_the_room_temperature_at_night_or_when_the_room_is_unoccupied,quality,automatically reduce the room temperature at night or when the room is unoccupied
+onsite_electricity_generation_and_storage,object,onsite electricity generation and storage
+photovoltaic_panels,object,photovoltaic panels
+battery_storage,object,battery storage
+an_appropriate_size_for_the_site___available_infrastructure_and_onsite_energy_demand,quality,"an appropriate size for the site , available infrastructure and onsite energy demand"
+test_data,object,test data
+certified_by_a_notified_body,quality,certified by a notified body
+heat_exchanger,object,heat exchanger
+between_a_solar_primary_and_secondary_system,quality,between a solar primary and secondary system
+0_1m2,value,0.1m2
+heat_exchanger_area,property,heat exchanger area
+every_1m2,quality,every 1m2
+net_absorber_area,property,net absorber area
+solar_collector,object,solar collector
+being_connected_to_a_new_dwelling,quality,being connected to a new dwelling
+not_have_a_CO2_emission_factor_for_delivered_heat_to_the_dwelling_which_is_greater_than_0_350kgCO2_kWh,quality,not have a CO2 emission factor for delivered heat to the dwelling which is greater than 0.350kgCO2/kWh
+heat_pump_installations,object,heat pump installations
+heat_sources,object,heat sources
+available_to_the_same_building,quality,available to the same building
+appropriately_incorporated_into_a_singular_control_system,quality,appropriately incorporated into a singular control system
+when_there_is_no_demand_for_space_heating_or_hot_water_the_heating_appliance_and_pump_are_switched_off,quality,when there is no demand for space heating or hot water the heating appliance and pump are switched off
+boiler_interlock,object,boiler interlock
+those,object,those
+in_contact_with_the_outside_of_the_dwelling,quality,in contact with the outside of the dwelling
+insulated_to_limit_heat_losses_to_not_more_than_10W_m2,quality,insulated to limit heat losses to not more than 10W/m2
+external_to_the_heater,quality,external to the heater
+time_switch_programmer,object,time switch/programmer
+room_thermostat,object,room thermostat
+programmable,quality,programmable
+calculated_using_the_sum_of_the_thermal_resistance_of_the_floor_finish_and_the_underlying_heated_layer___multiplied_by_10,quality,"calculated using the sum of the thermal resistance of the floor finish and the underlying heated layer , multiplied by 10"
+space_heating_systems,object,space heating systems
+installed_for_the_heating_appliance,quality,installed for the heating appliance
+integrated_in_the_heater,quality,integrated in the heater
+room_temperature_sensor,object,room temperature sensor
+linked_to_heater_firing_and_fan_speed_control,quality,linked to heater firing and fan speed control
+number_of_appliances,property,number of appliances
+one_per_100m2,value,one per 100m2
+heating_plant_emission_rate,property,heating plant emission rate
+micro_combined_heat_and_power_system,object,micro combined heat and power system
+emission_rate,property,emission rate
+regular,quality,regular
+using_the_same_fuel_as_the_microCHP,quality,using the same fuel as the microCHP
+seasonal_energy_efficiency_ratio,property,seasonal energy efficiency ratio
+air_conditioner,object,air conditioner
+working_in_cooling_mode,quality,working in cooling mode
+4_0,value,4.0
+permanent,quality,permanent
+removable,quality,removable
+seating,object,seating
+provided_as_part_of_the_design,quality,provided as part of the design
+disabled_people,object,disabled people
+have_a_choice_of_seating_location_at_spectator_events,quality,have a choice of seating location at spectator events
+held_open,quality,held open
+avoid_people_being_harmed_by_walking_into_the_door,quality,avoid people being harmed by walking into the door
+with_visual_impairment,quality,with visual impairment
+be_in_no_doubt_as_to_the_location_of_glass_doors___especially_when_they_are_within_a_glazed_screen,quality,"be in no doubt as to the location of glass doors , especially when they are within a glazed screen"
+landing_call_buttons,object,landing call buttons
+located_between_900mm_and_1100mm_from_the_floor_of_the_landing_and_at_least_500mm_from_any_return_wall,quality,located between 900mm and 1100mm from the floor of the landing and at least 500mm from any return wall
+lifting_platform_controls,object,lifting platform controls
+located_between_800mm_and_1100mm_from_the_floor_of_the_lifting_platform_and_at_least_400mm_from_any_return_wall,quality,located between 800mm and 1100mm from the floor of the lifting platform and at least 400mm from any return wall
+presence,property,presence
+closed,quality,closed
+apparent_to_visually_impaired_people_through_the_careful_choice_of_colour_and_material_for_the_door_and_its_surroundings,quality,apparent to visually impaired people through the careful choice of colour and material for the door and its surroundings
+rated_speed,property,rated speed
+platform,object,platform
+0_15m_s,value,0.15m/s
+to_appreciate_the_size_of_a_space_they_have_entered,quality,to appreciate the size of a space they have entered
+to_find_their_way_around,quality,to find their way around
+visual_contrast,property,visual contrast
+between_the_wall_and_the_ceiling,quality,between the wall and the ceiling
+between_the_wall_and_the_floor,quality,between the wall and the floor
+able_to_use_presentation_facilities,quality,able to use presentation facilities
+exceptional_circumstances,property,exceptional circumstances
+wheelchair_platform_stairlift,object,wheelchair platform stairlift
+considered___provided_its_installation_does_not_conflict_with_requirements_for_means_of_escape,quality,"considered , provided its installation does not conflict with requirements for means of escape"
+users,object,users
+able_to_locate_suitable_seating,quality,able to locate suitable seating
+move_safely_and_easily_to_and_from_the_seating_area_and_ancillary_accommodation___such_as_lavatories___dining_rooms_and_bedroom_suites,quality,"move safely and easily to and from the seating area and ancillary accommodation , such as lavatories , dining rooms and bedroom suites"
+lifting_device,object,lifting device
+chosen,quality,chosen
+internal_stairs,object,internal stairs
+always_be_provided_as_an_alternative_means_of_vertical_access,quality,always be provided as an alternative means of vertical access
+designed_to_suit_ambulant_disabled_people_and_those_with_impaired_sight,quality,designed to suit ambulant disabled people and those with impaired sight
+Corridors,object,Corridors
+wide_enough_to_allow_people_with_buggies___people_carrying_cases_or_people_on_crutches_to_pass_others_on_the_access_route,quality,"wide enough to allow people with buggies , people carrying cases or people on crutches to pass others on the access route"
+with_hearing_impairments,quality,with hearing impairments
+able_to_participate_fully_in_conferences___committee_meetings_and_study_groups,quality,"able to participate fully in conferences , committee meetings and study groups"
+potential,quality,potential
+barriers,object,barriers
+use,property,use
+avoided_whenever_appropriate,quality,avoided whenever appropriate
+identifying_the_floor_reached,quality,identifying the floor reached
+provided_on_each_landing_in_a_location_that_can_be_easily_seen_from_the_lifting_device,quality,provided on each landing in a location that can be easily seen from the lifting device
+it_contrasts_visually_with_its_surrounding,quality,it contrasts visually with its surrounding
+floor_areas,object,floor areas
+located_at_different_levels,quality,located at different levels
+about_the_building,quality,about the building
+easily_obtained_from_a_reception_point_or_gathered_from_notice_boards_and_signs,quality,easily obtained from a reception point or gathered from notice boards and signs
+sleeping_accommodation,object,sleeping accommodation
+hotels,object,hotels
+motels,object,motels
+student_accommodation,object,student accommodation
+designed_for_independent_use_by_wheelchair_users,quality,designed for independent use by wheelchair users
+minimum,quality,minimum
+dimensions,property,dimensions
+1100mm,value,1100mm
+1400mm,value,1400mm
+deep,property,deep
+located_at_90Â__relative_to_each_other,quality,located at 90Â° relative to each other
+lifting_platform,object,lifting platform
+enclosed,quality,enclosed
+provision,object,provision
+being_made_for_an_accompanied_wheelchair_user,quality,being made for an accompanied wheelchair user
+given_to_providing_an_area_next_to_certain_seats_for_an_assistance_dog_to_rest,quality,given to providing an area next to certain seats for an assistance dog to rest
+is_open,quality,is open
+with_impaired_sight,quality,with impaired sight
+able_to_identify_the_door_opening_within_the_wall___as_well_as_the_leading_edge_of_the_door,quality,"able to identify the door opening within the wall , as well as the leading edge of the door"
+needed_for_fire_control,quality,needed for fire control
+electrically_powered,quality,electrically powered
+hold_open_devices,object,hold-open devices
+swing_free,quality,swing-free
+used_as_appropriate,quality,used as appropriate
+Lift_door_systems,object,Lift door systems
+designed_to_allow_adequate_time_for_people___and_any_assistance_dogs___to_enter_or_leave_the_lift_without_coming_into_contact_with_closing_doors,quality,"designed to allow adequate time for people , and any assistance dogs , to enter or leave the lift without coming into contact with closing doors"
+travel_distance,property,travel distance
+2m,value,2m
+where_there_is_no_liftway_enclosure_and_no_floor_penetration,quality,where there is no liftway enclosure and no floor penetration
+where_there_is_a_liftway_enclosure,quality,where there is a liftway enclosure
+Signs,property,Signs
+indicating_the_location_of_a_lifting_device_accessible_by_mobility_impaired_people,quality,indicating the location of a lifting device accessible by mobility-impaired people
+clearly_visible_from_the_building_entrance,quality,clearly visible from the building entrance
+absence,property,absence
+harmonised,quality,harmonised
+European_Standards,object,European Standards
+products,object,products
+travel,property,travel
+3m,value,3m
+product_certificate,property,product certificate
+issued_by_a_Notified_Body,quality,issued by a Notified Body
+apparent,quality,apparent
+shut,quality,shut
+refreshment_facilities,object,refreshment facilities
+bars_and_counters,object,bars and counters
+at_a_level_suitable_for_wheelchair_users,quality,at a level suitable for wheelchair users
+mobility_impaired,quality,mobility-impaired
+going,object,going
+300mm,value,300mm
+preferred,quality,preferred
+visually,quality,visually
+acoustically_reflective,quality,acoustically reflective
+wall_surfaces,object,wall surfaces
+minimised_within_the_lifting_platform_to_prevent_discomfort_for_people_with_visual_and_hearing_impairment,quality,minimised within the lifting platform to prevent discomfort for people with visual and hearing impairment
+lobby,object,lobby
+large_enough,quality,large enough
+shape,property,shape
+to_allow_a_wheelchair_user_or_a_person_pushing_a_pram_to_move_clear_of_one_door_before_opening_the_second_door,quality,to allow a wheelchair user or a person pushing a pram to move clear of one door before opening the second door
+Manual_controls,object,Manual controls
+entrance_doors,object,entrance doors
+clearly_distinguishable_against_the_background,quality,clearly distinguishable against the background
+not_located_so_that_a_person___having_used_the_control___needs_to_move_to_avoid_contact_with_the_door_as_it_opens,quality,"not located so that a person , having used the control , needs to move to avoid contact with the door as it opens"
+All,quality,All
+wheelchair_users,object,wheelchair users
+able_to_reach_and_use_the_controls_that_summon_and_direct_the_lifting_platform,quality,able to reach and use the controls that summon and direct the lifting platform
+Good,quality,Good
+acoustic_design,object,acoustic design
+employed_to_achieve,quality,employed to achieve
+acoustic_environment,object,acoustic environment
+that_is_neither_too_reverberant_nor_too_absorbent,quality,that is neither too reverberant nor too absorbent
+so_that_announcements_and_conversations_can_be_heard_clearly,quality,so that announcements and conversations can be heard clearly
+able_to_reach_and_use_the_controls_that_summon_and_direct_the_lifting_device,quality,able to reach and use the controls that summon and direct the lifting device
+service_building,object,service building
+reception,property,reception
+sales_counter,property,sales counter
+convenient,quality,convenient
+at_a_level_suitable_for_a_wheelchair_user_or_a_seated_person,quality,at a level suitable for a wheelchair user or a seated person
+passenger_lift,object,passenger lift
+most_suitable_means_of_vertical_access,quality,most suitable means of vertical access
+provided_wherever_possible,quality,provided wherever possible
+commissioning_notice,object,commissioning notice
+given_to_the_building_control_body,quality,given to the building control body
+copy,object,copy
+submitted_to_the_building_control_body_as_evidence_that_the_system_has_been_correctly_installed___inspected_and_commissioned,quality,"submitted to the building control body as evidence that the system has been correctly installed , inspected and commissioned"
+only_a_basement,quality,only a basement
+treated_as_a_single_storey_dwelling_above_ground_level,quality,treated as a single-storey dwelling above ground level
+measured,quality,measured
+air_flow_rates,property,air flow rates
+Adequate,quality,Adequate
+available_for_access_to_maintain_ventilation_equipment,quality,available for access to maintain ventilation equipment
+Air_flow_rates,property,Air flow rates
+installation_and_commissioning_checklist,object,installation and commissioning checklist
+flexible,quality,flexible
+full_internal_diameter_is_maintained,quality,full internal diameter is maintained
+flow_resistance_is_minimised,quality,flow resistance is minimised
+high_rate_controls,object,high rate controls
+provided_locally_to_the_spaces_being_served,quality,provided locally to the spaces being served
+Background_ventilators,object,Background ventilators
+at_least_1700mm_above_floor_level___to_reduce_cold_draughts,quality,"at least 1700mm above floor level , to reduce cold draughts"
+easy_for_the_occupant_to_reach,quality,easy for the occupant to reach
+performance_standards,property,performance standards
+from_outside_to_inside_the_dwelling,quality,from outside to inside the dwelling
+from_inside_the_dwelling_to_outside,quality,from inside the dwelling to outside
+Continuously_running,quality,Continuously running
+set_up_to_operate_without_occupant_intervention,quality,set up to operate without occupant intervention
+for_selecting_the_high_rate_of_operation,quality,for selecting the high rate of operation
+inspected_to_ensure_that_the_following_have_been_achieved,quality,inspected to ensure that the following have been achieved
+Controls,object,Controls
+ventilators,object,ventilators
+ventilation_in_each_room_can_be_adjusted,quality,ventilation in each room can be adjusted
+Duct,object,Duct
+connections,object,connections
+mechanically_secured,quality,mechanically secured
+adequately_sealed_to_prevent_leaks,quality,adequately sealed to prevent leaks
+air_terminal,object,air terminal
+90,value,90
+office,object,office
+provide_purge_ventilation,quality,provide purge ventilation
+reduce_pollutants_before_the_office_space_is_occupied_or_after_activities_such_as_painting,quality,reduce pollutants before the office space is occupied or after activities such as painting
+Extract_ventilators,object,Extract ventilators
+sanitary_accommodation,object,sanitary accommodation
+capable_of_continuous_operation_if_required,quality,capable of continuous operation if required
+extract_ventilation,object,extract ventilation
+heat_recovery,property,heat recovery
+balanced_to_achieve_design_air_flow_rates_at_each_room_terminal,quality,balanced to achieve design air flow rates at each room terminal
+terminals,object,terminals
+automatic_flow_adjustment,property,automatic flow adjustment
+fan_unit,object,fan unit
+fan,object,fan
+speed,property,speed
+set_to_achieve_the_desired_continuous_flow_rate,quality,set to achieve the desired continuous flow rate
+fans_operating_in_normal_background_ventilation_mode_are_not_overly_noisy___taking_into_consideration_the_use_and_likely_background_level_of_noise_from_other_sources,quality,"fans operating in normal background ventilation mode are not overly noisy , taking into consideration the use and likely background level of noise from other sources"
+Hinged,quality,Hinged
+pivot,quality,pivot
+opening_angle,property,opening angle
+15_degrees,value,15 degrees
+not_suitable_for_purge_ventilation,quality,not suitable for purge ventilation
+set_to_a_significantly_closed_position_to_achieve_the_required_air_flow_rate,quality,set to a significantly closed position to achieve the required air flow rate
+reduced,quality,reduced
+rebalanced,quality,rebalanced
+exhaust_air_terminal,object,exhaust air terminal
+located_on_a_facade_that_is_exposed_to_the_prevailing_wind,quality,located on a facade that is exposed to the prevailing wind
+minimise_likely_wind_effects,quality,minimise likely wind effects
+exposed,quality,exposed
+facade,object,facade
+close_to_an_area_of_sustained_and_loud_noise,quality,close to an area of sustained and loud noise
+noise_attenuating_background_ventilator,object,noise-attenuating background ventilator
+background_ventilators,object,background ventilators
+at_least_500mm_apart,quality,at least 500mm apart
+insulating_material,object,insulating material
+cavity_wall,object,cavity wall
+prevent_the_subsequent_permeation_of_any_toxic_fumes_from_that_material_into_any_part_of_the_building_occupied_by_people,quality,prevent the subsequent permeation of any toxic fumes from that material into any part of the building occupied by people
+basement,object,basement
+bedrooms,object,bedrooms
+treated_as_having_one_bedroom,quality,treated as having one bedroom
+required_for_the_purposes_of_meeting_the_ventilation_standards,quality,required for the purposes of meeting the ventilation standards
+centralised_system,object,centralised system
+extended_into_the_additional_room,quality,extended into the additional room
+similar___to_allow_cross_ventilation,quality,"similar , to allow cross-ventilation"
+ventilation_rate,property,ventilation rate
+13l_s,value,13l/s
+index_terminal,object,index terminal
+total_flow_rate,property,total flow rate
+can_not_be_achieved_through_all_the_terminals,quality,can not be achieved through all the terminals
+increased,quality,increased
+intermittent_extract_fan,object,intermittent extract fan
+continue_to_operate_the_fan_for_at_least_15_minutes_after_the_room_is_vacated,quality,continue to operate the fan for at least 15 minutes after the room is vacated
+Insulating_materials,object,Insulating materials
+give_off_formaldehyde_fumes___either_when_used_or_later_in_normal_use__,quality,give off formaldehyde fumes ( either when used or later in normal use )
+used_to_insulate_the_cavity_in_a_cavity_wall_where_there_is_a_continuous_barrier_which_will_minimise_as_far_as_practicable_the_passage_of_fumes_to_the_occupiable_parts,quality,used to insulate the cavity in a cavity wall where there is a continuous barrier which will minimise as far as practicable the passage of fumes to the occupiable parts
+Intermittent_extract_fans,object,Intermittent extract fans
+supply_terminals,object,supply terminals
+directed,quality,directed
+avoid_draughts,quality,avoid draughts
+commissioned_in_accordance_with_an_approved_procedure,quality,commissioned in accordance with an approved procedure
+commissioned_to_provide_adequate_ventilation,quality,commissioned to provide adequate ventilation
+heat_recovery_systems,object,heat recovery systems
+designed_to_avoid_the_moist_air_from_the_wet_rooms_recirculating_to_the_habitable_rooms,quality,designed to avoid the moist air from the wet rooms recirculating to the habitable rooms
+Rooms,object,Rooms
+designed_to_contain_printers_and_photocopiers_in_substantial_use___more_than_30_minutes_per_hour__,quality,designed to contain printers and photocopiers in substantial use ( more than 30 minutes per hour )
+not_be_designed_to_be_occupied,quality,not be designed to be occupied
+through_infiltration,quality,through infiltration
+ventilation_provision,property,ventilation provision
+shown_to_meet_an_equal_level_of_performance,quality,shown to meet an equal level of performance
+Purge_ventilation,object,Purge ventilation
+capable_of_extracting_at_least_four_air_changes_per_hour_per_room_directly_to_the_outside,quality,capable of extracting at least four air changes per hour per room directly to the outside
+Rigid_connectors,object,Rigid connectors
+jubilee_clips,object,jubilee clips
+used_for_flexible_ducting_to_ensure_a_good_seal,quality,used for flexible ducting to ensure a good seal
+Rigid_ducts,object,Rigid ducts
+used_wherever_possible,quality,used wherever possible
+allow_fresh_air_into_the_home,quality,allow fresh air into the home
+left_open,quality,left open
+actual,quality,actual
+equivalent_area,property,equivalent area
+air_extract_rate,property,air extract rate
+20_litres_per_second,value,20 litres per second
+machine,object,machine
+during_use,quality,during use
+air_flow_rate,property,air flow rate
+ventilation_fans,object,ventilation fans
+tested,quality,tested
+air_flow_resistance,property,air flow resistance
+considered_when_specifying_ventilation_systems,quality,considered when specifying ventilation systems
+treated_separately_as_a_single_storey_dwelling_above_ground_level,quality,treated separately as a single-storey dwelling above ground level
+cooker_hood,object,cooker hood
+span,property,span
+full_width,property,full width
+cooker,object,cooker
+correct,quality,correct
+operation,property,operation
+control_function,property,control function
+tested_where_it_is_practical,quality,tested where it is practical
+approximately_achieve_the_desired_continuous_flow_rate,quality,approximately achieve the desired continuous flow rate
+general,quality,general
+adjoining_rooms,object,adjoining rooms
+achieved_using_background_ventilators,quality,achieved using background ventilators
+flow_rate,property,flow rate
+set_with_the_terminal_fully_open,quality,set with the terminal fully open
+adjusted_to_achieve_the_required_flow_rates_at_each_terminal,quality,adjusted to achieve the required flow rates at each terminal
+adjusted_to_achieve_the_required_flows_at_each_terminal,quality,adjusted to achieve the required flows at each terminal
+above_ground_level,quality,above ground level
+considered_separately,quality,considered separately
+quality_of_the_installation,property,quality of the installation
+ventilator_product,object,ventilator product
+checked_to_ensure_it_is_correctly_mounted_within_the_wall_or_window_aperture,quality,checked to ensure it is correctly mounted within the wall or window aperture
+three_part,quality,three-part
+form,object,form
+completed_for_each_installation_address,quality,completed for each installation address
+total_number_of_ventilators,property,total number of ventilators
+habitable_rooms,object,habitable rooms
+kitchens,object,kitchens
+properties,object,properties
+four,value,four
+Five_ventilators,value,Five ventilators
+total_supply_air_flow,property,total supply air flow
+distributed_proportionately_to_the_volume_of_each_habitable_room,quality,distributed proportionately to the volume of each habitable room
+To_reduce_the_risks_to_the_health_of_persons_in_buildings,quality,To reduce the risks to the health of persons in buildings
+formaldehyde_fumes,object,formaldehyde fumes
+given_off_by_urea_formaldehyde_foams,quality,given off by urea formaldehyde foams
+not_penetrate_to_occupied_parts_of_buildings_to_an_extent_which_would_give_rise_to_an_irritant_concentration,quality,not penetrate to occupied parts of buildings to an extent which would give rise to an irritant concentration
+not_penetrate_to_the_occupied_parts_of_buildings_to_an_extent_which_would_give_rise_to_an_irritant_concentration,quality,not penetrate to the occupied parts of buildings to an extent which would give rise to an irritant concentration
+Ventilation_intakes,object,Ventilation intakes
+located_away_from_the_direct_impact_of_the_sources_of_local_pollution,quality,located away from the direct impact of the sources of local pollution
+controllable,quality,controllable
+Ventilation_systems,object,Ventilation systems
+recirculate_air_between_more_than_one_space___room_or_zone,quality,"recirculate air between more than one space , room or zone"
+able_to_operate_in_a_mode_that_reduces_the_risk_of_the_transmission_of_airborne_infection,quality,able to operate in a mode that reduces the risk of the transmission of airborne infection
+living_room_accommodation,object,living room accommodation
+not_separate_rooms,quality,not separate rooms
+of_the_same_equivalent_area_as_for_other_habitable_rooms,quality,of the same equivalent area as for other habitable rooms
+open_plan_space,object,open-plan space
+building_work,object,building work
+bathroom,object,bathroom
+fans___including_cooker_hoods___where_they_extract_to_the_outside__,object,"fans ( including cooker hoods , where they extract to the outside )"
+retained,quality,retained
+flexible_ducts,object,flexible ducts
+final,quality,final
+lengths,property,lengths
+kept_to_a_minimum,quality,kept to a minimum
+prevailing_wind_direction,property,prevailing wind direction
+exhaust_outlets,object,exhaust outlets
+downwind_of_intakes,quality,downwind of intakes
+passive_stack_ventilation,quality,passive stack ventilation
+located_in_the_ceiling,quality,located in the ceiling
+Calibration,object,Calibration
+carried_out_in_accordance_with_CIBSEs_TM23,quality,carried out in accordance with CIBSEs TM23
+20,value,20
+design_solar_load,property,design solar load
+25W_m2,value,25W/m2
+building_owner,object,building owner
+complex,quality,complex
+projects,object,projects
+commissioning_manager,object,commissioning manager
+forms_all___or_part_of___the_approach_route,quality,"forms all , or part of , the approach route"
+additional_allowance,quality,additional allowance
+wheelchair_user_can_pass_a_parked_car,quality,wheelchair user can pass a parked car
+at_least_the_same_extent_as_in_the_existing_building,quality,at least the same extent as in the existing building
+excluding_display_windows,quality,excluding display windows
+within_the_area_served,quality,within the area served
+40,value,40
+estimated_using_the_National_Calculation_Methodology_Modelling_Guide,quality,estimated using the National Calculation Methodology Modelling Guide
+approach_route,object,approach route
+cross_fall,property,cross fall
+1_in_40,value,1 in 40
+close_to_the_draw_off_points,quality,close to the draw-off points
+storage_capacity,property,storage capacity
+100_litres,value,100 litres
+level,quality,level
+gently_sloping,quality,gently sloping
+where_necessary___ramped,quality,"where necessary , ramped"
+situated_centrally_with_a_distribution_system_to_supply_water_to_the_drawoff_points,quality,situated centrally with a distribution system to supply water to the drawoff points
+capacity,property,capacity
+300_litres,value,300 litres
+assessed___and_the_results_documented_and_handed_over_to_the_building_owner_with_the_manufacturers_supporting_literature,quality,"assessed , and the results documented and handed over to the building owner with the manufacturers supporting literature"
+ducted_systems,object,ducted systems
+served_by_fans,quality,served by fans
+design_flow_rate,property,design flow rate
+1m3_s,value,1m3/s
+ductwork_leakage_tests,object,ductwork leakage tests
+carried_out,quality,carried out
+Requirements,object,Requirements
+accessibility,quality,accessibility
+balanced_against_preserving_historic_buildings_or_environments,quality,balanced against preserving historic buildings or environments
+safe_and_convenient_for_everyone___including_older_and_disabled_people_and_some_wheelchair_users,quality,"safe and convenient for everyone , including older and disabled people and some wheelchair users"
+value,property,value
+consequential,quality,consequential
+improvement_works,object,improvement works
+principal_works,object,principal works
+Reasonable,quality,Reasonable
+conservation_of_fuel_and_power,object,conservation of fuel and power
+limiting_heat_gains_and_losses,quality,limiting heat gains and losses
+through_thermal_elements_and_other_parts_of_the_building_fabric,quality,through thermal elements and other parts of the building fabric
+from_pipes___ducts_and_vessels_used_for_space_heating___space_cooling_and_hot_water_services,quality,"from pipes , ducts and vessels used for space heating , space cooling and hot water services"
+providing_fixed_building_services,quality,providing fixed building services
+energy_efficient_to_a_reasonable_standard,quality,energy efficient to a reasonable standard
+effective_controls,quality,effective controls
+commissioned_by_testing_and_adjusting_as_necessary_to_ensure_they_use_no_more_fuel_and_power_than_is_reasonable_in_the_circumstances,quality,commissioned by testing and adjusting as necessary to ensure they use no more fuel and power than is reasonable in the circumstances
+20__,value,20 %
+on_site_electricity_generation_is_installed,quality,on-site electricity generation is installed
+reasonable,quality,reasonable
+system_and_its_electrical_output,object,system and its electrical output
+commissioned_by_testing_and_adjusting_as_necessary_to_ensure_that_it_produces_the_maximum_electricity_that_is_reasonable_in_the_circumstances,quality,commissioned by testing and adjusting as necessary to ensure that it produces the maximum electricity that is reasonable in the circumstances
+g_value,object,g-value
+no_worse_than_0_3,quality,no worse than 0.3
+sloping_surfaces,object,sloping surfaces
+galleries,object,galleries
+raked_auditoria,object,raked auditoria
+tiered_terraces,object,tiered terraces
+taken_as_their_area_on_plan,quality,taken as their area on plan
+Air_permeability,property,Air permeability
+m3____hm2___at_50Pa,value,m3/ ( hm2 ) at 50Pa
+made_for_people,quality,made for people
+gain_access_to___and___b___use___the_dwelling_and_its_facilities,quality,"gain access to ; and ( b ) use , the dwelling and its facilities"
+Remedial_work,object,Remedial work
+achieve_satisfactory_performance_in_retests,quality,achieve satisfactory performance in retests
+flight,object,flight
+between_landings,quality,between landings
+total_useful,quality,total useful
+being_extended,quality,being extended
+habitable_area,property,habitable area
+being_increased,quality,being increased
+consequential_improvements_should_be_installed,quality,consequential improvements should be installed
+parasitic_energy_use,property,parasitic energy use
+unknown,quality,unknown
+allowance,property,allowance
+0_3W_m2,value,0.3W/m2
+control_system,object,control system
+Individual,quality,Individual
+flights,object,flights
+1_15,value,1:15
+10m,value,10m
+1_12,value,1:12
+5m,value,5m
+technically___functionally_and_economically_feasible_measures,object,"technically , functionally and economically feasible measures"
+to_improve_the_fabric_of_the_building_served_by_the_service,quality,to improve the fabric of the building served by the service
+implemented,quality,implemented
+Air_pressure_tests,object,Air pressure tests
+performed_following_the_guidance_in_the_approved_airtightness_testing_methodology___CIBSEs_TM23,quality,"performed following the guidance in the approved airtightness testing methodology , CIBSEs TM23"
+justification,object,justification
+strategy,object,strategy
+in_line_with_the_approved_airtightness_testing_methodology___CIBSEs_TM23,quality,"in line with the approved airtightness testing methodology , CIBSEs TM23"
+Test_data,object,Test data
+from_a_minimum_of_five_in_situ_measurements_of_the_same_module_types,quality,from a minimum of five in-situ measurements of the same module types
+link_details_as_used_in_the_actual_building,quality,link details as used in the actual building
+power_socket,object,power socket
+suitable_for_powering_the_lifting_device,quality,suitable for powering the lifting device
+close_to_the_liftway,quality,close to the liftway
+Door_entry_controls,object,Door entry controls
+900_1000mm,value,900-1000mm
+above,property,above
+finished,quality,finished
+ground_level,object,ground level
+away,property,away
+projecting_corner,object,projecting corner
+Lifting_devices,object,Lifting devices
+positioned_with_the_end_opposite_to_the_entry_point_located_against_a_wall_at_every_floor_level,quality,positioned with the end opposite to the entry point located against a wall at every floor level
+serves_more_than_three_storeys,quality,serves more than three storeys
+visual_and_audible_indicators,object,visual and audible indicators
+to_identify_the_floor_reached,quality,to identify the floor reached
+meet_the_needs_of_occupants_with_differing_needs___including_some_older_or_disabled_people,quality,"meet the needs of occupants with differing needs , including some older or disabled people"
+allow_adaptation_of_the_dwelling_to_meet_the_changing_needs_of_occupants_over_time,quality,allow adaptation of the dwelling to meet the changing needs of occupants over time
+provide_easy_access_between_rooms_on_the_entrance_storey,quality,provide easy access between rooms on the entrance storey
+stepped_change_of_level_within_the_entrance_storey_should_be_avoided_where_possible,quality,stepped change of level within the entrance storey should be avoided where possible
+not_reasonable_to_achieve_a_step_free_approach_route_to_the_principal_private_entrance,quality,not reasonable to achieve a step-free approach route to the principal private entrance
+step_free_approach_route_should_be_provided_to_a_suitable_alternative_private_entrance_instead,quality,step-free approach route should be provided to a suitable alternative private entrance instead
+safe_and_convenient_for_everyone,quality,safe and convenient for everyone
+be_at_the_shallowest_gradient_that_can_reasonably_be_achieved,quality,be at the shallowest gradient that can reasonably be achieved
+be_stepfree,quality,be stepfree
+irrespective_of_the_storey_on_which_the_dwelling_is_located,quality,irrespective of the storey on which the dwelling is located
+full,quality,full
+under_a_stair_that_forms_part_of_the_storage_provision,quality,under a stair that forms part of the storage provision
+1m2,value,1m2
+relationship,property,relationship
+between_the_kitchen___dining_and_living_areas,quality,"between the kitchen , dining and living areas"
+step_free,quality,step-free
+load_capacity,property,load capacity
+400kg,value,400kg
+strong_enough_to_support_grab_rails___seats_and_other_adaptations_that_could_impose_a_load_of_up_to_1_5kN_m2,quality,"strong enough to support grab rails , seats and other adaptations that could impose a load of up to 1.5kN/m2"
+principal_living_area,object,principal living area
+located_between_450mm_and_1200mm_above_floor_level___unless_the_window_is_fitted_with_a_remote_opening_device_that_is_within_this_height_range,quality,"located between 450mm and 1200mm above floor level , unless the window is fitted with a remote opening device that is within this height range"
+installed_to_allow_the_potential_liftway_to_be_used_as_storage_or_for_other_purposes,quality,installed to allow the potential liftway to be used as storage or for other purposes
+easily_removed_without_structural_alteration,quality,easily removed without structural alteration
+Double_doors,object,Double doors
+nibs,object,nibs
+leaf,object,leaf
+key_parts_of_the_accommodation,object,key parts of the accommodation
+easily_altered_to_meet_the_needs_of_a_wheelchair_user,quality,easily altered to meet the needs of a wheelchair user
+where_required_by_a_local_planning_authority,quality,where required by a local planning authority
+dwelling_is_wheelchair_accessible,quality,dwelling is wheelchair accessible
+parking,object,parking
+private_curtilage,object,private curtilage
+carport,object,carport
+at_least_one_space_is_a_standard_parking_bay,quality,at least one space is a standard parking bay
+widened,property,widened
+3_3m,value,3.3m
+grippable_handrail,object,grippable handrail
+850_1000mm,value,850-1000mm
+pitch_line_of_the_flight,object,pitch line of the flight
+extends,property,extends
+beyond_the_top_and_bottom_nosings,quality,beyond the top and bottom nosings
+communal,quality,communal
+blocks_of_flats,object,blocks of flats
+standard,quality,standard
+parking_bay,object,parking bay
+close_to_the_communal_entrance_of_each_core_of_the_block___or_to_the_lift_core_where_the_parking_bay_is_internal__,quality,close to the communal entrance of each core of the block ( or to the lift core where the parking bay is internal )
+allow_simple_adaptation_of_the_dwelling_to_meet_the_needs_of_occupants_who_use_wheelchairs,quality,allow simple adaptation of the dwelling to meet the needs of occupants who use wheelchairs
+meet_the_needs_of_occupants_who_use_wheelchairs,quality,meet the needs of occupants who use wheelchairs
+overridden_by_a_door_reactivating_device_that_relies_on_appropriate_electronic_methods___but_not_a_door_edge_pressure_system,quality,overridden by a door reactivating device that relies on appropriate electronic methods ( but not a door edge pressure system
+lift_door,object,lift door
+remains_fully_open,quality,remains fully open
+three_seconds,value,three seconds
+Unit_length,property,Unit length
+measured_through_midline_of_the_worktop___not_the_front_or_rear_edge,quality,"measured through midline of the worktop , not the front or rear edge"
+wide_range,quality,wide range
+accompanied_wheelchair_users,object,accompanied wheelchair users
+able_to_access_and_use_the_lift,quality,able to access and use the lift
+adopt_the_shallowest_gradient_that_can_reasonably_be_achieved,quality,adopt the shallowest gradient that can reasonably be achieved
+Turning_circle,object,Turning circle
+clear_of_top_step_of_any_adjacent_flight_of_steps,quality,clear of top step of any adjacent flight of steps
+sink,object,sink
+150mm,value,150mm
+insulation_to_the_underside,quality,insulation to the underside
+prevent_scalding_of_a_wheelchair_users_legs,quality,prevent scalding of a wheelchair users legs
+as_shallow_as_the_site_permits,quality,as shallow as the site permits
+private,quality,private
+radiator,object,radiator
+towel_rail,object,towel rail
+clear_of_all_access_zones,quality,clear of all access zones
+Taps,object,Taps
+lever_operated,quality,lever operated
+capable_of_easy_operation,quality,capable of easy operation
+ambulant,quality,ambulant
+disabled_person,object,disabled person
+able_to_move_within___and_between___storeys,quality,"able to move within , and between , storeys"
+close_to_an_accessible_bathroom_suitable_for_a_wheelchair_user,quality,close to an accessible bathroom suitable for a wheelchair user
+accessible_to_a_wheelchair_user,quality,accessible to a wheelchair user
+worktop,object,worktop
+one_side,property,one side
+oven,object,oven
+fridge,object,fridge
+fridge_freezer,object,fridge freezer
+taller_than_the_worktop_height,quality,taller than the worktop height
+pair_of,quality,pair of
+tall,quality,tall
+appliances,object,appliances
+located_together_at_the_end_of_a_run,quality,located together at the end of a run
+minimum_except_where_noted,quality,minimum except where noted
+easy_to_install_a_lift,quality,easy to install a lift
+rise_between_landings,property,rise between landings
+suitable_for_a_wheelchair,quality,suitable for a wheelchair
+powered_opening,quality,powered opening
+avoid_the_need_for_the_300mm_access_space_adjacent_to_the_leading_edge_of_the_door,quality,avoid the need for the 300mm access space adjacent to the leading edge of the door
+Main,quality,Main
+distribution_routes,object,distribution routes
+through_vertical_risers,quality,through vertical risers
+minimise_heat_gains_into_common_spaces,quality,minimise heat gains into common spaces
+Wheelchair_users,object,Wheelchair users
+able_to_manoeuvre_around,quality,able to manoeuvre around
+use_the_facilities_in_the_room,quality,use the facilities in the room
+operate_switches_and_controls,quality,operate switches and controls
+building_complexes,object,building complexes
+retail_parks,object,retail parks
+sports_centres,object,sports centres
+unisex,quality,unisex
+toilet,object,toilet
+capable_of_including_an_adult_changing_table,quality,capable of including an adult changing table
+shut_all_the_time,quality,shut all the time
+available_to_everybody,quality,available to everybody
+designed_for_wheelchair_users___ambulant_disabled_people___people_of_either_sex_with_babies_and_small_children_or_people_encumbered_by_luggage,quality,"designed for wheelchair users , ambulant disabled people , people of either sex with babies and small children or people encumbered by luggage"
+At_night,quality,At night
+patio_doors,object,patio doors
+balcony_doors,object,balcony doors
+modelled_as_closed,quality,modelled as closed
+Refreshment_facilities,object,Refreshment facilities
+restaurants,object,restaurants
+bars,object,bars
+they_can_be_reached_and_used_by_all_people_independently_or_with_companions,quality,they can be reached and used by all people independently or with companions
+installing_a_fold_down_table,quality,installing a fold-down table
+no_less_advantageously_situated_than_other_bedrooms,quality,no less advantageously situated than other bedrooms
+Changing_places_toilets,quality,Changing places toilets
+facilities_designed_for_individuals_with_complex_and_multiple_impairments_who_may_require_the_assistance_of_up_to_two_assistants,quality,facilities designed for individuals with complex and multiple impairments who may require the assistance of up to two assistants
+separate_sex,quality,separate-sex
+toileting_facilities,object,toileting facilities
+baby_changing_facilities,object,baby changing facilities
+Uplighters,object,Uplighters
+mounted_at_low_or_floor_level,quality,mounted at low or floor level
+disorientate_some_visually_impaired_people,quality,disorientate some visually impaired people
+avoided,quality,avoided
+Capacities,property,Capacities
+derived_from_the_combined_total_of_a_buildings_publicly_accessible_facilities,quality,derived from the combined total of a buildings publicly accessible facilities
+residential_unit,object,residential unit
+shared,quality,shared
+communal_room,object,communal room
+common_space,object,common space
+categorised_separately,quality,categorised separately
+able_to_reach_all_the_facilities_available_within_the_building,quality,able to reach all the facilities available within the building
+Artificial,quality,Artificial
+designed_to_give_good_colour_rendering_of_all_surfaces___without_creating_glare_or_pools_of_bright_light_and_strong_shadows,quality,"designed to give good colour rendering of all surfaces , without creating glare or pools of bright light and strong shadows"
+able_to_locate_a_control___know_which_setting_it_is_on_and_use_it_without_inadvertently_changing_its_setting,quality,"able to locate a control , know which setting it is on and use it without inadvertently changing its setting"
+installing_a_chemical_sanitary_waste_disposal_unit,quality,installing a chemical sanitary waste disposal unit
+WC_accommodation,object,WC accommodation
+internal_temperature,property,internal temperature
+23C,value,23C
+at_11pm,quality,at 11pm
+demonstrates_that_the_residential_building_passes_CIBSEs_TM59_assessment_of_overheating,quality,demonstrates that the residential building passes CIBSEs TM59 assessment of overheating
+Standard,quality,Standard
+WC_compartments,object,WC compartments
+have_a_minimum_manoeuvring_space_clear_of_any_door_swing,quality,have a minimum manoeuvring space clear of any door swing
+meet_or_exceed_the_free_area_of_the_opening,quality,meet or exceed the free area of the opening
+type_and_quality,property,type and quality
+public_address,object,public address
+hearing_enhancement,object,hearing enhancement
+telephone_systems,object,telephone systems
+chosen_carefully_to_ensure_intelligibility,quality,chosen carefully to ensure intelligibility
+sufficiently_spacious_to_enable_a_wheelchair_user_to_transfer_to_one_side_of_a_bed___with_or_without_assistance,quality,"sufficiently spacious to enable a wheelchair user to transfer to one side of a bed , with or without assistance"
+WCs___for_women__,object,WCs ( for women )
+urinals___for_men__,object,urinals ( for men )
+some,quality,some
+at_least_twice_as_many,quality,at least twice as many
+contains_both_living_accommodation_and_space_for_commercial_purposes,quality,contains both living accommodation and space for commercial purposes
+treated_as_a_residential_building___as_long_as_the_commercial_part_canrevert_to_residential_use,quality,"treated as a residential building , as long as the commercial part canrevert to residential use"
+low_level,quality,low level
+urinal,object,urinal
+for_children,quality,for children
+male_washrooms,object,male washrooms
+WC_compartment_doors,object,WC compartment doors
+shower_rooms,object,shower rooms
+have_an_emergency_release_mechanism_so_that_they_are_capable_of_being_opened_outwards___from_the_outside___in_case_of_emergency,quality,"have an emergency release mechanism so that they are capable of being opened outwards , from the outside , in case of emergency"
+fitted_with_support_rails,quality,fitted with support rails
+include_a_minimum_activity_space_to_accommodate_people_who_use_crutches___or_otherwise_have_impaired_leg_movements,quality,"include a minimum activity space to accommodate people who use crutches , or otherwise have impaired leg movements"
+disabled,quality,disabled
+able_to_wash_or_bathe_either_independently_or_with_assistance_from_others,quality,able to wash or bathe either independently or with assistance from others
+able_to_approach___transfer_to_and_use_the_sanitary_facilities_provided_within_a_building,quality,"able to approach , transfer to and use the sanitary facilities provided within a building"
+method,object,method
+to_reduce_overheating_risk_in_residential_buildings,quality,to reduce overheating risk in residential buildings
+comply_with_all_other_parts_of_the_Building_Regulations,quality,comply with all other parts of the Building Regulations
+public_areas,object,public areas
+lavatory,quality,lavatory
+telephones,object,telephones
+terraces,object,terraces
+danger,object,danger
+adjacent,quality,adjacent
+induction_loop_system,object,induction loop system
+the_signals_may_overlap,quality,the signals may overlap
+clothes_shops,object,clothes shops
+recommended_for_an_individual_changing_cubicle,quality,recommended for an individual changing cubicle
+sports,quality,sports
+provided,quality,provided
+WC_cubicle,quality,WC cubicle
+operable_by_people_with_limited_strength_or_manual_dexterity,quality,operable by people with limited strength or manual dexterity
+cubicles,object,cubicles
+capable_of_being_opened_if_a_person_has_collapsed_against_them_while_inside_the_cubicle,quality,capable of being opened if a person has collapsed against them while inside the cubicle
+toilet_washroom,object,toilet washroom
+accessed_by_wheelchair_users,quality,accessed by wheelchair users
+possible_for_them_to_use_both_a_urinal___where_appropriate___and_a_washbasin_at_a_lower_height_than_is_provided_for_other_users,quality,"possible for them to use both a urinal , where appropriate , and a washbasin at a lower height than is provided for other users"
+constructed_to_meet_requirement_O1_using_passive_means_as_far_as_reasonably_practicable,quality,constructed to meet requirement O1 using passive means as far as reasonably practicable
+facility,object,facility
+divided_into_distinct_wet_and_dry_areas,quality,divided into distinct wet and dry areas
+glare_and_reflections,property,glare and reflections
+shiny,quality,shiny
+repeating,quality,repeating
+patterns,property,patterns
+avoided_in_spaces_where_visual_acuity_is_critical_as_they_will_hamper_communication_for_people_with_impaired_vision___and_those_who_lip_read_or_use_sign_language,quality,"avoided in spaces where visual acuity is critical as they will hamper communication for people with impaired vision , and those who lip read or use sign language"
+absorption_chillers,object,absorption chillers
+used_in_conjunction_with_onsite_CHP_or_a_district_heat_network_or_community_heating_system,quality,used in conjunction with onsite CHP or a district heat network or community heating system
+calculated_in_the_same_way_as_when_using_CHP_for_heating,quality,calculated in the same way as when using CHP for heating
+Supply_temperature_control,object,Supply temperature control
+provided_via_a_variable_set_point_with_outdoor_temperature_compensation,quality,provided via a variable set point with outdoor temperature compensation
+Air_handling_units,object,Air handling units
+made_and_assembled_so_as_to_be_reasonably_airtight,quality,made and assembled so as to be reasonably airtight
+Timing_and_temperature_demand_control,object,Timing and temperature demand control
+total,quality,total
+system_output,object,system output
+made_up_of_three_equally_sized_boilers,quality,made up of three equally sized boilers
+15__,value,15 %
+lead_boiler,object,lead boiler
+operating_at_45___of_its_rated_output_with_the_other_two_boilers_switched_off,quality,operating at 45 % of its rated output with the other two boilers switched off
+split_into_different_heating_zones_and_each_zone_should_have_separate_controls_for_timing_and_temperature_demand,quality,split into different heating zones and each zone should have separate controls for timing and temperature demand
+efficiencies,property,efficiencies
+boiler_efficiency,property,boiler efficiency
+30___load,value,30 % load
+connected_to_a_new_building,quality,connected to a new building
+delivered_heat_to_the_building_which_is_greater_than_0_350kgCO2_kWh,quality,delivered heat to the building which is greater than 0.350kgCO2/kWh
+Ventilation_ductwork,object,Ventilation ductwork
+be_wired_so_that_when_there_is_no_demand_for_space_heating_or_hot_water___the_heating_appliance___if_appropriate___and_pump_are_switched_off,quality,"be wired so that when there is no demand for space heating or hot water , the heating appliance , if appropriate , and pump are switched off"
+boilers,object,boilers
+used_in_the_calculation___including_any_that_are_identical,quality,"used in the calculation , including any that are identical"
+rated_output,property,rated output
+assessed_based_on_the_final_installed_capacity_of_the_heating_or_air_conditioning_system,quality,assessed based on the final installed capacity of the heating or air-conditioning system
+on_site_electricity_generation,object,on-site electricity generation
+storage,object,storage
+be_an_appropriate_size_for_the_site___available_infrastructure_and_on_site_energy_demand,quality,"be an appropriate size for the site , available infrastructure and on-site energy demand"
+heated_through_a_district_heat_network_or_community_heating_system,quality,heated through a district heat network or community heating system
+based_on_the_capacity_of_the_equipment_installed_in_the_building,quality,based on the capacity of the equipment installed in the building
+Display_lighting,object,Display lighting
+controlled_on_dedicated_circuits_that_can_be_switched_separately_from_those_for_lighting_provided_for_general_illuminance,quality,controlled on dedicated circuits that can be switched separately from those for lighting provided for general illuminance
+Manual_control,property,Manual control
+heat_release,object,heat release
+be_possible,quality,be possible
+district_cooling_schemes,object,district cooling schemes
+CO2,property,CO2
+primary_energy_content,property,primary energy content
+cooling_energy,object,cooling energy
+supplied,quality,supplied
+Non_condensing,quality,Non-condensing
+fitted_with_a_flue_condensing_kit_where_feasible_and_where_the_boiler_is_likely_to_be_able_to_operate_in_condensing_mode,quality,fitted with a flue condensing kit where feasible and where the boiler is likely to be able to operate in condensing mode
+have_the_ability_to_use_free_cooling_or_heat_recovery,quality,have the ability to use free cooling or heat recovery
+SEER,property,SEER
+derived_for_the_specific_application___including_free_cooling_or_heat_recovery_elements,quality,"derived for the specific application , including free cooling or heat recovery elements"
+specified_and_installed_according_to_the_manufacturers_instructions_to_ensure_the_overall_performance_of_the_system_meets_a_reasonable_standard,quality,specified and installed according to the manufacturers instructions to ensure the overall performance of the system meets a reasonable standard
+building_automation_and_control_system,object,building automation and control system
+control_capabilities,property,control capabilities
+appropriate_for_the_building___its_expected_usage_and_the_building_services_specification,quality,"appropriate for the building , its expected usage and the building services specification"
+Equipment,object,Equipment
+specified,quality,specified
+installed_with_the_aim_of_maximising_its_efficiency_as_installed,quality,installed with the aim of maximising its efficiency as installed
+Manual_reset,object,Manual reset
+be_possible_if_there_is_an_over_temperature_trip,quality,be possible if there is an over-temperature trip
+electric_storage_heaters,object,electric storage heaters
+adjusted_automatically___based_on_the_internal_air_temperature,quality,"adjusted automatically , based on the internal air temperature"
+Air_handling_systems,object,Air handling systems
+capable_of_achieving_a_specific_fan_power___SFP___at_25_of_design_flow_rate_no_greater_than_the_SFP_achieved_at_100_design_flow_rate,quality,capable of achieving a specific fan power ( SFP ) at 25 of design flow rate no greater than the SFP achieved at 100 design flow rate
+Lighting,object,Lighting
+designed_based_on_CIBSEs_SLL_Lighting_Handbook_or_an_equivalent_design_guide,quality,designed based on CIBSEs SLL Lighting Handbook or an equivalent design guide
+space_heating_or_airconditioning_system,object,space heating or airconditioning system
+effective_rated_output,property,effective rated output
+180kW,value,180kW
+Multiple,quality,Multiple
+cooling_units,object,cooling units
+provided_with_controls_that_ensure_that_the_combined_plant_operates_in_its_most_efficient_modes,quality,provided with controls that ensure that the combined plant operates in its most efficient modes
+electricity_generation,object,electricity generation
+automated,quality,automated
+support_the_design_of_the_system_and_the_intended_use,quality,support the design of the system and the intended use
+load_EER,property,load EER
+0_7,value,0.7
+variable,quality,variable
+volume_systems,object,volume systems
+speed_glandless_circulators,object,speed glandless circulators
+refrigerant_flow___VRF___systems,object,refrigerant flow ( VRF ) systems
+any,quality,any
+calculations,property,calculations
+indoor_and_outdoor_conditions,property,indoor and outdoor conditions
+power_input_from_controls,property,power input from controls
+indoor_units,property,indoor units
+Gasfired_boilers,object,Gasfired boilers
+multi_stage_oilfired_boilers,object,multi-stage oilfired boilers
+output,property,output
+500kW,value,500kW
+fully_modulating_burner_controls,quality,fully modulating burner controls
+water_pump,object,water pump
+used_on_a_closed_loop_circuit,quality,used on a closed loop circuit
+motor,object,motor
+is_rated_at_more_than_750W,quality,is rated at more than 750W
+fitted_with_or_controlled_by_an_appropriate_variable_speed_controller_on_any_variable_volume_system,quality,fitted with or controlled by an appropriate variable speed controller on any variable volume system
+Linear_interpolation,object,Linear interpolation
+manufacturers_declared_efficiencies,property,manufacturers declared efficiencies
+30,value,30
+100,value,100
+Fans,object,Fans
+air_distribution,property,air distribution
+that_are_rated_at_more_than_1100W,quality,that are rated at more than 1100W
+fitted_with_variable_speed_drives,quality,fitted with variable speed drives
+automated___with_manual_override__,quality,automated ( with manual override )
+power_requirements,property,power requirements
+essential,quality,essential
+life_safety,object,life safety
+that_provide_supply_and_extract_ventilation,quality,that provide supply and extract ventilation
+fitted_with_a_heat_recovery_system_where_technically_feasible,quality,fitted with a heat recovery system where technically feasible
+Public_Health_Englands_Indoor_Air_Quality_Guidelines,object,Public Health Englands Indoor Air Quality Guidelines
+Selected_Volatile_Organic_Compounds___VOCs___in_the_UK,quality,Selected Volatile Organic Compounds ( VOCs ) in the UK
+extension,object,extension
+30m2,value,30m2
+other_than_dwellings,quality,other than dwellings
+provided_in_a_new_or_existing_building_log_book,quality,provided in a new or existing building log book
+given_to_the_building_control_body_of_the_calculations,quality,given to the building control body of the calculations
+Glazing,object,Glazing
+with_which_people_are_likely_to_come_into_contact_whilst_moving_in_or_about_the_building,quality,with which people are likely to come into contact whilst moving in or about the building
+broken_on_impact,quality,broken on impact
+break_in_a_way_which_is_unlikely_to_cause_injury,quality,break in a way which is unlikely to cause injury
+resist_impact_without_breaking,quality,resist impact without breaking
+be_shielded_or_protected_from_impact,quality,be shielded or protected from impact
+floor_level,object,floor level
+steeper,quality,steeper
+designed_as_a_ramp,quality,designed as a ramp
+full_height_structural,quality,full-height structural
+guarding,object,guarding
+second___lower__,quality,second ( lower )
+from_the_pitch_line_of_the_steps___or_the_surface_of_the_ramp___to_the_top_of_the_second___lower___handrail,quality,from the pitch line of the steps ( or the surface of the ramp ) to the top of the second ( lower ) handrail
+commissioning_sheet,object,commissioning sheet
+given_to_the_owner_of_the_building,quality,given to the owner of the building
+Provision,object,Provision
+made_to_ensure_a_clear_view_of_the_space_on_either_side_of_a_swing_door_or_gate,quality,made to ensure a clear view of the space on either side of a swing door or gate
+made,quality,made
+skylights,object,skylights
+transparent,quality,transparent
+translucent,quality,translucent
+ceilings,object,ceilings
+be_safely_accessible_for_cleaning,quality,be safely accessible for cleaning
+Windows___skylights_and_ventilators,object,"Windows , skylights and ventilators"
+which_can_be_opened_by_people_in_or_about_the_building,quality,which can be opened by people in or about the building
+constructed_or_equipped_that_they_may_be_opened___closed_or_adjusted_safely,quality,"constructed or equipped that they may be opened , closed or adjusted safely"
+frequency,property,frequency
+measurements,object,measurements
+sufficient_to_ensure_that_changes_in_the_use_of_the_room_or_space_throughout_the_day_are_represented_in_the_readings,quality,sufficient to ensure that changes in the use of the room or space throughout the day are represented in the readings
+allow_fresh_air_into_the_building,quality,allow fresh air into the building
+made_for_powered_doors_and_gates_to_be_opened_in_the_event_of_a_power_failure,quality,made for powered doors and gates to be opened in the event of a power failure
+twice_the_rise_plus_the_going___2R_G__,value,twice the rise plus the going ( 2R G )
+between_550mm_and_700mm,value,between 550mm and 700mm
+supply_rate,object,supply rate
+in_the_absence_of_tobacco_smoke_or_other_excessive_pollutants,quality,in the absence of tobacco smoke or other excessive pollutants
+10_litres_per_second_per_person,value,10 litres per second per person
+sliding,quality,sliding
+stop,object,stop
+other_effective,quality,other effective
+to_prevent_them_coming_off_the_end_of_the_track,quality,to prevent them coming off the end of the track
+retaining_rail,object,retaining rail
+to_prevent_doors_and_gates_falling_if_the_suspension_system_fails_or_the_rollers_leave_the_track,quality,to prevent doors and gates falling if the suspension system fails or the rollers leave the track
+substantial_proportion,object,substantial proportion
+assessed_on_a_case_by_case_basis_by_the_building_control_body,quality,assessed on a case-by-case basis by the building control body
+Gangways,object,Gangways
+unless_used_by_not_more_than_50_persons,quality,unless used by not more than 50 persons
+gangways,object,gangways
+Extract,property,Extract
+extract_fan,object,extract fan
+acentral_system,object,acentral system
+access_areas,object,access areas
+that_contain_flats,quality,that contain flats
+all,quality,all
+escape_routes,object,escape routes
+headroom,property,headroom
+except_in_doorways,quality,except in doorways
+close_to_an_area_of_sustained_and_loud_noise___e_g___a_main_road__,quality,close to an area of sustained and loud noise ( e.g . a main road )
+noise_attenuating,quality,noise attenuating
+background_ventilator,object,background ventilator
+fitted,quality,fitted
+no_visible,quality,no visible
+mould,object,mould
+inner_surfaces,property,inner surfaces
+properly_heated,quality,properly heated
+with_typical_moisture_generation,quality,with typical moisture generation
+CO2_measurements,object,CO2 measurements
+used_as_a_broad_guide_to_ventilation_within_a_space___rather_than_treated_as_safe_thresholds,quality,"used as a broad guide to ventilation within a space , rather than treated as safe thresholds"
+Special,quality,Special
+not_necessary,quality,not necessary
+ladder,object,ladder
+6m,value,6m
+Monitors,object,Monitors
+positioned_at_least_500mm_away_from_room_occupants,quality,positioned at least 500mm away from room occupants
+Manual,quality,Manual
+where_provided,quality,where provided
+within_reasonable_reach_of_the_occupants,quality,within reasonable reach of the occupants
+provided_by_natural_means___e_g___an_openable_window___ormechanical_means___e_g___a_fan__,quality,provided by natural means ( e.g . an openable window ) ormechanical means ( e.g . a fan )
+considered_to_be_part_of_the_ventilation_provision_of_a_building,quality,considered to be part of the ventilation provision of a building
+Instantaneous,quality,Instantaneous
+snapshot,quality,snapshot
+CO2_readings,object,CO2 readings
+misleading,quality,misleading
+several,quality,several
+taken_throughout_the_day,quality,taken throughout the day
+tier,object,tier
+uninterrupted_by_cross_gangways,quality,uninterrupted by cross-gangways
+Stairs,object,Stairs
+ladders,object,ladders
+designed___constructed_and_installed_as_to_be_safe_for_people_moving_between_different_levels_in_or_about_the_building,quality,"designed , constructed and installed as to be safe for people moving between different levels in or about the building"
+Length,property,Length
+made_to_prevent_people_moving_in_or_about_the_building_from_colliding_with_open_windows___skylights_or_ventilators,quality,"made to prevent people moving in or about the building from colliding with open windows , skylights or ventilators"
+tapered,quality,tapered
+that_are_part_of_the_building,quality,that are part of the building
+step,property,step
+280mm,value,280mm
+made_to_prevent,quality,made to prevent
+door_or_gate,object,door or gate
+which_slides_or_opens_upwards,quality,which slides or opens upwards
+from_falling_onto_any_person,quality,from falling onto any person
+which_is_powered,quality,which is powered
+from_trapping_any_person,quality,from trapping any person
+storm_water_sewers,object,storm water sewers
+condensation_insulation,quality,condensation insulation
+oil_and_grease_separators,object,oil and grease separators
+filling_alarm,object,filling alarm
+Level_differences,property,Level differences
+equipped_with_an_appropriate_safety_barrier___railing_or_handrail,quality,"equipped with an appropriate safety barrier , railing or handrail"
+indoor_steps,object,indoor steps
+dwelling_units,object,dwelling units
+living_quarters,object,living quarters
+190_millimetres,value,190 millimetres
+250_millimetres,value,250 millimetres
+pass_between_the_stair_steps,quality,pass between the stair steps
+gap,object,gap
+ten_millimetres,value,ten millimetres
+indoor_areas,object,indoor areas
+0_9_metres,value,0.9 metres
+drop,property,drop
+three_metres,value,three metres
+residential_block_of_flats,object,residential block of flats
+natural_light,property,natural light
+intermediate_landing,property,intermediate landing
+guardrail,object,guardrail
+accessed_by_children,quality,accessed by children
+sewerage_system,object,sewerage system
+easy_to_handle,quality,easy to handle
+lockable_in_both_horizontal_and_vertical_sewers,quality,lockable in both horizontal and vertical sewers
+not_be_slippery,quality,not be slippery
+entrance_halls,object,entrance halls
+administrative___service_and_business_premises,object,"administrative , service and business premises"
+sand,object,sand
+sludge,object,sludge
+grease,object,grease
+petrol,object,petrol
+oil,object,oil
+detrimental_physical_or_chemical_substances,object,detrimental physical or chemical substances
+end_up_in_the_sewerage_system_or_network_or_in_the_environment,quality,end up in the sewerage system or network or in the environment
+separator_or_treatment_device,object,separator or treatment device
+one_metre,value,one metre
+six_metres,value,six metres
+continue_onto_the_intermediate_landing_without_interruption,quality,continue onto the intermediate landing without interruption
+length,property,length
+reserved_in_front_of_and_behind_a_door_located_in_an_exit_route,quality,reserved in front of and behind a door located in an exit route
+sewers,object,sewers
+identifiable,quality,identifiable
+located_separate_from_one_another,quality,located separate from one another
+200_millimetres,value,200 millimetres
+pass_between_the_upper_edge_of_the_barrier_and_the_protective_part,quality,pass between the upper edge of the barrier and the protective part
+Ramps,object,Ramps
+thresholds,property,thresholds
+differences,property,differences
+levels,object,levels
+clearly_indicated_using_lighting_and_surface_brightness_contrasts_or_warning_signs,quality,clearly indicated using lighting and surface brightness contrasts or warning signs
