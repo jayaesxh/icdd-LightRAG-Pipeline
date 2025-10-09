@@ -1,0 +1,25 @@
+__pycache__/
+*.pyc
+.env
+.env.*
+*.secret
+*.key
+venv/
+.myenv/
+env/
+.venv/
+.ipynb_checkpoints/
+*.ipynb~*
+dist/
+build/
+*.icdd
+*.zip
+output/
+**/Payload documents/
+**/Payload triples/
+data/
+models/
+*.safetensors
+*.bin
+.DS_Store
+Thumbs.db
