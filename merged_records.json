@@ -1,0 +1,543 @@
+[
+  {
+    "sample_id": 1,
+    "application_id": "MUC-2024-0815",
+    "application_date": "2024-03-15",
+    "applicant_name": "Klaus Meier",
+    "applicant_type": "Privatperson",
+    "applicant_address": {
+      "street": "Sonnenallee 12",       
+      "city": "München",
+      "zip": "80331",
+      "country": "DE"
+    },
+    "architect_name": "Planwerk GmbH",
+    "architect_license": "189023",
+    "site_address": {
+      "street": "Isarstraße 5",
+      "city": "München",
+      "zip": "",
+      "country": "DE"
+    },
+    "parcel_id": "Gemarkung: Schwabing, Flur-Nr: 1234",
+    "building_class": 2,
+    "building_type": "Wohngebäude",
+    "building_area_sqm": 180.5,
+    "num_floors": 2,
+    "attachments_count": 10,
+    "attachments_list": [
+      "Amtlicher Lageplan",
+      "Bauzeichnungen",
+      "Baubeschreibung",
+      "Standsicherheitsnachweis",
+      "Brandschutznachweis"
+    ],
+    "project_description": "Antrag auf Baugenehmigung für den Neubau eines freistehenden Einfamilienhauses mit angebauter Doppelgarage im Stadtteil Schwabing, München. Das geplante Wohngebäude erstreckt sich über zwei Vollgeschosse mit einer Gesamtwohnfläche von 180,5 m² und ist nicht unterkellert. Die Konstruktion basiert auf einem massiven Ziegelmauerwerk auf einer Stahlbeton-Bodenplatte. Das Dach wird als traditioneller Holzdachstuhl in Form eines Satteldachs ausgeführt. Die Fassade erhält einen hellen Mineralputz. Das Vorhaben respektiert alle planungsrechtlichen Vorgaben des gültigen Bebauungsplans, insbesondere die Einhaltung der Abstandsflächen zu den Nachbargrundstücken gemäß BayBO Art. 6. Die Erschließung ist über die Isarstraße gesichert, und die notwendigen Stellplätze werden auf dem Grundstück nachgewiesen.",
+    "construction_methods": [
+      "Gründung mittels einer tragenden und gedämmten Stahlbeton-Bodenplatte.",
+      "Errichtung der Außen- und Innenwände in hochdämmendem Ziegelmauerwerk.",
+      "Konstruktion des Dachstuhls aus Nadelholz mit Aufsparrendämmung und Ziegeleindeckung.",
+      "Einbau von Kunststofffenstern mit Dreifach-Isolierverglasung."
+    ],
+    "required_proofs": [
+      "Standsicherheitsnachweis",
+      "Kriterienkatalog",
+      "Brandschutznachweis"
+    ],
+    "provenance_note": "synthetic_v1_bayern",
+    "notes": "Einfamilienhaus mit Doppelgarage",
+    "metadata": {
+      "applicant_type_generated": true,
+      "applicant_address_country_generated": true,
+      "site_address_city_generated": true,
+      "site_address_zip_generated": true,
+      "site_address_country_generated": true
+    }
+  },
+  {
+    "sample_id": 2,
+    "application_id": "N-2024-2101",
+    "application_date": "2024-05-02",
+    "applicant_name": "Bauträger Invest AG",
+    "applicant_type": "Unternehmen",
+    "applicant_address": {
+      "street": "Maximilianstraße 1",
+      "city": "Nürnberg",
+      "zip": "90402",
+      "country": "DE"
+    },
+    "architect_name": "Architekturbüro Huber & Sohn",
+    "architect_license": "175442",
+    "site_address": {
+      "street": "Fürther Straße 210",
+      "city": "Nürnberg",
+      "zip": "",
+      "country": "DE"
+    },
+    "parcel_id": "Gemarkung: Gostenhof, Flur-Nr: 567/2",
+    "building_class": 4,
+    "building_type": "Mehrfamilienhaus",
+    "building_area_sqm": 1250.0,
+    "num_floors": 5,
+    "attachments_count": 15,
+    "attachments_list": [
+      "Amtlicher Lageplan",
+      "Bauzeichnungen",
+      "Baubeschreibung",
+      "Standsicherheitsnachweis",
+      "Brandschutznachweis"
+    ],
+    "project_description": "Geplant ist die Errichtung eines fünfgeschossigen Mehrfamilienhauses mit 12 Wohneinheiten und einer gemeinsamen Tiefgarage in Nürnberg-Gostenhof. Das Bauvorhaben mit einer Gesamtnutzfläche von 1250,0 m² wird in Stahlbetonskelettbauweise realisiert, was eine flexible Grundrissgestaltung der einzelnen Wohnungen ermöglicht. Die Fassade wird mit einem Wärmedämmverbundsystem und partiellen Klinkerriemchen-Applikationen gestaltet. Das Gebäude erhält ein Flachdach mit extensiver Begrünung. Es werden besondere Maßnahmen für den Schallschutz zwischen den Wohneinheiten gemäß BayBO Art. 15 umgesetzt, um eine hohe Wohnqualität zu gewährleisten. Der Entwurf fügt sich harmonisch in die umgebende Bebauung ein und leistet einen Beitrag zur städtischen Nachverdichtung.",
+    "construction_methods": [
+      "Errichtung der Tiefgarage und des Kellergeschosses als wasserundurchlässige Stahlbetonkonstruktion (Weiße Wanne).",
+      "Aufbau der Tragstruktur aus Stahlbetonstützen und Flachdecken (Ortbeton).",
+      "Ausfachung der nichttragenden Außenwände mit hochisolierendem Mauerwerk.",
+      "Leichte Trennwände innerhalb der Wohnungen in Trockenbauweise."
+    ],
+    "required_proofs": [
+      "Standsicherheitsnachweis",
+      "Kriterienkatalog",
+      "Brandschutznachweis"
+    ],
+    "provenance_note": "synthetic_v1_bayern",
+    "notes": "12 Wohneinheiten, Tiefgarage",
+    "metadata": {
+      "applicant_type_generated": true,
+      "applicant_address_country_generated": true,
+      "site_address_city_generated": true,
+      "site_address_zip_generated": true,
+      "site_address_country_generated": true
+    }
+  },
+  {
+    "sample_id": 3,
+    "application_id": "A-2025-0045",
+    "application_date": "2025-02-10",
+    "applicant_name": "Sabine Schuster",
+    "applicant_type": "Privatperson",
+    "applicant_address": {
+      "street": "Am Bach 3",
+      "city": "Augsburg",
+      "zip": "86150",
+      "country": "DE"
+    },
+    "architect_name": "F. Wagner",
+    "architect_license": "",
+    "site_address": {
+      "street": "Schillerweg 14",
+      "city": "Augsburg",
+      "zip": "",
+      "country": "DE"
+    },
+    "parcel_id": "Gemarkung: Lechhausen, Flur-Nr: 889",
+    "building_class": 1,
+    "building_type": "Anbau",
+    "building_area_sqm": 45.5,
+    "num_floors": 1,
+    "attachments_count": 7,
+    "attachments_list": [
+      "Amtlicher Lageplan",
+      "Bauzeichnungen",
+      "Baubeschreibung",
+      "Standsicherheitsnachweis"
+    ],
+    "project_description": "Der Bauantrag bezieht sich auf den Anbau eines eingeschossigen Wintergartens an ein bestehendes Einfamilienhaus in Augsburg-Lechhausen. Die Erweiterung der Wohnfläche beträgt 45,5 m². Die Tragkonstruktion wird aus witterungsbeständigen und thermisch getrennten Aluminiumprofilen mit einer Füllung aus Dreifach-Isolierglas realisiert, um hohe energetische Standards zu erfüllen. Der Anbau gründet auf einer neu zu erstellenden, gedämmten Stahlbeton-Bodenplatte. Der Anschluss an das Bestandsgebäude wird sorgfältig geplant, um Wärmebrücken zu vermeiden und die statische Integrität zu sichern. Die Gestaltung des Anbaus nimmt Bezug auf das Hauptgebäude, wobei die Belichtung und der Bezug zum Garten im Vordergrund stehen. Die Vorschriften zu Rettungswegen gemäß BayBO Art. 33 werden eingehalten.",
+    "construction_methods": [
+      "Erstellung von Streifenfundamenten und einer gedämmten Bodenplatte.",
+      "Montage der vorgefertigten Aluminium-Glas-Konstruktion.",
+      "Herstellung eines dichten und wärmebrückenfreien Anschlusses an die bestehende Hauswand."
+    ],
+    "required_proofs": [
+      "Standsicherheitsnachweis",
+      "Kriterienkatalog"
+    ],
+    "provenance_note": "synthetic_v1_bayern",
+    "notes": "Wintergartenanbau an Bestandsgebäude",
+    "metadata": {
+      "applicant_type_generated": true,
+      "applicant_address_country_generated": true,
+      "site_address_city_generated": true,
+      "site_address_zip_generated": true,
+      "site_address_country_generated": true
+    }
+  },
+  {
+    "sample_id": 4,
+    "application_id": "2301-2024-9870",
+    "application_date": "2024-01-22",
+    "applicant_name": "Logistik GmbH & Co. KG",
+    "applicant_type": "Unternehmen",
+    "applicant_address": {
+      "street": "Industriering 200",
+      "city": "Regensburg",
+      "zip": "93055",
+      "country": "DE"
+    },
+    "architect_name": "Konzeptbau Partner",
+    "architect_license": "201187",
+    "site_address": {
+      "street": "Leibnizstraße 44",
+      "city": "Regensburg",
+      "zip": "",
+      "country": "DE"
+    },
+    "parcel_id": "Gemarkung: Harting, Flur-Nr: 2110",
+    "building_class": 5,
+    "building_type": "Gewerbe",
+    "building_area_sqm": 2450.8,
+    "num_floors": 1,
+    "attachments_count": 14,
+    "attachments_list": [
+      "Amtlicher Lageplan",
+      "Bauzeichnungen",
+      "Baubeschreibung",
+      "Standsicherheitsnachweis",
+      "Brandschutznachweis"
+    ],
+    "project_description": "Es wird die Baugenehmigung für den Neubau einer eingeschossigen Logistik- und Lagerhalle mit einer Nutzfläche von 2450,8 m² im Gewerbegebiet von Regensburg beantragt. Das Gebäude wird in einer wirtschaftlichen Stahl-Systembauweise errichtet. Die Dacheindeckung sowie die Wandverkleidung erfolgen mittels hochgedämmter Sandwichpaneele. In die Halle wird ein zweigeschossiger Meister- und Sozialtrakt in Massivbauweise integriert. Der Hallenboden wird als fugenlose, oberflächenvergütete Stahlfaserbetonplatte ausgeführt, um den hohen Belastungen durch Gabelstaplerverkehr standzuhalten. Die Planung berücksichtigt die Anforderungen der Arbeitsstättenverordnung und stellt die Einhaltung der Brandschutzanforderungen für gewerbliche Bauten, wie in BayBO Art. 26 ff. gefordert, durch ein detailliertes Brandschutzkonzept sicher.",
+    "construction_methods": [
+      "Erstellung von Köcherfundamenten für die Aufnahme der Stahlstützen.",
+      "Montage des primären und sekundären Stahltragwerks (Stützen, Binder, Pfetten).",
+      "Verkleidung von Dach und Wand mit PIR-isolierten Sandwichpaneelen.",
+      "Einbau von Sektionaltoren, Fenstern und Türen."
+    ],
+    "required_proofs": [
+      "Standsicherheitsnachweis",
+      "Kriterienkatalog",
+      "Brandschutznachweis"
+    ],
+    "provenance_note": "synthetic_v1_bayern",
+    "notes": "Brandschutzkonzept mangelhaft",
+    "metadata": {
+      "applicant_type_generated": true,
+      "applicant_address_country_generated": true,
+      "site_address_city_generated": true,
+      "site_address_zip_generated": true,
+      "site_address_country_generated": true
+    }
+  },
+  {
+    "sample_id": 5,
+    "application_id": "WUE-2024-0555",
+    "application_date": "2024-09-01",
+    "applicant_name": "Einzelhandel Maier e.K.",
+    "applicant_type": "Unternehmen",
+    "applicant_address": {
+      "street": "Marktplatz 7",
+      "city": "Würzburg",
+      "zip": "97070",
+      "country": "DE"
+    },
+    "architect_name": "Ingrid Schmidt",
+    "architect_license": "198750",
+    "site_address": {
+      "street": "Domstraße 19",
+      "city": "Würzburg",
+      "zip": "",
+      "country": "DE"
+    },
+    "parcel_id": "Gemarkung: Altstadt, Flur-Nr: 432",
+    "building_class": 3,
+    "building_type": "Laden",
+    "building_area_sqm": 320.0,
+    "num_floors": 2,
+    "attachments_count": 10,
+    "attachments_list": [
+      "Amtlicher Lageplan",
+      "Bauzeichnungen",
+      "Baubeschreibung",
+      "Standsicherheitsnachweis",
+      "Brandschutznachweis"
+    ],
+    "project_description": "Gegenstand des Antrags ist die Nutzungsänderung und der Umbau einer ehemaligen Bürofläche zu einem modernen Einzelhandelsgeschäft in der Würzburger Innenstadt. Auf zwei Etagen mit insgesamt 320,0 m² werden strukturelle Änderungen vorgenommen, um eine offene und einladende Verkaufsfläche zu schaffen. Hierfür werden nichttragende Wände entfernt und eine tragende Wand durch einen Stahlträger abgefangen. Die Fassade wird unter Wahrung des historischen Erscheinungsbildes saniert und das Schaufenster im Erdgeschoss erneuert. Die gesamte Haustechnik wird modernisiert. Ein besonderes Augenmerk liegt auf der Herstellung der Barrierefreiheit gemäß BayBO Art. 48, insbesondere im Eingangsbereich und bei den sanitären Anlagen.",
+    "construction_methods": [
+      "Rückbau der nichttragenden Innenwände und der alten Haustechnik.",
+      "Einbau eines Stahlträgers auf Stahlbetonauflagern zur Abfangung einer tragenden Wand.",
+      "Innenausbau in Trockenbauweise zur Schaffung neuer Raumstrukturen.",
+      "Fachgerechte Sanierung der denkmalgeschützten Sandsteinfassade."
+    ],
+    "required_proofs": [
+      "Standsicherheitsnachweis",
+      "Kriterienkatalog",
+      "Brandschutznachweis"
+    ],
+    "provenance_note": "synthetic_v1_bayern",
+    "notes": "Nutzungsänderung und Umbau",
+    "metadata": {
+      "applicant_type_generated": true,
+      "applicant_address_country_generated": true,
+      "site_address_city_generated": true,
+      "site_address_zip_generated": true,
+      "site_address_country_generated": true
+    }
+  },
+  {
+    "sample_id": 6,
+    "application_id": "MUC-2025-0112",
+    "application_date": "2025-01-30",
+    "applicant_name": "Peter Pan",
+    "applicant_type": "Privatperson",
+    "applicant_address": {
+      "street": "Nimmerland Gasse 1",
+      "city": "München",
+      "zip": "81541",
+      "country": "DE"
+    },
+    "architect_name": "Architekturbüro Huber & Sohn",
+    "architect_license": "175442",
+    "site_address": {
+      "street": "Tegernseer Landstraße 150",
+      "city": "München",
+      "zip": "",
+      "country": "DE"
+    },
+    "parcel_id": "Gemarkung: Giesing, Flur-Nr: 789/1",
+    "building_class": 3,
+    "building_type": "Büro",
+    "building_area_sqm": 650.2,
+    "num_floors": 4,
+    "attachments_count": 12,
+    "attachments_list": [
+      "Amtlicher Lageplan",
+      "Bauzeichnungen",
+      "Baubeschreibung",
+      "Standsicherheitsnachweis",
+      "Brandschutznachweis"
+    ],
+    "project_description": "Das Bauvorhaben umfasst den Neubau eines viergeschossigen Bürogebäudes in München-Giesing mit einer Gesamt-Bruttogrundfläche von 650,2 m². Das Gebäude wird als Stahlbeton-Skelettbau errichtet und erhält eine moderne Vorhangfassade aus Glas- und Aluminiumelementen. Die innere Gliederung der Büroetagen ist flexibel konzipiert, um sowohl Zellen- als auch Großraumbüros zu ermöglichen. Die vertikale Erschließung erfolgt über ein zentrales Treppenhaus mit Aufzugsanlage, das als tragender und aussteifender Kern dient. Das Flachdach wird als Retentionsdach mit einer extensiven Begrünung ausgeführt. Die nachzuweisenden Stellplätze gemäß der örtlichen Satzung und BayBO Art. 47 werden in einer Tiefgarage untergebracht.",
+    "construction_methods": [
+      "Gründung auf einer durchgehenden Stahlbeton-Bodenplatte.",
+      "Errichtung des tragenden Skeletts sowie des aussteifenden Kerns in Ortbeton.",
+      "Montage der vorgefertigten Fassadenelemente an der Rohbaustruktur.",
+      "Ausbau der Büroflächen mit flexiblen Systemtrennwänden und Hohlraumböden."
+    ],
+    "required_proofs": [
+      "Standsicherheitsnachweis",
+      "Kriterienkatalog",
+      "Brandschutznachweis"
+    ],
+    "provenance_note": "synthetic_v1_bayern",
+    "notes": "Stellplatznachweis unvollständig",
+    "metadata": {
+      "applicant_type_generated": true,
+      "applicant_address_country_generated": true,
+      "site_address_city_generated": true,
+      "site_address_zip_generated": true,
+      "site_address_country_generated": true
+    }
+  },
+  {
+    "sample_id": 7,
+    "application_id": "RO-2023-1430",
+    "application_date": "2023-11-20",
+    "applicant_name": "Familie Yilmaz",
+    "applicant_type": "Privatperson",
+    "applicant_address": {
+      "street": "Rosenheimer Str. 58",
+      "city": "Rosenheim",
+      "zip": "83022",
+      "country": "DE"
+    },
+    "architect_name": "Baustudio Kreativ",
+    "architect_license": "210988",
+    "site_address": {
+      "street": "Ahornring 22",
+      "city": "Rosenheim",
+      "zip": "",
+      "country": "DE"
+    },
+    "parcel_id": "Gemarkung: Aising, Flur-Nr: 1552",
+    "building_class": 2,
+    "building_type": "Wohngebäude",
+    "building_area_sqm": 165.0,
+    "num_floors": 2,
+    "attachments_count": 8,
+    "attachments_list": [
+      "Amtlicher Lageplan",
+      "Bauzeichnungen",
+      "Baubeschreibung",
+      "Standsicherheitsnachweis",
+      "Brandschutznachweis"
+    ],
+    "project_description": "Der zurückgezogene Bauantrag betraf den Neubau eines Wohnhauses für eine Familie in Rosenheim. Geplant war ein zweigeschossiges Gebäude mit einer Wohnfläche von 165,0 m² in einer energieeffizienten Holzrahmenbauweise. Die tragende Konstruktion sollte aus vorgefertigten Holzelementen bestehen, die mit Zellulose gedämmt sind. Als Fassadenverkleidung war eine hinterlüftete Lärchenholzschalung vorgesehen. Die Gründung sollte über eine Stahlbeton-Bodenplatte erfolgen. Das architektonische Konzept sah ein Pultdach mit geringer Neigung vor, das für die Installation einer Photovoltaikanlage geeignet ist. Die Planung berücksichtigte alle Vorgaben des Bebauungsplans und die Einhaltung der Abstandsflächenregelungen der BayBO Art. 6.",
+    "construction_methods": [
+      "Herstellung einer gedämmten Fundamentplatte aus Stahlbeton.",
+      "Aufstellen der im Werk vorgefertigten Wand-, Decken- und Dachelemente.",
+      "Montage der Fenster und der hinterlüfteten Holzfassade.",
+      "Innenausbau in Trockenbauweise."
+    ],
+    "required_proofs": [
+      "Standsicherheitsnachweis",
+      "Kriterienkatalog",
+      "Brandschutznachweis"
+    ],
+    "provenance_note": "synthetic_v1_bayern",
+    "notes": "Bauherr hat Grundstück verkauft",
+    "metadata": {
+      "applicant_type_generated": true,
+      "applicant_address_country_generated": true,
+      "site_address_city_generated": true,
+      "site_address_zip_generated": true,
+      "site_address_country_generated": true
+    }
+  },
+  {
+    "sample_id": 8,
+    "application_id": "5510-2025-0310",
+    "application_date": "2025-04-01",
+    "applicant_name": "Martin Gruber",
+    "applicant_type": "Privatperson",
+    "applicant_address": {
+      "street": "Bergweg 8",
+      "city": "Garmisch-Partenkirchen",
+      "zip": "82467",
+      "country": "DE"
+    },
+    "architect_name": "Planwerk GmbH",
+    "architect_license": "189023",
+    "site_address": {
+      "street": "Zugspitzstraße 99",
+      "city": "Garmisch-Partenkirchen",
+      "zip": "",
+      "country": "DE"
+    },
+    "parcel_id": "Gemarkung: Garmisch, Flur-Nr: 3045",
+    "building_class": 1,
+    "building_type": "Garage",
+    "building_area_sqm": 35.0,
+    "num_floors": 1,
+    "attachments_count": 4,
+    "attachments_list": [
+      "Amtlicher Lageplan",
+      "Bauzeichnungen",
+      "Baubeschreibung"
+    ],
+    "project_description": "Beantragt wird die Errichtung einer Beton-Fertiggarage mit einer Grundfläche von 35,0 m² auf einem Grundstück in Garmisch-Partenkirchen. Die Garage wird als monolithischer Baukörper angeliefert und auf vorbereiteten Streifenfundamenten platziert. Sie dient der Unterbringung von zwei Personenkraftwagen. Das Flachdach der Garage wird abgedichtet und erhält eine extensive Begrünung, um die versiegelte Fläche ökologisch aufzuwerten. Der Außenputz wird farblich an das bestehende Hauptgebäude angepasst. Das Vorhaben wird direkt an der seitlichen Grundstücksgrenze errichtet und nutzt die privilegierten Möglichkeiten der Grenzbebauung im Rahmen der maximal zulässigen Längen und Höhen gemäß BayBO Art. 6. Die Zustimmung des betroffenen Nachbarn liegt vor.",
+    "construction_methods": [
+      "Aushub und Betonage von frostsicheren Streifenfundamenten.",
+      "Anlieferung und Versetzen des kompletten Garagenkörpers mit einem Autokran.",
+      "Aufbringen der Dachabdichtung und der Begrünungsschichten.",
+      "Anstrich des Außenputzes."
+    ],
+    "required_proofs": [],
+    "provenance_note": "synthetic_v1_bayern",
+    "notes": "",
+    "metadata": {
+      "applicant_type_generated": true,
+      "applicant_address_country_generated": true,
+      "site_address_city_generated": true,
+      "site_address_zip_generated": true,
+      "site_address_country_generated": true
+    }
+  },
+  {
+    "sample_id": 9,
+    "application_id": "N-2025-0200",
+    "application_date": "2025-03-03",
+    "applicant_name": "Stadtwerke Nürnberg",
+    "applicant_type": "Öffentliche Einrichtung",
+    "applicant_address": {
+      "street": "Hochhausring 1",
+      "city": "Nürnberg",
+      "zip": "90408",
+      "country": "DE"
+    },
+    "architect_name": "F. Wagner",
+    "architect_license": "",
+    "site_address": {
+      "street": "Brückenstraße 17",
+      "city": "Nürnberg",
+      "zip": "",
+      "country": "DE"
+    },
+    "parcel_id": "Gemarkung: St. Johannis, Flur-Nr: 4180",
+    "building_class": 5,
+    "building_type": "Gewerbe",
+    "building_area_sqm": 1800.0,
+    "num_floors": 3,
+    "attachments_count": 16,
+    "attachments_list": [
+      "Amtlicher Lageplan",
+      "Bauzeichnungen",
+      "Baubeschreibung",
+      "Standsicherheitsnachweis",
+      "Brandschutznachweis"
+    ],
+    "project_description": "Das Bauvorhaben der Stadtwerke Nürnberg umfasst die Errichtung einer neuen, dreigeschossigen Trafostation im Stadtteil St. Johannis. Das rein technische Betriebsgebäude hat eine Nutzfläche von 1800,0 m² und wird in einer robusten Massivbauweise aus Stahlbeton errichtet, um die schweren Transformatoren und Schaltanlagen aufzunehmen. Die Fassade erhält ein Verblendmauerwerk aus Klinker, um sich gestalterisch in das städtebauliche Umfeld zu integrieren. Aufgrund seiner Funktion und der technischen Ausstattung wird das Gebäude als Sonderbau eingestuft. Es gelten daher erhöhte Anforderungen an den baulichen Brandschutz, insbesondere an die Abschottung der einzelnen Brandabschnitte gemäß BayBO Art. 54, die durch ein umfassendes Brandschutzkonzept nachgewiesen werden.",
+    "construction_methods": [
+      "Erstellung einer Tiefgründung mittels Bohrpfählen und einer massiven Fundamentplatte.",
+      "Schalung und Betonage der Wände und Decken in Ortbeton.",
+      "Vormauerung der Klinkerfassade mit Kerndämmung.",
+      "Einbringung der schweren technischen Komponenten durch Montageöffnungen."
+    ],
+    "required_proofs": [
+      "Standsicherheitsnachweis",
+      "Kriterienkatalog",
+      "Brandschutznachweis"
+    ],
+    "provenance_note": "synthetic_v1_bayern",
+    "notes": "Errichtung einer Trafostation",
+    "metadata": {
+      "applicant_type_generated": true,
+      "applicant_address_country_generated": true,
+      "site_address_city_generated": true,
+      "site_address_zip_generated": true,
+      "site_address_country_generated": true
+    }
+  },
+  {
+    "sample_id": 10,
+    "application_id": "MUC-2024-3456",
+    "application_date": "2024-08-12",
+    "applicant_name": "Baugemeinschaft \"Wohnen am Park\"",
+    "applicant_type": "Baugemeinschaft",
+    "applicant_address": {
+      "street": "Westendstraße 199",
+      "city": "München",
+      "zip": "80686",
+      "country": "DE"
+    },
+    "architect_name": "Konzeptbau Partner",
+    "architect_license": "201187",
+    "site_address": {
+      "street": "Agnes-Bernauer-Straße 180",
+      "city": "München",
+      "zip": "",
+      "country": "DE"
+    },
+    "parcel_id": "Gemarkung: Laim, Flur-Nr: 2345/3",
+    "building_class": 5,
+    "building_type": "Mehrfamilienhaus",
+    "building_area_sqm": 2100.5,
+    "num_floors": 6,
+    "attachments_count": 15,
+    "attachments_list": [
+      "Amtlicher Lageplan",
+      "Bauzeichnungen",
+      "Baubeschreibung",
+      "Standsicherheitsnachweis",
+      "Brandschutznachweis"
+    ],
+    "project_description": "Eine Baugemeinschaft beantragt die Genehmigung für den Neubau eines sechsgeschossigen Wohngebäudes mit Tiefgarage in München-Laim. Das Projekt mit einer Gesamtnutzfläche von 2100,5 m² wird in einer innovativen Holz-Hybridbauweise ausgeführt. Die aussteifenden Treppenhauskerne und die Geschossdecken werden aus Stahlbeton gefertigt, während die hochgedämmten Außenwände als vorgefertigte Holzrahmenelemente realisiert werden. Diese Bauweise kombiniert die Vorteile des Massivbaus (Schallschutz, Brandschutz) mit denen des Holzbaus (Nachhaltigkeit, schnelle Montage). Das Gebäude ist barrierefrei konzipiert. Für die von den Festsetzungen des Bebauungsplans abweichende Dachform wird eine Befreiung beantragt, die mit einer besseren städtebaulichen Integration begründet wird. Die Anforderungen an die Barrierefreiheit nach BayBO Art. 48 werden vollumfänglich erfüllt.",
+    "construction_methods": [
+      "Errichtung der Untergeschosse und der aussteifenden Kerne in Stahlbetonbauweise.",
+      "Montage von Beton-Halbfertigteildecken (Filigrandecken).",
+      "Einhängen der vorgefertigten und gedämmten Holzrahmenbau-Fassadenelemente.",
+      "Anbringen der Balkone als eigenständige, thermisch entkoppelte Stahlkonstruktion."
+    ],
+    "required_proofs": [
+      "Standsicherheitsnachweis",
+      "Kriterienkatalog",
+      "Brandschutznachweis"
+    ],
+    "provenance_note": "synthetic_v1_bayern",
+    "notes": "Antrag auf Abweichung bzgl. Dachform genehmigt",
+    "metadata": {
+      "applicant_type_generated": true,
+      "applicant_address_country_generated": true,
+      "site_address_city_generated": true,
+      "site_address_zip_generated": true,
+      "site_address_country_generated": true
+    }
+  }
+]
