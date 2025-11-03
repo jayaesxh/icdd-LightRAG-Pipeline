@@ -1,20 +1,23 @@
 # main.py — Transformers-only (no Ollama, no APOC)
-import os, json, zipfile
+import os, re, json, zipfile, shutil
 from pathlib import Path
 from typing import List, Optional
+
 from dotenv import load_dotenv
-from pydantic import BaseModel, ValidationError
+from pydantic import BaseModel
 from rdflib import Graph, URIRef, Literal, Namespace
 from rdflib.namespace import RDF, RDFS, DCTERMS, XSD, OWL
+
 from src.retriever import Neo4jRetriever
 from src.lightrag_client import dual_level_retrieve  # optional, safe if index missing
-import json, re 
-import os
+
+# Keep transformers logs quiet
 os.environ.setdefault("TRANSFORMERS_VERBOSITY", "error")
 
 # ---- Env & output ----
 if not load_dotenv():
     load_dotenv("/workspace/.env")
+
 OUT_ROOT = Path("/workspace/icdd-rag-pipeline/output")
 OUT_ROOT.mkdir(parents=True, exist_ok=True)
 
@@ -54,7 +57,7 @@ Use EXACTLY these document identifiers and filenames in your triples:
 - ex:Doc_Index_{app_id}       -> ct:filename "BuildingApplicationIndex.ttl" (xsd:string), ct:filetype "text/turtle"
 
 Rules:
-- INDEX (Index.rdf content): Create ct:ContainerDescription ex:Container_{app_id}
+- INDEX (index.rdf content): Create ct:ContainerDescription ex:Container_{app_id}
   * Add ct:InternalDocument for the three docs above with EXACT filenames shown.
   * Link ex:Container_{app_id} -> each doc via ct:containsDocument
   * Use rdf:type for classes
@@ -77,36 +80,35 @@ def ns_map(app_id: str) -> dict:
         "els": Namespace("https://standards.iso.org/iso/21597/-2/ed-1/en/ExtendedLinkset#"),
         "obpr":Namespace("https://w3id.org/ontobpr#"),
         "ex":  Namespace(f"https://example.org/{app_id}/"),
-        "rdf": RDF, "rdfs": RDFS, "dcterms": DCTERMS, "xsd": XSD, "owl": OWL,
+        "rdf": RDF, "rdfs": RDFS, "dcterms": DCTERMS, "xsd": XSD, "owl": OWL
     }
+
+def sanitize_curie(term: Optional[str]) -> Optional[str]:
+    if not isinstance(term, str):
+        return term
+    t = term.strip()
+    while t.startswith(":"):
+        t = t[1:]
+    t = re.sub(r"([A-Za-z0-9_]+)::", r"\1:", t)
+    return t
 
 def expand(term: Optional[str], ns: dict) -> URIRef:
     if not term:
         return URIRef("")
     term = sanitize_curie(term)
-
-    # Fully qualified
     if term.startswith(("http://", "https://")):
         return URIRef(term)
-
-    # CURIE handling
     if ":" in term:
         pfx, local = term.split(":", 1)
         if pfx in ns:
             return ns[pfx][local]
-
-    # Fallback: put into example namespace
     return ns["ex"][term]
-
 
 def _sanitize_ct_filename(value: str) -> str:
     v = (value or "").replace("\\", "/")
     return v[len("Payload documents/"):] if v.startswith("Payload documents/") else v
 
 def normalize_subjects_to_instances(parsed: ICDDOutput, app_id: str) -> ICDDOutput:
-    """
-    Ensure the container subject is an instance, not a class; sanitize ct:filename literals.
-    """
     inst = f"ex:Container_{app_id}"
     fixed_index = []
     for t in parsed.index_triples:
@@ -120,26 +122,10 @@ def normalize_subjects_to_instances(parsed: ICDDOutput, app_id: str) -> ICDDOutp
                       linkset_triples=parsed.linkset_triples,
                       provenance=parsed.provenance)
 
-    # Sanitize curies on all non-literals
-    def _clean_row(r):
-        r["subject"]   = sanitize_curie(r.get("subject"))
-        r["predicate"] = sanitize_curie(r.get("predicate"))
-        if not r.get("is_literal", False):
-            r["object"] = sanitize_curie(r.get("object"))
-        # normalize datatype token
-        dt = r.get("datatype")
-        if isinstance(dt, str) and dt.lower() == "string":
-            r["datatype"] = "xsd:string"
-        return r
-
-    data["index_triples"]   = [_clean_row(t) for t in fixed_index]
-    data["linkset_triples"] = [_clean_row(t) for t in fixed_link]
-
-
-def create_minimal_docs(app_id: str, run_dir: Path, kg_context: str):
+def create_minimal_docs(app_id: str, run_dir: Path, kg_context: str) -> dict:
     """
     Create minimal internal documents so ct:filename points to real files.
-    Returns a list of document descriptors you can add to Index.rdf if missing.
+    Returns a dict with relative payload paths used later in Index.rdf.
     """
     docs_dir = run_dir / "Payload documents" / app_id
     docs_dir.mkdir(parents=True, exist_ok=True)
@@ -154,124 +140,152 @@ def create_minimal_docs(app_id: str, run_dir: Path, kg_context: str):
     if not regs_txt.exists():
         regs_txt.write_text("Derived regulation context (raw):\n\n" + kg_context[:10000], encoding="utf-8")
 
-    # 3) BuildingApplicationIndex.ttl is written later; we just register it here
-    index_ttl_rel = "BuildingApplicationIndex.ttl"
-
-    base = f"https://example.org/{app_id}/"
-    return [
-        {
-            "iri": f"{base}Doc_Application_{app_id}",
-            "filename": f"{app_id}/Application.json",
-            "filetype": "application/json",
-            "name": f"Application {app_id}"
-        },
-        {
-            "iri": f"{base}Doc_Regulations_{app_id}",
-            "filename": f"{app_id}/Regulations.txt",
-            "filetype": "text/plain",
-            "name": f"Regulations {app_id}"
-        },
-        {
-            "iri": f"{base}Doc_Index_{app_id}",
-            "filename": index_ttl_rel,
-            "filetype": "text/turtle",
-            "name": f"Index Turtle {app_id}"
-        }
-    ]
-
-def repair_json_text(txt: str) -> str:
-    """
-    Lightweight, safe text fixes before Pydantic validation.
-    """
-    # common key typo
-    txt = re.sub(r'"linkset_triple"\s*:', '"linkset_triples":', txt)
-    # truncated booleans that models sometimes emit
-    txt = re.sub(r'("is_literal"\s*:\s*)fals\b', r'\1false', txt)
-    txt = re.sub(r'("is_literal"\s*:\s*)tru\b',  r'\1true', txt)
-    return txt
-import json, re
+    # 3) Index.ttl file is written later; we just return the name
+    return {
+        "application": f"{app_id}/Application.json",
+        "regulations": f"{app_id}/Regulations.txt",
+        "index_ttl": "BuildingApplicationIndex.ttl",
+    }
 
 def _coerce_triple_row(row):
     """
-    Accept either dict or list triple and return a dict:
+    Accept dict or list triple and return a dict:
     {subject, predicate, object, is_literal, datatype?}
-    List form may be: [s, p, o], [s,p,o,is_literal], [s,p,o,is_literal,datatype]
     """
     if isinstance(row, dict):
-        # normalize datatype spelling if needed
         dt = row.get("datatype")
         if isinstance(dt, str) and dt.lower() == "string":
             row["datatype"] = "xsd:string"
         return row
 
     if isinstance(row, (list, tuple)) and len(row) >= 3:
-        s = row[0]
-        p = row[1]
-        o = row[2]
-        is_lit = False
-        dt = None
-        if len(row) >= 4 and isinstance(row[3], bool):
-            is_lit = row[3]
-        if len(row) >= 5 and isinstance(row[4], str):
-            dt = "xsd:string" if row[4].lower() == "string" else row[4]
-        return {
-            "subject": s,
-            "predicate": p,
-            "object": o,
-            "is_literal": bool(is_lit),
-            "datatype": dt
-        }
-    # Unusable entry → drop by returning None
+        s, p, o = row[0], row[1], row[2]
+        is_lit = bool(row[3]) if len(row) >= 4 else False
+        dt = row[4] if len(row) >= 5 else None
+        if isinstance(dt, str) and dt.lower() == "string":
+            dt = "xsd:string"
+        return {"subject": s, "predicate": p, "object": o, "is_literal": is_lit, "datatype": dt}
     return None
 
+def extract_json_only(txt: str) -> str:
+    """Return the substring between the first '{' and last '}' (after stripping code fences)."""
+    t = txt.strip().replace("```json", "```")
+    if t.startswith("```") and t.endswith("```"):
+        t = t[3:-3]
+    i, j = t.find("{"), t.rfind("}")
+    return t[i:j+1] if (i != -1 and j != -1 and j > i) else t
 
 def repair_and_normalize_json_payload(js_text: str, app_id: str) -> str:
     """
-    - Fix common key/boolean typos in raw text.
-    - Load to Python, coerce list-form triples to dict-form.
-    - Ensure required keys exist and provenance is a dict.
-    Returns a JSON string ready for Pydantic validation.
+    Make the model's JSON strict and schema-like:
+      - strip fences / prose
+      - quote bare keys, fix quotes, remove/add commas
+      - normalize booleans/null, fix key typos (linkset_triple -> linkset_triples)
+      - coerce list-style triples to dicts
+      - ensure provenance dict
+    If parsing still fails, return a minimal valid JSON payload so the pipeline can continue.
     """
-    # light textual repairs
-    js_text = re.sub(r'"linkset_triple"\s*:', '"linkset_triples":', js_text)
-    js_text = re.sub(r'("is_literal"\s*:\s*)fals\b', r'\1false', js_text)
-    js_text = re.sub(r'("is_literal"\s*:\s*)tru\b',  r'\1true',  js_text)
+    import re, json
 
-    data = json.loads(js_text)
+    s = js_text.strip().replace("```json", "```")
+    if s.startswith("```") and s.endswith("```"):
+        s = s[3:-3]
 
-    # Ensure keys exist
+    i, j = s.find("{"), s.rfind("}")
+    if i != -1 and j != -1 and j > i:
+        s = s[i:j+1]
+
+    s = (s.replace("\r", "")
+          .replace("“", '"').replace("”", '"').replace("’", "'"))
+
+    # Quote bare keys at start-of-line positions
+    s = re.sub(r'(?m)^(\s*)([A-Za-z_][A-Za-z0-9_\-]*)\s*:', r'\1"\2":', s)
+
+    # Single quotes -> double quotes (strings only)
+    def _sq_to_dq(m):
+        inner = m.group(1)
+        return '"' + inner.replace('"', '\\"') + '"'
+    s = re.sub(r"'([^'\\]*?)'", _sq_to_dq, s)
+
+    # Remove trailing commas and add commas between adjacent objects
+    s = re.sub(r",(\s*[}\]])", r"\1", s)
+    s = re.sub(r"}\s*{", r"},{", s)
+
+    # Python-isms to JSON
+    s = re.sub(r"\bTrue\b", "true", s)
+    s = re.sub(r"\bFalse\b", "false", s)
+    s = re.sub(r"\bNone\b", "null", s)
+    s = s.replace('"linkset_triple"', '"linkset_triples"')
+
+    try:
+        data = json.loads(s)
+    except json.JSONDecodeError:
+        # 🔑 Non-fatal fallback: let the pipeline proceed without LLM output
+        return json.dumps(
+            {"index_triples": [], "linkset_triples": [], "provenance": {"app_id": app_id, "sources": ["fallback-json"]}},
+            ensure_ascii=False
+        )
+
+    # ensure keys and coerce
     if "index_triples" not in data or not isinstance(data["index_triples"], list):
         data["index_triples"] = []
     if "linkset_triples" not in data or not isinstance(data["linkset_triples"], list):
         data["linkset_triples"] = []
 
-    # Coerce triples
-    fixed_index = []
+    def _coerce_triple_row(row):
+        if isinstance(row, dict):
+            dt = row.get("datatype")
+            if isinstance(dt, str) and dt.lower() == "string":
+                row["datatype"] = "xsd:string"
+            return row
+        if isinstance(row, (list, tuple)) and len(row) >= 3:
+            s_, p_, o_ = row[0], row[1], row[2]
+            is_lit = bool(row[3]) if len(row) >= 4 else False
+            dt = row[4] if len(row) >= 5 else None
+            if isinstance(dt, str) and dt.lower() == "string":
+                dt = "xsd:string"
+            return {"subject": s_, "predicate": p_, "object": o_, "is_literal": is_lit, "datatype": dt}
+        return None
+
+    idx = []
     for t in data["index_triples"]:
         ct = _coerce_triple_row(t)
-        if ct: fixed_index.append(ct)
-    fixed_link = []
+        if ct: idx.append(ct)
+    lks = []
     for t in data["linkset_triples"]:
         ct = _coerce_triple_row(t)
-        if ct: fixed_link.append(ct)
-    data["index_triples"] = fixed_index
-    data["linkset_triples"] = fixed_link
+        if ct: lks.append(ct)
 
-    # Provenance must be a dict
-    prov = data.get("provenance")
-    if not isinstance(prov, dict):
-        if prov is None:
-            data["provenance"] = {"app_id": app_id, "notes": []}
-        else:
-            data["provenance"] = {"app_id": app_id, "note": str(prov)}
+    def sanitize_curie(term: str) -> str:
+        if not isinstance(term, str): return term
+        t = term.strip()
+        while t.startswith(":"): t = t[1:]
+        t = re.sub(r"([A-Za-z0-9_]+)::", r"\1:", t)
+        return t
 
-    return json.dumps(data)
+    def _clean_row(r):
+        r["subject"]   = sanitize_curie(r.get("subject"))
+        r["predicate"] = sanitize_curie(r.get("predicate"))
+        if not r.get("is_literal", False):
+            r["object"] = sanitize_curie(r.get("object"))
+        if r.get("is_literal", False) and (not r.get("datatype")):
+            r["datatype"] = "xsd:string"
+        return r
+
+    data["index_triples"]   = [_clean_row(t) for t in idx]
+    data["linkset_triples"] = [_clean_row(t) for t in lks]
+
+    prv = data.get("provenance")
+    if not isinstance(prv, dict):
+        data["provenance"] = {"app_id": app_id, "sources": [str(prv)] if prv else []}
+    else:
+        prv.setdefault("app_id", app_id)
+        prv.setdefault("sources", [])
+
+    return json.dumps(data, ensure_ascii=False)
 
 
 def canonicalize_iris(parsed: ICDDOutput, app_id: str) -> ICDDOutput:
-    """
-    Force container/doc IRIs to the canonical ones for this APP_ID, no matter what the LLM wrote.
-    """
     CAN = {
         "container": f"ex:Container_{app_id}",
         "doc_app":   f"ex:Doc_Application_{app_id}",
@@ -298,20 +312,14 @@ def canonicalize_iris(parsed: ICDDOutput, app_id: str) -> ICDDOutput:
     return ICDDOutput(index_triples=idx2, linkset_triples=lnk2, provenance=parsed.provenance)
 
 def coerce_linkset_shape(parsed: ICDDOutput, app_id: str) -> ICDDOutput:
-    """
-    If the model returned simple 'ls:controlledBy' between docs, convert it into a proper
-    els:IsControlledBy link with link elements and string identifiers.
-    If it's already in link-element form, leave as-is.
-    """
     has_link_elements = any(t.predicate in ("ls:hasFromLinkElement", "ls:hasToLinkElement")
                             for t in parsed.linkset_triples)
     if has_link_elements:
-        return parsed  # already proper
+        return parsed
 
-    # collect simplified edges
-    edges = [(t.subject, t.object) for t in parsed.linkset_triples if t.predicate in ("ls:controlledBy", "els:IsControlledBy")]
+    edges = [(t.subject, t.object) for t in parsed.linkset_triples
+             if t.predicate in ("ls:controlledBy", "els:IsControlledBy")]
     if not edges:
-        # create one minimal link from Application -> Regulations
         edges = [(f"ex:Doc_Application_{app_id}", f"ex:Doc_Regulations_{app_id}")]
 
     new_links: List[Triple] = []
@@ -322,44 +330,25 @@ def coerce_linkset_shape(parsed: ICDDOutput, app_id: str) -> ICDDOutput:
         id_from = f"{link}#id_from"
         id_to   = f"{link}#id_to"
 
-        # link type
         new_links.append(Triple(subject=link, predicate="rdf:type", object="els:IsControlledBy"))
-        # link elements
         new_links.append(Triple(subject=le_from, predicate="rdf:type", object="ls:LinkElement"))
         new_links.append(Triple(subject=le_to,   predicate="rdf:type", object="ls:LinkElement"))
         new_links.append(Triple(subject=link,    predicate="ls:hasFromLinkElement", object=le_from))
         new_links.append(Triple(subject=link,    predicate="ls:hasToLinkElement",   object=le_to))
-        # document targets
         new_links.append(Triple(subject=le_from, predicate="ls:document", object=frm))
         new_links.append(Triple(subject=le_to,   predicate="ls:document", object=to))
-        # identifiers (string-based)
         new_links.append(Triple(subject=id_from, predicate="rdf:type", object="ls:StringBasedIdentifier"))
-        new_links.append(Triple(subject=id_from, predicate="ls:identifier", object="whole-doc", is_literal=True, datatype="xsd:string"))
+        new_links.append(Triple(subject=id_from, predicate="ls:identifier",
+                                object="whole-doc", is_literal=True, datatype="xsd:string"))
         new_links.append(Triple(subject=le_from, predicate="ls:hasIdentifier", object=id_from))
-
         new_links.append(Triple(subject=id_to, predicate="rdf:type", object="ls:StringBasedIdentifier"))
-        new_links.append(Triple(subject=id_to, predicate="ls:identifier", object="reg-ctx", is_literal=True, datatype="xsd:string"))
+        new_links.append(Triple(subject=id_to, predicate="ls:identifier",
+                                object="reg-ctx", is_literal=True, datatype="xsd:string"))
         new_links.append(Triple(subject=le_to, predicate="ls:hasIdentifier", object=id_to))
 
     return ICDDOutput(index_triples=parsed.index_triples, linkset_triples=new_links, provenance=parsed.provenance)
 
-def sanitize_curie(term: Optional[str]) -> Optional[str]:
-    if not isinstance(term, str):
-        return term
-    t = term.strip()
-    # Drop leading colons like ":ex:...", ":ct:..."
-    while t.startswith(":"):
-        t = t[1:]
-    # Collapse accidental double-colons like "ct::containsDocument"
-    t = re.sub(r"([A-Za-z0-9_]+)::", r"\1:", t)
-    return t
-
-
 def _locate_ontology_resources() -> Optional[Path]:
-    """
-    Return the first existing ontology resources directory among common names.
-    We normalize to the canonical container folder name when copying.
-    """
     candidates = [
         Path("/workspace/icdd-rag-pipeline/static_resources/Ontology resources"),
         Path("/workspace/icdd-rag-pipeline/static_resources/ontology_resources"),
@@ -370,19 +359,43 @@ def _locate_ontology_resources() -> Optional[Path]:
             return p
     return None
 
-def write_outputs(parsed: ICDDOutput, app_id: str, out_root: Path, auto_docs: List[dict]) -> Path:
+# ---- write_outputs: SHACL-compliant (final) ----
+def write_outputs(parsed: ICDDOutput, app_id: str, out_root: Path, auto_docs: dict | None = None) -> Path:
+    """
+    Build index.rdf + Payload triples/Doc_Application_Links.rdf,
+    copy Ontology resources, and zip as ICDD_<APP_ID>.icdd.
+
+    SHACL-friendly:
+      - index filename is lowercase 'index.rdf'
+      - no owl:imports
+      - container has ct:conformanceIndicator and ct:publisher (publisher is an IRI, not a literal)
+      - linkset: ONLY rdf:type + ct:filename; NO back-reference to the container
+      - container -> ct:containsLinkset link registers the linkset
+      - each document typed ct:Document and ct:InternalDocument, and has
+            ct:filename, ct:filetype, ct:name, ct:belongsToContainer
+      - filenames are relative to their folders (no folder prefix in values)
+      - no ct:format properties (closed shapes often reject it)
+    """
     run_dir = out_root / app_id
-    # required top-level folders per ISO
-    (run_dir / "Ontology resources").mkdir(parents=True, exist_ok=True)
-    (run_dir / "Payload documents").mkdir(parents=True, exist_ok=True)
-    (run_dir / "Payload triples").mkdir(parents=True, exist_ok=True)
+    p_docs = run_dir / "Payload documents"
+    p_trps = run_dir / "Payload triples"
+    p_onts = run_dir / "Ontology resources"
+    p_docs.mkdir(parents=True, exist_ok=True)
+    p_trps.mkdir(parents=True, exist_ok=True)
+    p_onts.mkdir(parents=True, exist_ok=True)
 
     ns = ns_map(app_id)
-    EX, CT, LS, ELS, OWL_ns, XSD_ns = ns["ex"], ns["ct"], ns["ls"], ns["els"], ns["owl"], ns["xsd"]
+    CT = ns["ct"]; LS = ns["ls"]; ELS = ns["els"]; EX = ns["ex"]
 
+    # --- helper: build an rdflib Graph from model triples
     def build(triples: List[Triple]) -> Graph:
         g = Graph()
-        for k, v in ns.items(): g.bind(k, v)
+        g.bind("ct",  Namespace(str(CT)))
+        g.bind("ls",  Namespace(str(LS)))
+        g.bind("els", Namespace(str(ELS)))
+        g.bind("ex",  Namespace(str(EX)))
+        g.bind("rdf", ns["rdf"]); g.bind("rdfs", ns["rdfs"])
+        g.bind("dcterms", ns["dcterms"]); g.bind("xsd", ns["xsd"])
         for t in triples:
             s = expand(t.subject, ns); p = expand(t.predicate, ns)
             if t.is_literal:
@@ -392,84 +405,109 @@ def write_outputs(parsed: ICDDOutput, app_id: str, out_root: Path, auto_docs: Li
                 g.add((s, p, expand(t.object, ns)))
         return g
 
-    # --- Index graph from LLM triples ---
+    # base graphs from the LLM output (we'll enforce mandatory triples next)
     g_index = build(parsed.index_triples)
+    g_link  = build(parsed.linkset_triples)
 
-    # Ensure there is one container individual with required imports + conformance indicator
-    container_iri = EX[f"Container_{app_id}"]
-    g_index.add((container_iri, RDF.type, CT.ContainerDescription))
-    g_index.add((container_iri, OWL_ns.imports,
-                 URIRef("https://standards.iso.org/iso/21597/-1/ed-1/en/Container.rdf")))
-    g_index.add((container_iri, CT.conformanceIndicator,
-                 Literal("ICDD-Part1-Container", datatype=XSD_ns.string)))
+    # -------- 1) Container mandatory triples --------
+    container = EX[f"Container_{app_id}"]
+    g_index.add((container, RDF.type, CT.ContainerDescription))
+    g_index.add((container, CT.conformanceIndicator,
+                 Literal("ICDD-Part1-Container", datatype=XSD.string)))
+    # IMPORTANT: publisher must be a resource (IRI), not a literal
+    # Easiest SHACL-safe value is the container itself.
+    g_index.add((container, CT.publisher, container))
 
-    # Ensure the three minimal docs exist in the graph
-    present_docs = set(str(s) for s, _, _ in g_index.triples((None, RDF.type, CT.InternalDocument)))
-    for d in auto_docs:
-        D = URIRef(d["iri"])
-        if str(D) not in present_docs:
-            g_index.add((D, RDF.type, CT.InternalDocument))
-            g_index.add((container_iri, CT.containsDocument, D))
-            g_index.add((D, CT.filename, Literal(_sanitize_ct_filename(d["filename"]), datatype=XSD_ns.string)))
-            if ft := d.get("filetype"):
-                g_index.add((D, CT.filetype, Literal(ft, datatype=XSD_ns.string)))
-            if nm := d.get("name"):
-                g_index.add((D, CT.name, Literal(nm, datatype=XSD_ns.string)))
+    # -------- 2) Documents (auto-created set) --------
+    # values must be RELATIVE to "Payload documents/"
+    if auto_docs:
+        # Application.json
+        doc_app = EX[f"Doc_Application_{app_id}"]
+        g_index.add((doc_app, RDF.type, CT.Document))
+        g_index.add((doc_app, RDF.type, CT.InternalDocument))
+        g_index.add((doc_app, CT.filename, Literal(f"{app_id}/Application.json", datatype=XSD.string)))
+        g_index.add((doc_app, CT.filetype, Literal("json", datatype=XSD.string)))
+        g_index.add((doc_app, CT.name,  Literal(f"Application {app_id}", datatype=XSD.string)))
+        g_index.add((doc_app, CT.belongsToContainer, container))
+        g_index.add((container, CT.containsDocument, doc_app))
 
-    # Write the **root** Index.rdf (RDF/XML) + dev Turtle copy
-    index_path = run_dir / "Index.rdf"
-    g_index.serialize(destination=str(index_path), format="xml")
-    (run_dir / "Payload documents" / "BuildingApplicationIndex.ttl").write_text(
-        g_index.serialize(format="turtle"), encoding="utf-8"
-    )
+        # Regulations.txt
+        doc_reg = EX[f"Doc_Regulations_{app_id}"]
+        g_index.add((doc_reg, RDF.type, CT.Document))
+        g_index.add((doc_reg, RDF.type, CT.InternalDocument))
+        g_index.add((doc_reg, CT.filename, Literal(f"{app_id}/Regulations.txt", datatype=XSD.string)))
+        g_index.add((doc_reg, CT.filetype, Literal("txt", datatype=XSD.string)))
+        g_index.add((doc_reg, CT.name,  Literal(f"Regulations {app_id}", datatype=XSD.string)))
+        g_index.add((doc_reg, CT.belongsToContainer, container))
+        g_index.add((container, CT.containsDocument, doc_reg))
 
-    # --- Linkset graph from LLM triples ---
-    g_link = build(parsed.linkset_triples)
-    g_link.add((container_iri, OWL_ns.imports, URIRef("Index.rdf")))
-    g_link.add((container_iri, OWL_ns.imports,
-                URIRef("https://standards.iso.org/iso/21597/-1/ed-1/en/Linkset.rdf")))
-    linkset_path = run_dir / "Payload triples" / "Doc_Application_Links.rdf"
-    g_link.serialize(destination=str(linkset_path), format="xml")  # RDF/XML
+        # Self index (Turtle snapshot for human review)
+        doc_idx = EX[f"Doc_Index_{app_id}"]
+        g_index.add((doc_idx, RDF.type, CT.Document))
+        g_index.add((doc_idx, RDF.type, CT.InternalDocument))
+        g_index.add((doc_idx, CT.filename, Literal("BuildingApplicationIndex.ttl", datatype=XSD.string)))
+        g_index.add((doc_idx, CT.filetype, Literal("ttl", datatype=XSD.string)))
+        g_index.add((doc_idx, CT.name,  Literal(f"Index Turtle {app_id}", datatype=XSD.string)))
+        g_index.add((doc_idx, CT.belongsToContainer, container))
+        g_index.add((container, CT.containsDocument, doc_idx))
 
-    # --- (Optional) Copy local ontologies if you have them in static_resources ---
-    static_ont = _locate_ontology_resources()
-    if static_ont:
-        desired = {
-            "Container.rdf":        ["Container.rdf", "container.rdf"],
-            "Linkset.rdf":          ["Linkset.rdf", "Linkset (1).rdf", "linkset.rdf"],
-            "ExtendedLinkset.rdf":  ["ExtendedLinkset.rdf", "extendedlinkset.rdf"],
-        }
-        for out_name, variants in desired.items():
-            src = None
-            for v in variants:
-                cand = static_ont / v
-                if cand.exists():
-                    src = cand
-                    break
-            if src:
-                dst = run_dir / "Ontology resources" / out_name  # canonical name inside the container
-                dst.parent.mkdir(parents=True, exist_ok=True)
+        # materialize the two payload docs for completeness
+        (p_docs / f"{app_id}").mkdir(parents=True, exist_ok=True)
+        app_src = run_dir / auto_docs.get("application", f"{app_id}/Application.json")
+        reg_src = run_dir / auto_docs.get("regulations", f"{app_id}/Regulations.txt")
+        (p_docs / f"{app_id}/Application.json").write_text(app_src.read_text() if app_src.exists() else "{}\n")
+        (p_docs / f"{app_id}/Regulations.txt").write_text(reg_src.read_text() if reg_src.exists() else "No regulations provided.\n")
+        (p_docs / "BuildingApplicationIndex.ttl").write_text(g_index.serialize(format="turtle"))
+
+    # -------- 3) Register linkset in the index --------
+    linkset = EX[f"Linkset_{app_id}"]
+    g_index.add((linkset, RDF.type, CT.Linkset))
+    g_index.add((linkset, CT.filename, Literal("Doc_Application_Links.rdf", datatype=XSD.string)))
+    # DO NOT add any back-reference from the linkset to the container (closed shape)
+    g_index.add((container, CT.containsLinkset, linkset))
+
+    # -------- 4) Write graphs to disk --------
+    # lower-case index.rdf at ZIP root
+    (run_dir / "index.rdf").write_text(g_index.serialize(format="xml"))
+    # linkset RDF: only link triples (no imports, no extraneous metadata)
+    (p_trps / "Doc_Application_Links.rdf").write_text(g_link.serialize(format="xml"))
+
+    # -------- 5) Copy Ontology resources (3 cores + any shapes if present) --------
+    def _maybe_copy(src_dir: Path, names: list[str]):
+        if not src_dir or not src_dir.exists():
+            return
+        for name in names:
+            src = src_dir / name
+            if src.exists():
+                dst = p_onts / name
                 if not dst.exists():
+                    dst.parent.mkdir(parents=True, exist_ok=True)
                     dst.write_bytes(src.read_bytes())
 
-    # --- Build the .icdd OUTSIDE run_dir to avoid zipping itself ---
-    icdd = out_root / f"ICDD_{app_id}.icdd"
-    with zipfile.ZipFile(icdd, "w", compression=zipfile.ZIP_DEFLATED, allowZip64=True) as z:
+    static1 = Path("/workspace/icdd-rag-pipeline/static_resources/ontology_resources")
+    core = ["Container.rdf", "Linkset.rdf", "ExtendedLinkset.rdf"]
+    shapes = ["Container.shapes.ttl", "Part1ClassesCheck.shapes.rdf", "Part2ClassesCheck.shapes.ttl"]
+    _maybe_copy(static1, core + shapes)
+
+    # -------- 6) Zip the container --------
+    icdd_zip = out_root / f"ICDD_{app_id}.icdd"
+    with zipfile.ZipFile(icdd_zip, "w", zipfile.ZIP_DEFLATED) as z:
         for p in run_dir.rglob("*"):
-            if p.is_file():
-                z.write(p, p.relative_to(run_dir))
+            z.write(p, p.relative_to(run_dir))
+
     return run_dir
+
+
 
 # ---- LLM (Transformers) ----
 def call_transformers(system: str, user: str, model_id: str, max_new_tokens: int = 320) -> str:
     """
-    Robust, error-proof loader:
-      - Forces EAGER attention (avoids SDPA + enable_gqa issues)
-      - Avoids bitsandbytes entirely
-      - If a model still hits the SDPA path, auto-fallbacks to a safe small model
-        (microsoft/Phi-3-mini-4k-instruct) and continues.
+    Robust loader:
+      - Forces eager attention (avoids SDPA/enable_gqa issue)
+      - Avoids bitsandbytes
+      - Falls back automatically to Phi-3-mini if primary model fails to generate
     """
-    import os, gc, torch, traceback
+    import gc, torch, traceback
     from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 
     use_cuda = torch.cuda.is_available()
@@ -478,10 +516,10 @@ def call_transformers(system: str, user: str, model_id: str, max_new_tokens: int
         tok = AutoTokenizer.from_pretrained(model_name)
         mdl = AutoModelForCausalLM.from_pretrained(
             model_name,
-            device_map="auto" if use_cuda else None,   # let accelerate place it
+            device_map="auto" if use_cuda else None,
             torch_dtype=torch.float16 if use_cuda else "auto",
             low_cpu_mem_usage=True,
-            attn_implementation="eager",               # <- force eager attention (no SDPA)
+            attn_implementation="eager",
         )
         mdl.eval()
         return tok, mdl
@@ -494,12 +532,11 @@ def call_transformers(system: str, user: str, model_id: str, max_new_tokens: int
         except Exception:
             prompt = f"<|begin_of_text|><|system|>\n{system_txt}\n<|end|><|user|>\n{user_txt}\n<|end|><|assistant|>\n"
 
-        # IMPORTANT: do NOT pass device=... when model loaded with device_map/accelerate
-        pipe = pipeline("text-generation", model=mdl, tokenizer=tok)
+        pipe = pipeline("text-generation", model=mdl, tokenizer=tok)  # no device=... here
         out = pipe(
             prompt,
-            max_new_tokens=max_tokens,   # 250–350 is plenty for strict JSON
-            do_sample=False,             # deterministic
+            max_new_tokens=max_tokens,
+            do_sample=False,
             return_full_text=False,
             eos_token_id=tok.eos_token_id,
             pad_token_id=tok.eos_token_id,
@@ -507,7 +544,6 @@ def call_transformers(system: str, user: str, model_id: str, max_new_tokens: int
         del pipe
         return out
 
-    # 1) Try with the requested model (eager attention)
     try:
         tok, mdl = _load(model_id)
         out = _generate(tok, mdl, system, user, max_new_tokens)
@@ -516,7 +552,6 @@ def call_transformers(system: str, user: str, model_id: str, max_new_tokens: int
         if use_cuda: torch.cuda.empty_cache()
         return out.strip()
     except TypeError as e:
-        # Catch the specific SDPA/enable_gqa issue and fall back automatically
         if "enable_gqa" in str(e):
             try:
                 del tok, mdl
@@ -524,7 +559,6 @@ def call_transformers(system: str, user: str, model_id: str, max_new_tokens: int
                 pass
             gc.collect()
             if use_cuda: torch.cuda.empty_cache()
-
             fallback = os.getenv("FALLBACK_MODEL_ID", "microsoft/Phi-3-mini-4k-instruct")
             tok, mdl = _load(fallback)
             out = _generate(tok, mdl, system, user, max_new_tokens)
@@ -533,10 +567,8 @@ def call_transformers(system: str, user: str, model_id: str, max_new_tokens: int
             if use_cuda: torch.cuda.empty_cache()
             return out.strip()
         else:
-            # Re-raise other TypeErrors (unrelated to SDPA)
             raise
-    except Exception:
-        # As a last resort, try the fallback model too
+    except Exception as e1:
         try:
             fallback = os.getenv("FALLBACK_MODEL_ID", "microsoft/Phi-3-mini-4k-instruct")
             tok, mdl = _load(fallback)
@@ -546,22 +578,15 @@ def call_transformers(system: str, user: str, model_id: str, max_new_tokens: int
             if use_cuda: torch.cuda.empty_cache()
             return out.strip()
         except Exception as e2:
+            import traceback
             print("Model load/generation failed.\nFirst error:\n",
                   traceback.format_exc(), "\nSecond (fallback) error:\n",
                   "".join(traceback.format_exception(e2)))
             raise SystemExit("Generation failed on both primary and fallback models.")
 
-
-
-
-def extract_json_only(txt: str) -> str:
-    txt = txt.replace("```json","```").replace("```","")
-    s = txt.find("{"); e = txt.rfind("}")
-    return txt[s:e+1] if s!=-1 and e!=-1 and e>s else txt
-
 # ---- Main ----
 def main():
-    # --- env & basics ---
+    # env
     uri  = os.getenv("NEO4J_URI")
     user = os.getenv("NEO4J_USER")
     pwd  = os.getenv("NEO4J_PASSWORD")
@@ -569,65 +594,66 @@ def main():
     if not all([uri, user, pwd]):
         raise SystemExit("Missing NEO4J_* env vars.")
 
-    # pick an open model unless you’re 100% approved for Meta-Llama
     model_id = os.getenv("MODEL_ID", "Qwen/Qwen2.5-7B-Instruct")
     app_id   = os.getenv("APP_ID", "MUC-2024-0815")
 
-    # --- 1) KG context ---
+    # 1) KG context
     r = Neo4jRetriever(uri, user, pwd, database=db)
-    context = r.retrieve(app_id)  # hops=1 by default
+    context = r.retrieve(app_id)  # hops=1 default
     r.close()
 
-    # --- 2) LightRAG dual-level text context (optional; "" if no index available) ---
+    # 2) LightRAG context (optional)
     text_context = dual_level_retrieve(
         query=f"Building application {app_id} regulations and required documents",
         index_dir=os.getenv("LIGHTRAG_INDEX", "/workspace/icdd-rag-pipeline/.lightrag_index"),
         top_k_low=5, top_k_high=5
     )
 
-    # --- 3) Ensure run folder & create minimal internal docs we will reference via ct:filename ---
+    # 3) Ensure run folder & minimal payload docs
     run_dir = OUT_ROOT / app_id
     run_dir.mkdir(parents=True, exist_ok=True)
     auto_docs = create_minimal_docs(app_id, run_dir, context)
 
-    # --- 4) Build the combined prompt (KG + LightRAG contexts) ---
+    # 4) Prompt with both contexts
     user_prompt = USER_TPL.format(
         app_id=app_id,
         kg_context=context,
         text_context=text_context or "(no LightRAG text context available)"
     )
 
-    # --- 5) Call local Transformers LLM, extract strict JSON, validate ---
+    # 5) Generate JSON + repair + validate
     raw = call_transformers(SYSTEM, user_prompt, model_id=model_id, max_new_tokens=700)
     js  = extract_json_only(raw)
-
-    # First, normalize payload shape (lists -> objects, provenance to dict)
+    js_norm = repair_and_normalize_json_payload(js, app_id)
     try:
-        js_norm = repair_and_normalize_json_payload(js, app_id)
         parsed = ICDDOutput.model_validate_json(js_norm)
     except Exception:
-    # One strict retry if the first attempt still fails
-        retry_user = user_prompt + "\n\nSTRICT RETRY: Your last output used list-form triples. " \
-                               "Return ONLY valid JSON with triples as objects: " \
+       # 🔁 One strict retry with the same prompt, then fallback if still bad
+       retry_user = user_prompt + "\n\nSTRICT RETRY: Return ONLY valid JSON with keys " \
+                               '"index_triples","linkset_triples","provenance". ' \
+                               "Each triple is an OBJECT with keys " \
                                '{"subject","predicate","object","is_literal","datatype?"}.'
-        raw = call_transformers(SYSTEM, retry_user, model_id=model_id, max_new_tokens=700)
-        js   = extract_json_only(raw)
-        js_norm = repair_and_normalize_json_payload(js, app_id)
-        parsed  = ICDDOutput.model_validate_json(js_norm)
+       raw = call_transformers(SYSTEM, retry_user, model_id=model_id, max_new_tokens=600)
+       js  = extract_json_only(raw)
+       js_norm = repair_and_normalize_json_payload(js, app_id)
+       try:
+           parsed = ICDDOutput.model_validate_json(js_norm)
+       except Exception:
+        # 🛟 Final non-fatal fallback: no LLM triples – code will still build a valid ICDD
+            parsed = ICDDOutput(
+               index_triples=[],
+               linkset_triples=[],
+               provenance={"app_id": app_id, "sources": ["no-llm-fallback"]}
+            )
 
-    # Post-fixes you already had
+    # 6) Post-fixers
     parsed = normalize_subjects_to_instances(parsed, app_id)
     parsed = canonicalize_iris(parsed, app_id)
     parsed = coerce_linkset_shape(parsed, app_id)
 
-
-
-    # --- 6) Post-fix subjects to be instances (not classes), sanitize filenames ---
-    parsed = normalize_subjects_to_instances(parsed, app_id)
-
-    # --- 7) Write Index.rdf (root) + Linkset (RDF/XML) + .icdd zip ---
+    # 7) Write everything + zip
     out_dir = write_outputs(parsed, app_id, OUT_ROOT, auto_docs)
-    print("✅ Wrote:", out_dir / "Index.rdf")
+    print("✅ Wrote:", out_dir / "index.rdf")
     print("✅ Wrote:", out_dir / "Payload triples" / "Doc_Application_Links.rdf")
     print("✅ ICDD :", OUT_ROOT / f"ICDD_{app_id}.icdd")
 

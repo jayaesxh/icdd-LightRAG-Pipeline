@@ -1,0 +1,15 @@
+roles:
+  Building Application:
+    patterns: ["bauantrag", "antrag", "formular", "application"]
+  Site Plan:
+    patterns: ["lageplan", "site plan", "kataster", "flurkarte", "map"]
+  Building Model IFC:
+    patterns: ["\.ifc$", "ifc4", "ifc2x3", "gebäudemodell", "model"]
+  Thermal Insulation Report:
+    patterns: ["wärmeschutz", "dämm", "energie", "geg", "enev", "thermal insulation"]
+  Sound Insulation Report:
+    patterns: ["schall", "lärm", "sound", "noise"]
+  Structural Certificate:
+    patterns: ["statik", "trag", "stabil", "structural"]
+  Accessibility Report:
+    patterns: ["barriere", "accessibility", "din 18040"]

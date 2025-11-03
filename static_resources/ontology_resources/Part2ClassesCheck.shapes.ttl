@@ -1,0 +1,81 @@
+#CHECK FOR CONFORMANCE - PART 2 EXTENDED LINKSET
+    #Namespaces and prefixes used in ontologies referenced in the ISO 21597 series
+    @prefix owl: <http://www.w3.org/2002/07/owl#> .
+    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix ns0: <http://www.w3.org/ns/shacl#> .
+
+    #Namespaces and prefixes used in ontologies defined in the ISO 21597 series
+        
+    <https://standards.iso.org/iso/21597/-2/ed-1/en/AnnexB/Part2Schema>
+      a owl:Ontology ;
+      owl:imports <http://www.w3.org/ns/shacl#>, 
+                  <https://standards.iso.org/iso/21597/-1/ed-1/en/Container>,
+                  <http://datashapes.org/dash>, 
+                  <https://standards.iso.org/iso/21597/-1/ed-1/en/Linkset>,
+                  
+<https://standards.iso.org/iso/21597/-2/ed-1/en/ExtendedLinkset>.
+
+        
+<https://standards.iso.org/iso/21597/-2/ed-1/en/AnnexB/Part2Schema#ICDDClass>
+      a rdfs:Class, <http://www.w3.org/ns/shacl#NodeShape> ;
+      rdfs:subClassOf owl:Class ;
+      rdfs:label "ICDDClass" ;
+      ns0:sparql [
+        ns0:select """prefix rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+    prefix owl:<http://www.w3.org/2002/07/owl#>
+
+    SELECT distinct $this
+    WHERE 
+       {
+         $this a owl:Class . FILTER not exists { $this a 
+<https://standards.iso.org/iso/21597/-2/ed-1/en/AnnexB/Part2Schema#ICDDClass>} .
+ FILTER isIRI ($this) .
+        }
+    """ ;
+        ns0:message "{$this} class extension is not allowed." ;
+        ns0:prefixes 
+<https://standards.iso.org/iso/21597/-2/ed-1/en/AnnexB/Part2Schema>
+      ] ;
+      ns0:targetClass owl:Class .
+
+    <https://standards.iso.org/iso/21597/-2/ed-1/en/AnnexB/Part2Schema#MyImproperLinkExtension>
+      a owl:Class ;
+      rdfs:subClassOf 
+<https://standards.iso.org/iso/21597/-2/ed-1/en/Container#> ;
+      rdfs:label "My improper link extension" .
+
+    #Definitions of classes and sub-classes for the Extended Linksets defined in Part 2
+    <https://standards.iso.org/iso/21597/-2/ed-1/en/ExtendedLinkset/DirectedBinaryLink> a 
+<https://standards.iso.org/iso/21597/-2/ed-1/en/AnnexB/Part1Schema#ICDDClass>.
+    <https://standards.iso.org/iso/21597/-2/ed-1/en/ExtendedLinkset/Directed1toNLink> a 
+<https://standards.iso.org/iso/21597/-2/ed-1/en/AnnexB/Part1Schema#ICDDClass>.
+
+    #Definitions of the subclasses for <.../Linkset/DirectedBinaryLink>
+    <https://standards.iso.org/iso/21597/-2/ed-1/en/ExtendedLinkset/DirectedBinaryLink#IsIdenticalTo> a 
+<https://standards.iso.org/iso/21597/-2/ed-1/en/AnnexB/Part2Schema#ICDDClass>.
+    <https://standards.iso.org/iso/21597/-2/ed-1/en/ExtendedLinkset/DirectedBinaryLink#ConflictsWith> a 
+<https://standards.iso.org/iso/21597/-2/ed-1/en/AnnexB/Part2Schema#ICDDClass>.
+    <https://standards.iso.org/iso/21597/-2/ed-1/en/ExtendedLinkset/DirectedBinaryLink#IsAlternativeTo> a 
+<https://standards.iso.org/iso/21597/-2/ed-1/en/AnnexB/Part2Schema#ICDDClass>.
+
+    #Definitions of the subclasses for <.../Linkset/Directed1toNLink>
+    <https://standards.iso.org/iso/21597/-2/ed-1/en/ExtendedLinkset/Directed1toNLink#IsSpecialisedAs> a 
+<https://standards.iso.org/iso/21597/-2/ed-1/en/AnnexB/Part2Schema#ICDDClass>.
+    <https://standards.iso.org/iso/21597/-2/ed-1/en/ExtendedLinkset/Directed1toNLink#IsSpecialisedAs> a 
+<https://standards.iso.org/iso/21597/-2/ed-1/en/AnnexB/Part2Schema#ICDDClass>.
+    <https://standards.iso.org/iso/21597/-2/ed-1/en/ExtendedLinkset/Directed1toNLink#HasPart> a 
+<https://standards.iso.org/iso/21597/-2/ed-1/en/AnnexB/Part2Schema#ICDDClass>.
+    <https://standards.iso.org/iso/21597/-2/ed-1/en/ExtendedLinkset/Directed1toNLink#HasMember> a 
+<https://standards.iso.org/iso/21597/-2/ed-1/en/AnnexB/Part2Schema#ICDDClass>.
+    <https://standards.iso.org/iso/21597/-2/ed-1/en/ExtendedLinkset/Directed1toNLink#Supersedes> a 
+<https://standards.iso.org/iso/21597/-2/ed-1/en/AnnexB/Part2Schema#ICDDClass>.
+    <https://standards.iso.org/iso/21597/-2/ed-1/en/ExtendedLinkset/Directed1toNLink#IsElaboratedBy> a 
+<https://standards.iso.org/iso/21597/-2/ed-1/en/AnnexB/Part2Schema#ICDDClass>.
+    <https://standards.iso.org/iso/21597/-2/ed-1/en/ExtendedLinkset/Directed1toNLink#Controls> a 
+<https://standards.iso.org/iso/21597/-2/ed-1/en/AnnexB/Part2Schema#ICDDClass>.
+    <https://standards.iso.org/iso/21597/-2/ed-1/en/ExtendedLinkset/Directed1toNLink#Controls> a 
+<https://standards.iso.org/iso/21597/-2/ed-1/en/AnnexB/Part2Schema#ICDDClass>.
+    owl:Nothing a 
+<https://standards.iso.org/iso/21597/-2/ed-1/en/AnnexB/Part2Schema#ICDDClass>.
+    owl:Thing a 
+<https://standards.iso.org/iso/21597/-2/ed-1/en/AnnexB/Part2Schema#ICDDClass>.

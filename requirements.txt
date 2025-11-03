@@ -1,0 +1,9 @@
+rdflib>=6.2,<7
+pyshacl>=0.23
+PyYAML>=6.0
+neo4j>=5.10
+python-docx>=1.0.0
+pdfminer.six>=20221105
+chardet>=5.0
+# Optional (only if you plan OCR or heavy PDF parsing later):
+# pymupdf>=1.24.0

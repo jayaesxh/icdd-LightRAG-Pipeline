@@ -1,0 +1,70 @@
+﻿<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:ct="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="https://standards.iso.org/iso/21597/-1/ed-1/en/AnnexD/Part1Schema#"
+    xmlns:ls="https://standards.iso.org/iso/21597/-1/ed-1/en/Linkset#"
+    xmlns:sh="http://www.w3.org/ns/shacl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xml:base="https://standards.iso.org/iso/21597/-1/ed-1/en/AnnexD/Part1Schema">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://www.w3.org/ns/shacl#"/>
+    <owl:imports rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container"/>
+    <owl:imports rdf:resource="http://datashapes.org/dash"/>
+    <owl:imports rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Linkset"/>
+  </owl:Ontology>
+  <rdfs:Class rdf:ID="ICDDClass">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>ICDDClass</rdfs:label>
+    <sh:sparql rdf:parseType="Resource">
+      <sh:select>prefix rdfs:&lt;http://www.w3.org/2000/01/rdf-schema#&gt;&#xD;
+prefix owl:&lt;http://www.w3.org/2002/07/owl#&gt;&#xD;
+&#xD;
+SELECT distinct $this
+WHERE &#xD;
+   {
+     $this a owl:Class . FILTER not exists { $this a &lt;https://standards.iso.org/iso/21597/-1/ed-1/en/AnnexD/Part1Schema#ICDDClass&gt;} . FILTER isIRI ($this) .&#xD;
+	}&#xD;
+</sh:select>
+      <sh:message>{$this} class extension is not allowed.</sh:message>
+      <sh:prefixes rdf:resource=""/>
+    </sh:sparql>
+    <sh:targetClass rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+  </rdfs:Class>
+  <owl:Class rdf:ID="MyIllegalDocumentExtension">
+    <rdfs:subClassOf>
+      <ICDDClass rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Document"/>
+    </rdfs:subClassOf>
+    <rdfs:label>My illegal document extension</rdfs:label>
+  </owl:Class>
+  <ICDDClass rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Linkset#QueryBasedIdentifier"/>
+  <ICDDClass rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Linkset#LinkElement"/>
+  <ICDDClass rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Linkset#DirectedBinaryLink"/>
+  <ICDDClass rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Party"/>
+  <ICDDClass rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Linkset#URIBasedIdentifier"/>
+  <ICDDClass rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Linkset#Directed1toNLink"/>
+  <ICDDClass rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#SecuredDocument"/>
+  <ICDDClass rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#FolderDocument"/>
+  <ICDDClass rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Organisation"/>
+  <ICDDClass rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#EncryptedDocument"/>
+  <ICDDClass rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Linkset#DirectedLink"/>
+  <ICDDClass rdf:about="http://www.w3.org/2002/07/owl#Nothing"/>
+  <ICDDClass rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#ContainerDescription"/>
+  <ICDDClass rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Linkset#Link"/>
+  <ICDDClass rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+  <ICDDClass rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#ExternalDocument"/>
+  <ICDDClass rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#ReadOnlyDocument"/>
+  <ICDDClass rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Linkset#Identifier"/>
+  <ICDDClass rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#InternalDocument"/>
+  <ICDDClass rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Person"/>
+  <ICDDClass rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Linkset"/>
+  <ICDDClass rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Linkset#StringBasedIdentifier"/>
+  <ICDDClass rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Linkset#BinaryLink"/>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->
+
+

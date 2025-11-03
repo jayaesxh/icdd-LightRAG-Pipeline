@@ -1,0 +1,111 @@
+
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix ct:   <https://standards.iso.org/iso/21597/-1/ed-1/en/Container#> .
+@prefix ls:   <https://standards.iso.org/iso/21597/-1/ed-1/en/Linkset#> .
+@prefix els:  <https://standards.iso.org/iso/21597/-2/ed-1/en/ExtendedLinkset#> .
+
+# ContainerDescription must list docs + linksets and declare conformance
+ct:ContainerShape
+  a sh:NodeShape ;
+  sh:targetClass ct:ContainerDescription ;
+  sh:property [
+    sh:path ct:containsDocument ;
+    sh:minCount 1 ;
+  ] ;
+  sh:property [
+    sh:path ct:containsLinkset ;
+    sh:minCount 1 ;
+    sh:class ct:Linkset ;
+  ] ;
+  sh:property [
+    sh:path ct:conformanceIndicator ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:string ;
+  ] .
+
+# InternalDocument: must be in the container and have name/filename/filetype
+ct:InternalDocumentShape
+  a sh:NodeShape ;
+  sh:targetClass ct:InternalDocument ;
+  sh:property [
+    sh:path ct:belongsToContainer ;
+    sh:minCount 1 ;
+    sh:class ct:ContainerDescription ;
+  ] ;
+  sh:property [
+    sh:path ct:filename ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:string ;
+  ] ;
+  sh:property [
+    sh:path ct:filetype ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:string ;
+  ] ;
+  sh:property [
+    sh:path ct:name ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:string ;
+  ] .
+
+# Linkset: must be in the container and have a filename
+ct:LinksetShape
+  a sh:NodeShape ;
+  sh:targetClass ct:Linkset ;
+  sh:property [
+    sh:path ct:containedInContainer ;
+    sh:minCount 1 ;
+    sh:class ct:ContainerDescription ;
+  ] ;
+  sh:property [
+    sh:path ct:filename ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:string ;
+  ] .
+
+# Each ELS:IsControlledBy link must have both ends
+els:IsControlledByShape
+  a sh:NodeShape ;
+  sh:targetClass els:IsControlledBy ;
+  sh:property [
+    sh:path ls:hasFromLinkElement ;
+    sh:minCount 1 ;
+    sh:class ls:LinkElement ;
+  ] ;
+  sh:property [
+    sh:path ls:hasToLinkElement ;
+    sh:minCount 1 ;
+    sh:class ls:LinkElement ;
+  ] .
+
+# LinkElements must reference a document and an identifier
+ls:LinkElementShape
+  a sh:NodeShape ;
+  sh:targetClass ls:LinkElement ;
+  sh:property [
+    sh:path ls:document ;
+    sh:minCount 1 ;
+  ] ;
+  sh:property [
+    sh:path ls:hasIdentifier ;
+    sh:minCount 1 ;
+    sh:class ls:StringBasedIdentifier ;
+  ] .
+
+# Identifier literal present
+ls:StringBasedIdentifierShape
+  a sh:NodeShape ;
+  sh:targetClass ls:StringBasedIdentifier ;
+  sh:property [
+    sh:path ls:identifier ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:string ;
+  ] .
