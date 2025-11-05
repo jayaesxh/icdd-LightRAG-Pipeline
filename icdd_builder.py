@@ -1,224 +1,262 @@
+# icdd_builder.py
 from __future__ import annotations
-import os, shutil, zipfile, mimetypes
+
+import os, io, zipfile, shutil
 from pathlib import Path
 from dataclasses import dataclass
-from typing import Optional, List
+from typing import List, Optional, Iterable
+
 from rdflib import Graph, Namespace, URIRef, Literal
 from rdflib.namespace import RDF, XSD
 
-# ISO namespaces
+# --- ISO 21597 namespaces (ed-1) ---
 CT  = Namespace("https://standards.iso.org/iso/21597/-1/ed-1/en/Container#")
 LS  = Namespace("https://standards.iso.org/iso/21597/-1/ed-1/en/Linkset#")
 ELS = Namespace("https://standards.iso.org/iso/21597/-2/ed-1/en/ExtendedLinkset#")
 
-def ex_ns(case_id: str) -> Namespace:
-    return Namespace(f"https://example.org/{case_id}/")
-
-def guess_filetype_and_format(filename: str) -> tuple[str, str]:
-    name = filename.lower()
-    if name.endswith(".pdf"):  return ("pdf", "application/pdf")
-    if name.endswith(".json"): return ("json", "application/json")
-    if name.endswith(".txt"):  return ("txt", "text/plain")
-    if name.endswith(".ttl"):  return ("ttl", "text/turtle")
-    if name.endswith(".rdf") or name.endswith(".owl"):
-        return ("rdf", "application/rdf+xml")
-    if name.endswith(".xml"):  return ("xml", "application/xml")
-    if name.endswith(".csv"):  return ("csv", "text/csv")
-    if name.endswith(".ifc"):  return ("ifc", "application/octet-stream")
-    if name.endswith(".dwg"):  return ("dwg", "application/octet-stream")
-    mt = mimetypes.guess_type(filename)[0] or "application/octet-stream"
-    ext = (Path(filename).suffix or ".bin").lstrip(".")
-    return (ext, mt)
+# ---------- simple specs ----------
+@dataclass
+class DocSpec:
+    iri: URIRef
+    rel_filename: str  # relative to "Payload documents/<CASE_ID>/"
+    filetype: str      # e.g. 'pdf', 'ifc'
+    format: str        # MIME, e.g. 'application/pdf'
+    name: str          # label
+    description: str   # free text
 
 @dataclass
-class DocDef:
-    iri: URIRef
-    rel_path: str     # e.g. "BOCHUM-2025-0017/BuildingApplication.pdf"
-    filetype: str     # e.g. "pdf"
-    format: str       # e.g. "application/pdf"
-    name: str         # human readable name for ct:name
+class LinkSpec:
+    link_type: URIRef     # e.g., ELS.IsControlledBy
+    from_doc: URIRef      # a ct:Document IRI (from index)
+    from_ident: str       # "whole-doc" or any string identifier
+    to_doc: URIRef
+    to_ident: str
 
-def discover_and_stage_documents(case_id: str, incoming: Path, run_dir: Path) -> List[DocDef]:
+# ---------- helpers ----------
+def _base(case_id: str) -> str:
+    # supervisor asked to use fragment IRIs (#)
+    return f"https://example.org/{case_id}#"
+
+def copy_ontology_resources(src_dir: Path, dst_dir: Path, also_write_fixed_shapes: bool = False) -> None:
     """
-    Copies all files from 'incoming' into:
-        run_dir / "Payload documents" / case_id / <same relative paths>
-    Returns a DocDef for each copied file.
+    Copy everything from static_resources/ontology_resources into run_dir/"Ontology resources".
+    This makes the .icdd consumable by external platforms (RUB converter, etc.).
     """
-    dest_root = run_dir / "Payload documents" / case_id
-    dest_root.mkdir(parents=True, exist_ok=True)
+    dst_dir.mkdir(parents=True, exist_ok=True)
+    if src_dir.exists():
+        for p in src_dir.iterdir():
+            if p.is_file():
+                shutil.copy2(p, dst_dir / p.name)
+    # Do not rewrite shapes unless explicitly requested. Default keeps the official ones.
+    if also_write_fixed_shapes:
+        # (Optional patch hook; not used by default)
+        pass
 
-    docs: List[DocDef] = []
-    ex = ex_ns(case_id)
-
-    for p in incoming.rglob("*"):
-        if not p.is_file():
-            continue
-
-        rel_under_incoming = p.relative_to(incoming).as_posix()
-        dest = dest_root / rel_under_incoming
-        dest.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(p, dest)
-
-        filetype, fmt = guess_filetype_and_format(rel_under_incoming)
-        # stable IRI: Doc_<relative path with / replaced by _>
-        doc_id = rel_under_incoming.replace("/", "_")
-        iri = ex[f"Doc_{doc_id}"]
-        docs.append(DocDef(
-            iri=iri,
-            rel_path=f"{case_id}/{rel_under_incoming}",
-            filetype=filetype,
-            format=fmt,
-            name=Path(rel_under_incoming).name
-        ))
-    return docs
-
-def build_index_graph(case_id: str,
-                      docs: List[DocDef],
-                      linkset_filename: str,
-                      publisher_text: str = "icdd-rag-pipeline") -> Graph:
-
+# ---------- graph builders ----------
+def build_index_graph(
+    case_id: str,
+    docs: Iterable[DocSpec],
+    linkset_filename: str = "Doc_Application_Links.rdf",
+) -> Graph:
+    """
+    Build a minimal but ISO-21597-compliant index graph:
+      - ct:ContainerDescription node
+      - ct:containsDocument per payload doc
+      - ct:Linkset node registered via ct:containsLinkset with ct:filename
+      - ct:publisher as a ct:Party with ct:name (to satisfy common SHACL)
+    """
+    base = _base(case_id)
     g = Graph()
     g.bind("ct", CT)
     g.bind("ls", LS)
     g.bind("els", ELS)
-    g.bind("xsd", XSD)
-    ex = ex_ns(case_id)
-    g.bind("ex", ex)
 
-    container = ex[f"Container_{case_id}"]
+    container = URIRef(base + f"Container_{case_id}")
+    linkset   = URIRef(base + f"Linkset_{case_id}")
+    publisher = URIRef(base + f"Publisher_{case_id}")
 
-    # container description
+    # ContainerDescription
     g.add((container, RDF.type, CT.ContainerDescription))
-    g.add((container, CT.conformanceIndicator,
-           Literal("ICDD-Part1-Container", datatype=XSD.string)))
-    g.add((container, CT.publisher,
-           Literal(publisher_text, datatype=XSD.string)))
+    g.add((container, CT.conformanceIndicator, Literal("ICDD-Part1-Container", datatype=XSD.string)))
 
-    # documents
+    # Publisher as ct:Party with ct:name (matches typical Container.shapes.ttl)
+    g.add((publisher, RDF.type, CT.Party))
+    g.add((publisher, CT.name, Literal("icdd-rag-pipeline", datatype=XSD.string)))
+    g.add((container, CT.publisher, publisher))
+
+    # Documents
     for d in docs:
         g.add((d.iri, RDF.type, CT.Document))
         g.add((d.iri, RDF.type, CT.InternalDocument))
         g.add((d.iri, CT.belongsToContainer, container))
-        g.add((d.iri, CT.filename, Literal(d.rel_path, datatype=XSD.string)))
+        g.add((d.iri, CT.filename, Literal(Path(d.rel_filename).name, datatype=XSD.string)))
         g.add((d.iri, CT.filetype, Literal(d.filetype, datatype=XSD.string)))
         g.add((d.iri, CT["format"], Literal(d.format, datatype=XSD.string)))
         g.add((d.iri, CT.name, Literal(d.name, datatype=XSD.string)))
         g.add((container, CT.containsDocument, d.iri))
 
-    # register linkset (minimal)
-    linkset = ex[f"Linkset_{case_id}"]
+    # Linkset registration
     g.add((linkset, RDF.type, CT.Linkset))
-    g.add((linkset, CT.filename,
-           Literal(linkset_filename, datatype=XSD.string)))
+    g.add((linkset, CT.filename, Literal(linkset_filename, datatype=XSD.string)))
     g.add((container, CT.containsLinkset, linkset))
 
     return g
 
-@dataclass
-class LinkSpec:
-    link_type: URIRef        # e.g. ELS.IsControlledBy
-    from_doc: URIRef
-    from_ident: str
-    to_doc: URIRef
-    to_ident: str
-    link_id: Optional[str] = None
-
-def build_linkset_graph(case_id: str, links: List[LinkSpec]) -> Graph:
+def build_payload_linkset_graph(case_id: str, links: Iterable[LinkSpec]) -> Graph:
+    """
+    Build a payload linkset graph written under 'Payload triples/<filename>'.
+    """
+    base = _base(case_id)
     g = Graph()
     g.bind("ls", LS)
     g.bind("els", ELS)
-    g.bind("xsd", XSD)
 
-    ex = ex_ns(case_id)
-    g.bind("ex", ex)
+    for i, Lk in enumerate(links, start=1):
+        link_iri = URIRef(base + f"Link_{i}_{case_id}")
+        from_elem = URIRef(str(link_iri) + "#from")
+        to_elem   = URIRef(str(link_iri) + "#to")
+        id_from   = URIRef(str(link_iri) + "#id_from")
+        id_to     = URIRef(str(link_iri) + "#id_to")
 
-    for i, L in enumerate(links, start=1):
-        link_iri = ex[f"Link_{L.link_id or i}_{case_id}"]
-        g.add((link_iri, RDF.type, L.link_type))
+        g.add((link_iri, RDF.type, Lk.link_type))
 
-        from_elem = URIRef(f"{link_iri}#from")
-        to_elem   = URIRef(f"{link_iri}#to")
-        id_from   = URIRef(f"{link_iri}#id_from")
-        id_to     = URIRef(f"{link_iri}#id_to")
-
-        g.add((id_from, RDF.type, LS.StringBasedIdentifier))
-        g.add((id_from, LS.identifier,
-               Literal(L.from_ident, datatype=XSD.string)))
-
-        g.add((id_to, RDF.type, LS.StringBasedIdentifier))
-        g.add((id_to, LS.identifier,
-               Literal(L.to_ident, datatype=XSD.string)))
-
-        for elem, doc_iri, id_iri in (
-            (from_elem, L.from_doc, id_from),
-            (to_elem,   L.to_doc,   id_to),
-        ):
+        for elem, doc_iri, id_iri in ((from_elem, Lk.from_doc, id_from),
+                                      (to_elem,   Lk.to_doc,   id_to)):
             g.add((elem, RDF.type, LS.LinkElement))
             g.add((elem, LS.document, doc_iri))
             g.add((elem, LS.hasIdentifier, id_iri))
+
+        g.add((id_from, RDF.type, LS.StringBasedIdentifier))
+        g.add((id_from, LS.identifier, Literal(Lk.from_ident, datatype=XSD.string)))
+
+        g.add((id_to, RDF.type, LS.StringBasedIdentifier))
+        g.add((id_to, LS.identifier, Literal(Lk.to_ident, datatype=XSD.string)))
 
         g.add((link_iri, LS.hasFromLinkElement, from_elem))
         g.add((link_iri, LS.hasToLinkElement,   to_elem))
 
     return g
 
-def write_icdd_files(case_id: str,
-                     run_dir: Path,
-                     g_index: Graph,
-                     g_link: Graph,
-                     linkset_filename: str = "Doc_Application_Links.rdf",
-                     copy_ontologies_from: Optional[Path] = None) -> Path:
+# ---------- writers & checks ----------
+def write_icdd_files(
+    case_id: str,
+    g_index: Graph,
+    g_link: Graph,
+    run_dir: Path,
+    out_root: Path,
+    linkset_filename: str = "Doc_Application_Links.rdf",
+) -> Path:
+    """
+    Writes:
+      index.rdf
+      Payload triples/<linkset_filename>
+      (zip) output/ICDD_<CASE_ID>.icdd with <CASE_ID>/[...] inside
+    """
+    run_dir.mkdir(parents=True, exist_ok=True)
+    (run_dir / "Payload triples").mkdir(parents=True, exist_ok=True)
 
-    p_docs = run_dir / "Payload documents"
-    p_trps = run_dir / "Payload triples"
-    p_onts = run_dir / "Ontology resources"
-    p_docs.mkdir(parents=True, exist_ok=True)
-    p_trps.mkdir(parents=True, exist_ok=True)
-    p_onts.mkdir(parents=True, exist_ok=True)
+    # Write graphs (use destination=... so rdflib handles encoding)
+    g_index.serialize(destination=str(run_dir / "index.rdf"), format="xml")
+    g_link.serialize(destination=str(run_dir / "Payload triples" / linkset_filename), format="xml")
 
-    # Write core graphs
-    (run_dir / "index.rdf").write_text(g_index.serialize(format="xml"))
-    (p_trps / linkset_filename).write_text(g_link.serialize(format="xml"))
+    # Make .icdd with root folder named <CASE_ID>/
+    out_root.mkdir(parents=True, exist_ok=True)
+    icdd_path = out_root / f"ICDD_{case_id}.icdd"
+    with zipfile.ZipFile(icdd_path, "w", zipfile.ZIP_DEFLATED) as zf:
+        def _add_dir(d: Path, arc_prefix: str):
+            for p in d.rglob("*"):
+                if p.is_file():
+                    zf.write(p, arcname=str(Path(case_id) / arc_prefix / p.relative_to(d)))
+        # Ontology resources, Payload documents, Payload triples, index.rdf
+        _add_dir(run_dir / "Ontology resources", "Ontology resources")
+        _add_dir(run_dir / "Payload documents", "Payload documents")
+        _add_dir(run_dir / "Payload triples",   "Payload triples")
+        zf.write(run_dir / "index.rdf", arcname=str(Path(case_id) / "index.rdf"))
 
-    # Human-readable TTL for debugging only
-    (p_docs / "BuildingApplicationIndex.ttl").write_text(
-        g_index.serialize(format="turtle"))
+    return icdd_path
 
-    # Copy just the ISO ontologies
-    if copy_ontologies_from and copy_ontologies_from.exists():
-        for name in ("Container.rdf", "Linkset.rdf", "ExtendedLinkset.rdf"):
-            src = copy_ontologies_from / name
-            if src.exists():
-                shutil.copy2(src, p_onts / name)
+def quick_structural_check(run_dir: Path) -> List[str]:
+    """
+    Basic ZIP/layout sanity (no SHACL here).
+    """
+    issues = []
+    must = [
+        run_dir / "Ontology resources",
+        run_dir / "Payload documents",
+        run_dir / "Payload triples",
+        run_dir / "index.rdf",
+    ]
+    for p in must:
+        if not p.exists():
+            issues.append(f"Missing required path: {p}")
+    # must have linkset file under Payload triples
+    if not list((run_dir / "Payload triples").glob("*.rdf")):
+        issues.append("No RDF linkset found under 'Payload triples'.")
+    return issues
 
-    # Zip to output/ICDD_<CASE_ID>.icdd
-    zip_path = run_dir.parent / f"ICDD_{case_id}.icdd"
-    with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as z:
-        for p in run_dir.rglob("*"):
-            z.write(p, p.relative_to(run_dir))
-    return zip_path
-
-def quick_structural_check(zip_path: Path, run_dir: Path) -> None:
-    problems = []
-    with zipfile.ZipFile(zip_path) as z:
-        names = set(z.namelist())
-        print("ZIP entries:")
-        for n in sorted(names):
-            print(" ", n)
-        if "index.rdf" not in names:
-            problems.append("Missing lowercase index.rdf at root.")
-        for folder in ("Ontology resources/", "Payload documents/", "Payload triples/"):
-            if folder not in names:
-                problems.append(f"Missing folder in ZIP: {folder}")
-
+def coherence_check(run_dir: Path, case_id: str) -> List[str]:
+    """
+    Ensures that index.rdf registers the Linkset correctly and that at least one
+    ct:containsDocument exists.
+    """
+    issues = []
+    g = Graph()
     idx = run_dir / "index.rdf"
-    lnk = run_dir / "Payload triples" / "Doc_Application_Links.rdf"
-    if not idx.exists(): problems.append("index.rdf missing on disk")
-    if not lnk.exists(): problems.append("Doc_Application_Links.rdf missing on disk")
+    if not idx.exists():
+        return ["index.rdf is missing"]
+    g.parse(str(idx))
+    container = URIRef(_base(case_id) + f"Container_{case_id}")
+    linkset   = URIRef(_base(case_id) + f"Linkset_{case_id}")
 
-    if problems:
-        print("\n❌ Problems:")
-        for p in problems:
-            print(" -", p)
-    else:
-        print("\n✅ Structural checks passed.")
+    if not list(g.triples((container, CT.containsLinkset, linkset))):
+        issues.append("Container does not ct:containsLinkset the Linkset node.")
+    if not list(g.triples((linkset, RDF.type, CT.Linkset))):
+        issues.append("Linkset node is not typed ct:Linkset.")
+    if not list(g.triples((container, CT.containsDocument, None))):
+        issues.append("Container has no ct:containsDocument triples.")
+    return issues
+
+def run_shacl_validation(run_dir: Path, shapes_dirs: Optional[List[Path]] = None):
+    """
+    Convenience wrapper around pySHACL.
+    """
+    try:
+        from pyshacl import validate
+    except Exception:
+        return False, "pySHACL not installed", ""
+
+    data = Graph()
+    data.parse(str(run_dir / "index.rdf"))
+    for p in (run_dir / "Payload triples").glob("*.rdf"):
+        data.parse(str(p))
+
+    # collect shapes
+    shapes = Graph()
+    candidates = shapes_dirs or [
+        run_dir / "Ontology resources",
+        run_dir / "Ontology resources" / "shapes",
+        Path("/workspace/icdd-rag-pipeline/static_resources/ontology_resources"),
+    ]
+    def _fmt(pp: Path):
+        s = pp.suffix.lower()
+        if s == ".ttl": return "turtle"
+        if s in (".rdf", ".owl", ".xml"): return "xml"
+        return None
+
+    for base in candidates:
+        if not base.exists(): continue
+        for p in base.rglob("*"):
+            if p.is_file() and p.suffix.lower() in (".ttl", ".rdf", ".owl", ".xml"):
+                try:
+                    shapes.parse(str(p), format=_fmt(p))
+                except Exception:
+                    pass
+
+    conforms, rep_g, rep_t = validate(
+        data,
+        shacl_graph=shapes,
+        inference="rdfs",
+        advanced=True,
+        debug=False
+    )
+    return bool(conforms), rep_t, rep_g

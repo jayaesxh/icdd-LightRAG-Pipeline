@@ -1,19 +1,17 @@
 roles:
   Building Application:
-    patterns: ['bauantrag', 'antrag', 'formular', 'application', 'building application']
+    patterns: ["bauantrag", "antrag", "formular", "application", "building application"]
   Site Plan:
-    patterns: ['lageplan', 'site plan', 'kataster', 'flurkarte', 'map']
+    patterns: ["lageplan", "site plan", "kataster", "flurkarte", "map"]
   Building Model IFC:
-    patterns: ['\.ifc$', 'ifc4', 'ifc2x3', 'gebäudemodell', 'model']
+    patterns: ["\\.ifc$", "ifc4", "ifc2x3", "gebäudemodell", "model"]
   Thermal Insulation Report:
-    patterns: ['wärmeschutz', 'dämm', 'energie', 'geg', 'enev', 'thermal insulation']
+    patterns: ["wärmeschutz", "dämm", "energie", "geg", "enev", "thermal insulation"]
   Sound Insulation Report:
-    patterns: ['schall', 'lärm', 'sound', 'noise']
+    patterns: ["schall", "lärm", "sound", "noise"]
   Structural Certificate:
-    patterns: ['statik', 'trag', 'stabil', 'structural', 'stability']
+    patterns: ["statik", "trag", "stabil", "structural", "stability"]
   Accessibility Report:
-    patterns: ['barriere', 'accessibility', 'din 18040']
-  Energy Certificate/Passport:
-    patterns: ['energieausweis', 'epass', 'energy passport', 'Energiepass']
+    patterns: ["barriere", "accessibility", "din 18040"]
   Other:
     patterns: []
